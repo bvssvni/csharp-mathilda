@@ -27,6 +27,13 @@ namespace MathildaLib
 			var b = new NumberNode (10);
 			Assert.True (a.IsEqualTo (b));
 		}
+
+		[Test()]
+		public void TestZeroMultiply () {
+			var a = new VariableNode ("a").Multiply (0);
+			var b = new NumberNode (0);
+			Assert.True (a.IsEqualTo (b));
+		}
 	}
 }
 
