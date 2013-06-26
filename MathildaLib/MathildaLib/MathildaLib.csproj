@@ -48,6 +48,8 @@
     <Compile Include="Modules\SearchModule.cs" />
     <Compile Include="Tests\TestSearchModule.cs" />
     <Compile Include="Modules\NodeTypeModule.cs" />
+    <Compile Include="Modules\EqualityModule.cs" />
+    <Compile Include="Tests\TestEqualityModule.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
