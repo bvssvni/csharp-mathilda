@@ -14,6 +14,7 @@ namespace MathildaLib
 			MultiplyOneOperator.MultiplyOne,
 			ScalarProductOperator.Product,
 			MultiplyOperator.Multiply,
+			AddOperator.Add,
 			LiftOperator.Lift,
 			SwapOperator.Swap,
 		};
@@ -50,6 +51,7 @@ namespace MathildaLib
 					
 					var copy = Node.Copy ();
 					op.Do (ref copy);
+
 					if (History.ContainsKey (copy)) {
 						return;
 					}

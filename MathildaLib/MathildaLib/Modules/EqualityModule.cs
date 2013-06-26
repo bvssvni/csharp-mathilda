@@ -11,6 +11,11 @@ namespace MathildaLib
 
 			a = a.Minimize (null, operators);
 			b = b.Minimize (null, operators);
+
+			// TEST
+			Console.WriteLine (a);
+			Console.WriteLine (b);
+
 			return a.CompareTo (b) == 0;
 		}
 	}

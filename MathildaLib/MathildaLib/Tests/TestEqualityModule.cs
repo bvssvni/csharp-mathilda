@@ -89,6 +89,15 @@ namespace MathildaLib
 				new VariableNode ("a").Multiply ("c").Multiply ("d"));
 			Assert.True (a.IsEqualTo (b));
 		}
+
+		[Test()]
+		public void TestDuplicates () {
+			// a + a
+			var a = new VariableNode ("a").Add ("a");
+			// 2 * a
+			var b = new NumberNode (2).Multiply ("a");
+			Assert.True (a.IsEqualTo (b));
+		}
 	}
 }
 

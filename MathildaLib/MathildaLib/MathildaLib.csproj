@@ -65,6 +65,9 @@
     <Compile Include="Rules\ComplexRule.cs" />
     <Compile Include="Tests\TestComplexNumbers.cs" />
     <Compile Include="Operators\MultiplyOneOperator.cs" />
+    <Compile Include="Operators\AddOperator.cs" />
+    <Compile Include="Tests\TestCompareIgnoreScalar.cs" />
+    <Compile Include="Tests\TestCompare.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

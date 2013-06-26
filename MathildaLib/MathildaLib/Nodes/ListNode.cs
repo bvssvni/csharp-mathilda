@@ -9,8 +9,8 @@ namespace MathildaLib
 		public enum ListOperation : int
 		{
 			List = 0,
-			Sum = 1,
-			Product = 2,
+			Product = 1,
+			Sum = 2,
 		}
 
 		private ListOperation m_listOperation;
@@ -179,11 +179,78 @@ namespace MathildaLib
 			return new ListNode (m_listOperation, newList);
 		}
 
-		public override int CompareTo(Node other)
+		public int CompareToIgnoreScalar (Node other)
 		{
 			var otherNode = other as ListNode;
 			if (otherNode == null) {
 				return this.TypeId ().CompareTo (other.TypeId ());
+			}
+			
+			var thisSubLists = this.NumberOfNonProductSubLists ();
+			var otherSubLists = otherNode.NumberOfNonProductSubLists ();
+			var compareSubLists = thisSubLists.CompareTo (otherSubLists);
+			if (compareSubLists != 0) {
+				return compareSubLists;
+			}
+			
+			var compareOperation = m_listOperation.CompareTo (otherNode.m_listOperation);
+			if (compareOperation != 0) {
+				return compareOperation;
+			}
+			if (this.Operation != ListOperation.Product) {
+				throw new Exception ("Requires product list to compare ignored");
+			}
+
+			var thisIndex = this.List [0] is NumberNode ? 1 : 0;
+			var otherIndex = otherNode.List [0] is NumberNode ? 1 : 0;
+
+			var thisCount = this.List.Count - thisIndex;
+			var otherCount = otherNode.List.Count - otherIndex;
+			var compareCount = thisCount.CompareTo (otherCount);
+			if (compareCount != 0) {
+				return compareCount;
+			}
+
+			int n = thisCount;
+			for (int i = 0; i < n; i++) {
+				var compareItem = m_list [i + thisIndex].CompareTo (otherNode.m_list [i + otherIndex]);
+				if (compareItem != 0) {
+					return compareItem;
+				}
+			}
+
+			return 0;
+		}
+
+		public int NumberOfNonProductSubLists () {
+			int count = 0;
+			foreach (var item in m_list) {
+				var subList = item as ListNode;
+				if (subList == null) {
+					continue;
+				}
+				if (subList.Operation == ListOperation.Product) {
+					continue;
+				}
+
+				count++;
+			}
+
+			return count;
+		}
+
+		public override int CompareTo (Node other)
+		{
+			var otherNode = other as ListNode;
+			if (otherNode == null) {
+				return this.TypeId ().CompareTo (other.TypeId ());
+			}
+
+			var thisSubLists = this.NumberOfNonProductSubLists ();
+			var otherSubLists = otherNode.NumberOfNonProductSubLists ();
+			var compareSubLists = thisSubLists.CompareTo (otherSubLists);
+			if (compareSubLists != 0) {
+				return compareSubLists;
 			}
 
 			var compareOperation = m_listOperation.CompareTo (otherNode.m_listOperation);
@@ -193,6 +260,8 @@ namespace MathildaLib
 
 			var compareCount = m_list.Count.CompareTo (otherNode.m_list.Count);
 			if (compareCount != 0) {
+
+
 				return compareCount;
 			}
 
@@ -210,7 +279,7 @@ namespace MathildaLib
 		public override string ToString()
 		{
 			var strb = new StringBuilder ();
-
+			strb.Append (m_listOperation.ToString() + " ");
 			if (m_listOperation == ListOperation.List) {
 				strb.Append ("{");
 				int n = m_list.Count;

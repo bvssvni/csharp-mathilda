@@ -25,7 +25,7 @@ namespace MathildaLib
 		public void TestToString () {
 			var a = new ListNode (ListNode.ListOperation.List, new List<Node> () {
 				new NumberNode (1), new VariableNode ("hello")});
-			Assert.True (a.ToString () == "{1,hello}");
+			Assert.True (a.ToString () == "List {1,hello}");
 		}
 
 		[Test()]
