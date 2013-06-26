@@ -26,24 +26,9 @@ namespace MathildaLib
 			result = list;
 		}
 
-		public static void Sum (SortedList<Node, Operator> states, 
-		                        Node node, 
-		                        SortedList<Node, bool> history) {
+		public static void Sum (SearchModule.Search search) {
 			var op = new SumOperator ();
-			if (!op.Can (node)) {
-				return;
-			}
-
-			var copy = node.Copy ();
-			op.Do (copy, out copy);
-			if (history.ContainsKey (copy)) {
-				return;
-			}
-			if (states.ContainsKey (copy)) {
-				return;
-			}
-			
-			states.Add (copy, op);
+			search.Alternative (op);
 		}
 	}
 }

@@ -31,24 +31,8 @@ namespace MathildaLib
 			result = list.List [0];
 		}
 
-		public static void Lift (SortedList<Node, Operator> states, 
-		                  Node node, 
-		                  SortedList<Node, bool> history) {
-			var op = new LiftOperator ();
-			if (!op.Can (node)) {
-				return;
-			}
-			
-			var copy = node.Copy ();
-			op.Do (copy, out copy);
-			if (history.ContainsKey (copy)) {
-				return;
-			}
-			if (states.ContainsKey (copy)) {
-				return;
-			}
-			
-			states.Add (copy, op);
+		public static void Lift (SearchModule.Search search) {
+			search.Alternative (new LiftOperator ());
 		}
 	}
 }

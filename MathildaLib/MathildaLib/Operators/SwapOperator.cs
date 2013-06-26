@@ -26,9 +26,8 @@ namespace MathildaLib
 			result = list;
 		}
 
-		public static void Swap (SortedList<Node, Operator> states, 
-		                         Node node, 
-		                         SortedList<Node, bool> history) {
+		public static void Swap (SearchModule.Search search) {
+			var node = search.Node;
 			var list = node as ListNode;
 			if (list == null) {
 				return;
@@ -36,20 +35,7 @@ namespace MathildaLib
 
 			ListNode.ForeachPairDelegate swap = (int i, int j) => {
 				var op = new SwapOperator (i, j);
-				if (!op.Can (node)) {
-					return;
-				}
-				
-				var copy = node.Copy ();
-				op.Do (copy, out copy);
-				if (history.ContainsKey (copy)) {
-					return;
-				}
-				if (states.ContainsKey (copy)) {
-					return;
-				}
-				
-				states.Add (copy, op);
+				search.Alternative (op);
 			};
 			list.ForeachPair (swap);
 		}

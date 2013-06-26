@@ -5,9 +5,30 @@ namespace MathildaLib
 {
 	public static class SearchModule
 	{
-		public delegate void OperatorDelegate (SortedList<Node, Operator> states,
-		                                       Node node,
-		                                       SortedList<Node, bool> history);
+		public delegate void OperatorDelegate (Search search);
+
+		public struct Search {
+			public SortedList<Node, bool> History;
+			public Node Node;
+			public SortedList<Node, Operator> States;
+
+			public void Alternative (Operator op) {
+				if (!op.Can (Node)) {
+					return;
+				}
+				
+				var copy = Node.Copy ();
+				op.Do (copy, out copy);
+				if (History.ContainsKey (copy)) {
+					return;
+				}
+				if (States.ContainsKey (copy)) {
+					return;
+				}
+				
+				States.Add (copy, op);
+			}
+		}
 
 		public static Node Minimize (this Node node, 
 		                         SortedList<Node, bool> history = null,
@@ -19,9 +40,14 @@ namespace MathildaLib
 
 			// Collect the operations.
 			var states = new SortedList<Node, Operator> ();
+			var search = new Search () {
+				History = history,
+				Node = node,
+				States = states
+			};
 			int n = operators.Length;
 			for (int i = 0; i < n; i++) {
-				operators [i] (states, node, history);
+				operators [i] (search);
 			}
 
 			while (states.Count > 0) {
