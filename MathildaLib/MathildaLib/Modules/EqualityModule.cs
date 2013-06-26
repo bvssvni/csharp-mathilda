@@ -5,18 +5,8 @@ namespace MathildaLib
 	public static class EqualityModule
 	{
 		public static bool IsEqualTo (this Node a, Node b) {
-			var ops = new SearchModule.OperatorDelegate [] {
-				SumOperator.Sum,
-				ZeroMultiplyOperator.ZeroMultiply,
-				ZeroAddOperator.ZeroAdd,
-				ScalarProductOperator.Product,
-				MultiplyOperator.Multiply,
-				LiftOperator.Lift,
-				SwapOperator.Swap,
-			};
-			a = a.Minimize (null, ops);
-			b = b.Minimize (null, ops);
-
+			a = a.Minimize (null, SearchModule.StandardOperations);
+			b = b.Minimize (null, SearchModule.StandardOperations);
 			return a.CompareTo (b) == 0;
 		}
 	}

@@ -101,6 +101,18 @@ namespace MathildaLib
 			return list;
 		}
 
+		public static ListNode Add (this VariableNode a, ListNode b) {
+			if (b.Operation == ListNode.ListOperation.Sum) {
+				b.List.Insert (0, a);
+				return b;
+			}
+
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<Node> () {
+				a, b});
+			return list;
+		}
+
 		public static ListNode Add (this ListNode a, VariableNode b) {
 			if (a.Operation == ListNode.ListOperation.Sum) {
 				a.List.Add (b);

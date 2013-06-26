@@ -69,6 +69,26 @@ namespace MathildaLib
 				new VariableNode ("b").Multiply ("c"));
 			Assert.True (a.IsEqualTo (b));
 		}
+
+		[Test()]
+		public void TestNested2 () {
+			var a = new VariableNode ("a").Multiply (new VariableNode ("b").Add (2));
+			var b = new VariableNode ("a").Multiply ("b").Add (
+				new VariableNode ("a").Multiply (2));
+			Assert.True (a.IsEqualTo (b));
+		}
+
+		[Test()]
+		public void TestNested3 () {
+			// a*(b+(c*d))
+			var a = new VariableNode ("a").Multiply (
+				new VariableNode ("b").Add (
+				new VariableNode ("c").Multiply ("d")));
+			// (a*b)+(a*c*d)
+			var b = new VariableNode ("a").Multiply ("b").Add (
+				new VariableNode ("a").Multiply ("c").Multiply ("d"));
+			Assert.True (a.IsEqualTo (b));
+		}
 	}
 }
 

@@ -7,6 +7,16 @@ namespace MathildaLib
 	{
 		public delegate void OperatorDelegate (Search search);
 
+		public static OperatorDelegate[] StandardOperations = new OperatorDelegate [] {
+			SumOperator.Sum,
+			ZeroMultiplyOperator.ZeroMultiply,
+			ZeroAddOperator.ZeroAdd,
+			ScalarProductOperator.Product,
+			MultiplyOperator.Multiply,
+			LiftOperator.Lift,
+			SwapOperator.Swap,
+		};
+
 		public struct Search {
 			public SortedList<Node, bool> History;
 			public Node Node;
