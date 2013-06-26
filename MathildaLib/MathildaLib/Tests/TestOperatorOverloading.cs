@@ -109,10 +109,10 @@ namespace MathildaLib
 
 		[Test()]
 		public void TestListAddNumber () {
-			var a = new ListNode (ListNode.ListOperation.List,
+			var a = new ListNode (ListNode.ListOperation.Sum,
 			                      new List<Node> () {
 				new NumberNode (1)});
-			a += 2;
+			a.Add (2);
 			var b = new ListNode (ListNode.ListOperation.Sum,
 			                      new List<Node> () {
 				new NumberNode (1),
@@ -122,10 +122,10 @@ namespace MathildaLib
 
 		[Test()]
 		public void TestListAddVariable () {
-			var a = new ListNode (ListNode.ListOperation.List,
+			var a = new ListNode (ListNode.ListOperation.Sum,
 			                      new List<Node> () {
 				new NumberNode (1)});
-			a += "a";
+			a.Add ("a");
 			var b = new ListNode (ListNode.ListOperation.Sum,
 			                      new List<Node> () {
 				new NumberNode (1),
