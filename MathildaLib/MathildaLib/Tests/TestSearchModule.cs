@@ -14,7 +14,7 @@ namespace MathildaLib
 					new NumberNode (3),
 					new NumberNode (2),
 				new NumberNode (1)});
-			var b = a.Minimize ();
+			var b = a.Minimize (null, SwapOperator.Swap);
 			Console.WriteLine (b.ToString ());
 			var c = new ListNode (ListNode.ListOperation.List, new List<Node> () {
 				new NumberNode (1),
