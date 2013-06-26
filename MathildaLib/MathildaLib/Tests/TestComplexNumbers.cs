@@ -24,6 +24,18 @@ namespace MathildaLib
 			var b = new VariableNode ("b");
 			Assert.True (a.IsEqualTo (b, ops));
 		}
+
+		[Test()]
+		public void TestNested1 () {
+			var iRule = new ComplexRule ("i", -1);
+			var ops = SearchModule.CreateOperators (iRule.Operator);
+			// i * (1 + i)
+			var a = new VariableNode ("i").Multiply (
+				new NumberNode (1).Add ("i"));
+			// i - 1
+			var b = new VariableNode ("i").Add (-1);
+			Assert.True (a.IsEqualTo (b, ops));
+		}
 	}
 }
 

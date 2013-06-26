@@ -36,6 +36,38 @@ namespace MathildaLib
 			Assert.True (b.CompareTo (a) == 1);
 		}
 
+		[Test()]
+		public void TestForEachNode () {
+			var a = new ListNode (1, 2, 3);
+			var expected = new ListNode.Address[] {
+				new ListNode.Address (0),
+				new ListNode.Address (1),
+				new ListNode.Address (2)};
+			int i = 0;
+			a.ForEachNode ((ListNode.Address address) => {
+				Assert.True (address.IsEqualTo (expected [i++]));
+			});
+
+			Assert.True (i == 3);
+		}
+
+		[Test()]
+		public void TestForEachNode2 () {
+			var a = new ListNode (
+				new NumberNode (1),
+				new ListNode (2, 3));
+			var expected = new ListNode.Address [] {
+				new ListNode.Address (0),
+				new ListNode.Address (1),
+				new ListNode.Address (1, 0),
+				new ListNode.Address (1, 1)};
+			int i = 0;
+			a.ForEachNode ((ListNode.Address address) => {
+				Assert.True (address.IsEqualTo (expected [i++]));
+			});
+
+			Assert.True (i == 4);
+		}
 	}
 }
 

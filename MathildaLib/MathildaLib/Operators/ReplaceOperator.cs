@@ -2,6 +2,11 @@ using System;
 
 namespace MathildaLib
 {
+	/// <summary>
+	/// Replace operator.
+	/// 
+	/// Used by ComplexRule to replace two variables with a constant.
+	/// </summary>
 	public class ReplaceOperator : Operator
 	{
 		private int m_i;

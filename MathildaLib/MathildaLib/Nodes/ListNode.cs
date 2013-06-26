@@ -151,9 +151,9 @@ namespace MathildaLib
 			}
 		}
 
-		public delegate void ForeachPairDelegate (int i, int j);
+		public delegate void ForEachPairDelegate (int i, int j);
 
-		public void ForeachPair (ForeachPairDelegate f) {
+		public void ForEachPair (ForEachPairDelegate f) {
 			int n = m_list.Count;
 			for (int i = 0; i < n; i++) {
 				for (int j = i + 1; j < n; j++) {
@@ -162,7 +162,7 @@ namespace MathildaLib
 			}
 		}
 
-		public void ForeachNeighborPair (ForeachPairDelegate f) {
+		public void ForEachNeighborPair (ForEachPairDelegate f) {
 			int n = m_list.Count;
 			for (int i = 0; i < n - 1; i++) {
 				f (i, i + 1);
@@ -252,7 +252,98 @@ namespace MathildaLib
 			return strb.ToString ();
 		}
 
+		public delegate void ForEachNodeDelegate (Address address);
 
+		public void ForEachNode (ForEachNodeDelegate f, Address address = null) {
+			if (address == null) {
+				address = new Address ();
+			}
+
+			int n = m_list.Count;
+			for (int i = 0; i < n; i++) {
+				address.Add (i);
+				f (address);
+				var subList = m_list [i] as ListNode;
+				if (subList != null) {
+					subList.ForEachNode (f, address);
+				}
+
+				address.RemoveAt (address.Count - 1);
+			}
+		}
+
+		private Node GetByAddress (Address address, int i = 0) {
+			var remainder = address.Count - i;
+			if (remainder == 1) {
+				return m_list [address [i]];
+			} else {
+				var subList = m_list [address [i]] as ListNode;
+				return subList.GetByAddress (address, i + 1);
+			}
+		}
+
+		private void SetByAddress (Address address, Node node, int i = 0) {
+			var remainder = address.Count - i;
+			if (remainder == 1) {
+				m_list [address [i]] = node;
+			} else {
+				var subList = m_list [address [i]] as ListNode;
+				subList.SetByAddress (address, node, i + 1);
+			}
+		}
+
+		public Node this [Address address] {
+			get {
+				return GetByAddress (address, 0);
+			}
+			set {
+				SetByAddress (address, value, 0);
+			}
+		}
+
+		public class Address : List<int> {
+			public Address (params int[] items) : base (items) {
+
+			}
+
+			public Address () {
+
+			}
+
+			public bool IsEqualTo (Address b) {
+				var compareCount = this.Count.CompareTo (b.Count);
+				if (compareCount != 0) {
+					return false;
+				}
+
+				int n = this.Count;
+				for (int i = 0; i < n; i++) {
+					var compareItem = this [i].CompareTo (b [i]);
+					if (compareItem != 0) {
+						return false;
+					}
+				}
+
+				return true;
+			}
+
+			public override string ToString()
+			{
+				var strb = new StringBuilder ();
+				strb.Append ("{");
+				int n = this.Count;
+				for (int i = 0; i < n; i++) {
+					if (i > 0) {
+						strb.Append (",");
+					}
+
+					strb.Append (this [i]);
+				}
+
+				strb.Append ("}");
+				return strb.ToString ();
+			}
+		}
 	}
 }
 

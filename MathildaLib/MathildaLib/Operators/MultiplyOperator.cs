@@ -79,8 +79,7 @@ namespace MathildaLib
 		}
 
 		public static void Multiply (SearchModule.Search search) {
-			var node = search.Node;
-			var list = node as ListNode;
+			var list = search.ActiveNode as ListNode;
 			if (list == null) {
 				return;
 			}
@@ -88,11 +87,11 @@ namespace MathildaLib
 				return;
 			}
 			
-			ListNode.ForeachPairDelegate multiply = (int i, int j) => {
+			ListNode.ForEachPairDelegate multiply = (int i, int j) => {
 				var op = new MultiplyOperator (i, j);
 				search.Alternative (op);
 			};
-			list.ForeachNeighborPair (multiply);
+			list.ForEachNeighborPair (multiply);
 		}
 	}
 }

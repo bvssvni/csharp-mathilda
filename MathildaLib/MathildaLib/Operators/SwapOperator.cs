@@ -26,17 +26,16 @@ namespace MathildaLib
 		}
 
 		public static void Swap (SearchModule.Search search) {
-			var node = search.Node;
-			var list = node as ListNode;
+			var list = search.ActiveNode;
 			if (list == null) {
 				return;
 			}
 
-			ListNode.ForeachPairDelegate swap = (int i, int j) => {
+			ListNode.ForEachPairDelegate swap = (int i, int j) => {
 				var op = new SwapOperator (i, j);
 				search.Alternative (op);
 			};
-			list.ForeachPair (swap);
+			list.ForEachPair (swap);
 		}
 	}
 }

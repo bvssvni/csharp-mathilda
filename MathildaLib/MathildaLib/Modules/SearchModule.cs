@@ -30,23 +30,55 @@ namespace MathildaLib
 		public struct Search {
 			public SortedList<Node, bool> History;
 			public Node Node;
+			public ListNode.Address Address;
 			public SortedList<Node, Operator> States;
 
+			public ListNode ActiveNode {
+				get {
+					return Address == null 
+						? Node as ListNode :
+							((ListNode)Node) [Address] as ListNode;
+				}
+			}
+
 			public void Alternative (Operator op) {
-				if (!op.Can (Node)) {
-					return;
+				if (Address == null) {
+					// Get operator directly on node.
+					if (!op.Can (Node)) {
+						return;
+					}
+					
+					var copy = Node.Copy ();
+					op.Do (ref copy);
+					if (History.ContainsKey (copy)) {
+						return;
+					}
+					if (States.ContainsKey (copy)) {
+						return;
+					}
+					
+					States.Add (copy, op);
+				} else {
+					// Get operator on sub nodes of node.
+					var list = Node as ListNode;
+					var subNode = list [Address];
+					if (!op.Can (subNode)) {
+						return;
+					}
+
+					var copy = Node.Copy () as ListNode;
+					subNode = copy [Address];
+					op.Do (ref subNode);
+					copy [Address] = subNode;
+					if (History.ContainsKey (copy)) {
+						return;
+					}
+					if (States.ContainsKey (copy)) {
+						return;
+					}
+
+					States.Add (copy, op);
 				}
-				
-				var copy = Node.Copy ();
-				op.Do (ref copy);
-				if (History.ContainsKey (copy)) {
-					return;
-				}
-				if (States.ContainsKey (copy)) {
-					return;
-				}
-				
-				States.Add (copy, op);
 			}
 		}
 
@@ -68,6 +100,21 @@ namespace MathildaLib
 			int n = operators.Length;
 			for (int i = 0; i < n; i++) {
 				operators [i] (search);
+			}
+
+			var list = node as ListNode;
+			if (list != null) {
+				list.ForEachNode ((ListNode.Address address) => {
+					var subSearch = new Search () {
+						History = history,
+						Node = list,
+						Address = address,
+						States = states
+					};
+					for (int i = 0; i < n; i++) {
+						operators [i] (subSearch);
+					}
+				});
 			}
 
 			while (states.Count > 0) {

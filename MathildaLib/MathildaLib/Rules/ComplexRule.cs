@@ -15,7 +15,7 @@ namespace MathildaLib
 
 		public override void Operator(SearchModule.Search search)
 		{
-			var list = search.Node as ListNode;
+			var list = search.ActiveNode as ListNode;
 			if (list == null) {
 				return;
 			}
@@ -23,7 +23,7 @@ namespace MathildaLib
 				return;
 			}
 
-			list.ForeachNeighborPair ((int i, int j) => {
+			list.ForEachNeighborPair ((int i, int j) => {
 				var a = list.List [i] as VariableNode;
 				var b = list.List [j] as VariableNode;
 				if (a == null || b == null) {
