@@ -40,66 +40,6 @@ namespace MathildaLib
 		{
 			return m_value.ToString (System.Globalization.CultureInfo.InvariantCulture);
 		}
-
-		public ListNode Add (double b) {
-			var list = new ListNode (ListNode.ListOperation.Sum,
-			                         new List<Node> () {
-				this,
-				new NumberNode (b)});
-			return list;
-		}
-
-		public ListNode Multiply (double b) {
-			var list = new ListNode (ListNode.ListOperation.Multiply,
-			                         new List<Node> () {
-				this,
-				new NumberNode (b)});
-			return list;
-		}
-
-		public ListNode Add (NumberNode b) {
-			var list = new ListNode (ListNode.ListOperation.Sum,
-			                         new List<Node> () {
-				this, b});
-			return list;
-		}
-
-		public ListNode Multiply (NumberNode b) {
-			var list = new ListNode (ListNode.ListOperation.Multiply,
-			                         new List<Node> () {
-				this, b});
-			return list;
-		}
-
-		public ListNode Add (string b) {
-			var list = new ListNode (ListNode.ListOperation.Sum,
-			                         new List<Node> () {
-				this,
-				new VariableNode (b)});
-			return list;
-		}
-
-		public ListNode Multiply (string b) {
-			var list = new ListNode (ListNode.ListOperation.Multiply,
-			                         new List<Node> () {
-				this,
-				new VariableNode (b)});
-			return list;
-		}
-
-		public ListNode Add (VariableNode b) {
-			var list = new ListNode (ListNode.ListOperation.Sum,
-			                         new List<Node> () {
-				this, b});
-			return list;
-		}
-
-		public ListNode Multiply (VariableNode b) {
-			var list = new ListNode (ListNode.ListOperation.Multiply,
-			                         new List<Node> () {
-				this, b});
-			return list;
-		}
 	}
 }
 

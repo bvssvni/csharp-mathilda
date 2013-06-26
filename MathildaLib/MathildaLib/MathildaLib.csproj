@@ -55,6 +55,8 @@
     <Compile Include="Operators\ZeroMultiplyOperator.cs" />
     <Compile Include="Operators\ZeroAddOperator.cs" />
     <Compile Include="Operators\ProductOperator.cs" />
+    <Compile Include="Modules\AddExtensionModule.cs" />
+    <Compile Include="Modules\MultiplyExtensionModule.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

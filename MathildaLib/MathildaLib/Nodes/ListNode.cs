@@ -96,6 +96,33 @@ namespace MathildaLib
 			}
 		}
 
+		/*
+		public void Flatten () {
+			int n = m_list.Count;
+			var firstNumberIndex = -1;
+			for (int i = 0; i < n - 1; i++) {
+				if (m_list [i] is ListNode && ((ListNode)m_list [i]).m_listOperation == ListOperation.Sum) {
+					firstNumberIndex = i;
+					break;
+				}
+			}
+
+			if (firstNumberIndex == -1) {
+				return;
+			}
+
+			var subList = ((ListNode)m_list [firstNumberIndex]).m_list;
+			var newList = new List<Node> ();
+			int m = subList.Count;
+			for (int j = 0; j < m; j++) {
+				var subItem = subList [j];
+				for (int i = 0; i < n; i++) {
+
+				}
+			}
+		}
+		*/
+
 		public void RemoveZeroes () {
 			int n = m_list.Count;
 			for (int i = 0; i < n; i++) {
