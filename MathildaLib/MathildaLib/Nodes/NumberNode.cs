@@ -41,63 +41,63 @@ namespace MathildaLib
 			return m_value.ToString (System.Globalization.CultureInfo.InvariantCulture);
 		}
 
-		public static ListNode operator + (NumberNode a, double b) {
+		public ListNode Add (double b) {
 			var list = new ListNode (ListNode.ListOperation.Sum,
 			                         new List<Node> () {
-				a,
+				this,
 				new NumberNode (b)});
 			return list;
 		}
 
-		public static ListNode operator * (NumberNode a, double b) {
+		public ListNode Multiply (double b) {
 			var list = new ListNode (ListNode.ListOperation.Multiply,
 			                         new List<Node> () {
-				a,
+				this,
 				new NumberNode (b)});
 			return list;
 		}
 
-		public static ListNode operator + (NumberNode a, NumberNode b) {
+		public ListNode Add (NumberNode b) {
 			var list = new ListNode (ListNode.ListOperation.Sum,
 			                         new List<Node> () {
-				a, b});
+				this, b});
 			return list;
 		}
 
-		public static ListNode operator * (NumberNode a, NumberNode b) {
+		public ListNode Multiply (NumberNode b) {
 			var list = new ListNode (ListNode.ListOperation.Multiply,
 			                         new List<Node> () {
-				a, b});
+				this, b});
 			return list;
 		}
 
-		public static ListNode operator + (NumberNode a, string b) {
+		public ListNode Add (string b) {
 			var list = new ListNode (ListNode.ListOperation.Sum,
 			                         new List<Node> () {
-				a,
+				this,
 				new VariableNode (b)});
 			return list;
 		}
 
-		public static ListNode operator * (NumberNode a, string b) {
+		public ListNode Multiply (string b) {
 			var list = new ListNode (ListNode.ListOperation.Multiply,
 			                         new List<Node> () {
-				a,
+				this,
 				new VariableNode (b)});
 			return list;
 		}
 
-		public static ListNode operator + (NumberNode a, VariableNode b) {
+		public ListNode Add (VariableNode b) {
 			var list = new ListNode (ListNode.ListOperation.Sum,
 			                         new List<Node> () {
-				a, b});
+				this, b});
 			return list;
 		}
 
-		public static ListNode operator * (NumberNode a, VariableNode b) {
+		public ListNode Multiply (VariableNode b) {
 			var list = new ListNode (ListNode.ListOperation.Multiply,
 			                         new List<Node> () {
-				a, b});
+				this, b});
 			return list;
 		}
 	}
