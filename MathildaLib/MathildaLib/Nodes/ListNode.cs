@@ -9,7 +9,8 @@ namespace MathildaLib
 		public enum ListOperation : int
 		{
 			List = 0,
-			Sum = 1
+			Sum = 1,
+			Multiply = 2,
 		}
 
 		private ListOperation m_listOperation;

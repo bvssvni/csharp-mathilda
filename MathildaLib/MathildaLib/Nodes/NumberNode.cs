@@ -49,8 +49,23 @@ namespace MathildaLib
 			return list;
 		}
 
+		public static ListNode operator * (NumberNode a, double b) {
+			var list = new ListNode (ListNode.ListOperation.Multiply,
+			                         new List<Node> () {
+				a,
+				new NumberNode (b)});
+			return list;
+		}
+
 		public static ListNode operator + (NumberNode a, NumberNode b) {
 			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<Node> () {
+				a, b});
+			return list;
+		}
+
+		public static ListNode operator * (NumberNode a, NumberNode b) {
+			var list = new ListNode (ListNode.ListOperation.Multiply,
 			                         new List<Node> () {
 				a, b});
 			return list;
@@ -64,8 +79,23 @@ namespace MathildaLib
 			return list;
 		}
 
+		public static ListNode operator * (NumberNode a, string b) {
+			var list = new ListNode (ListNode.ListOperation.Multiply,
+			                         new List<Node> () {
+				a,
+				new VariableNode (b)});
+			return list;
+		}
+
 		public static ListNode operator + (NumberNode a, VariableNode b) {
 			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<Node> () {
+				a, b});
+			return list;
+		}
+
+		public static ListNode operator * (NumberNode a, VariableNode b) {
+			var list = new ListNode (ListNode.ListOperation.Multiply,
 			                         new List<Node> () {
 				a, b});
 			return list;
