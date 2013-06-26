@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace MathildaLib
 {
@@ -38,6 +39,14 @@ namespace MathildaLib
 		public override string ToString()
 		{
 			return m_value.ToString (System.Globalization.CultureInfo.InvariantCulture);
+		}
+
+		public static ListNode operator + (NumberNode a, double b) {
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<Node> () {
+				a,
+				new NumberNode (b)});
+			return list;
 		}
 	}
 }

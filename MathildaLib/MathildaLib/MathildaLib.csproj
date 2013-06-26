@@ -50,6 +50,7 @@
     <Compile Include="Modules\NodeTypeModule.cs" />
     <Compile Include="Modules\EqualityModule.cs" />
     <Compile Include="Tests\TestEqualityModule.cs" />
+    <Compile Include="Tests\TestOperatorOverloading.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
