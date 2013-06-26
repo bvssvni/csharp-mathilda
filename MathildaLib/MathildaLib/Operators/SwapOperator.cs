@@ -23,12 +23,6 @@ namespace MathildaLib
 			var list = node as ListNode;
 			list.Swap (m_i, m_j);
 		}
-
-		public override void Undo(Node node)
-		{
-			var list = node as ListNode;
-			list.Swap (m_j, m_i);
-		}
 	}
 }
 

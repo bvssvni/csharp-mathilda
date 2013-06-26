@@ -15,7 +15,7 @@ namespace MathildaLib
 			Assert.True (a.CompareTo (b) == 1);
 			Assert.True (b.CompareTo (a) == -1);
 
-			var c = new ListNode (new List<Node> ());
+			var c = new ListNode (ListNode.ListOperation.List, new List<Node> ());
 			Assert.True (a.CompareTo (c) == 2);
 		}
 	}

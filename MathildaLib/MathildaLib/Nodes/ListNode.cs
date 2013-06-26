@@ -6,10 +6,24 @@ namespace MathildaLib
 {
 	public class ListNode : Node
 	{
+		public enum ListOperation
+		{
+			List,
+			Sum
+		}
+
+		private ListOperation m_listOperation;
 		private List<Node> m_list;
 
-		public ListNode(List<Node> list)
+		public ListOperation Operation {
+			get {
+				return m_listOperation;
+			}
+		}
+
+		public ListNode(ListOperation listOperation, List<Node> list)
 		{
+			m_listOperation = listOperation;
 			m_list = list;
 		}
 
@@ -17,6 +31,33 @@ namespace MathildaLib
 			var tmp = m_list [i];
 			m_list [i] = m_list [j];
 			m_list [j] = tmp;
+		}
+
+		public void Sum () {
+			int n = m_list.Count;
+			var firstNumberIndex = -1;
+			for (int i = 0; i < n - 1; i++) {
+				if (m_list [i] is NumberNode) {
+					firstNumberIndex = i;
+				}
+			}
+
+			if (firstNumberIndex == -1) {
+				return;
+			}
+
+			var a = m_list [firstNumberIndex] as NumberNode;
+			for (int i = firstNumberIndex + 1; i < n; i++) {
+				var b = m_list [i] as NumberNode;
+				if (b == null) {
+					continue;
+				}
+
+				a.Value += b.Value;
+				m_list.RemoveAt (i);
+				n--;
+				i--;
+			}
 		}
 
 		public delegate void ForeachPairDelegate (int i, int j);
@@ -37,7 +78,7 @@ namespace MathildaLib
 				newList.Add (item.Copy ());
 			}
 
-			return new ListNode (newList);
+			return new ListNode (m_listOperation, newList);
 		}
 
 		public override int CompareTo(Node other)

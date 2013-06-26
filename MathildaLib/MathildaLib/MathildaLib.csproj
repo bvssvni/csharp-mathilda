@@ -45,6 +45,8 @@
     <Compile Include="Operators\SwapOperator.cs" />
     <Compile Include="Modules\SwapModule.cs" />
     <Compile Include="Tests\TestSwapModule.cs" />
+    <Compile Include="Operators\SumOperator.cs" />
+    <Compile Include="Tests\TestSum.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

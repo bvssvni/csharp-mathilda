@@ -9,6 +9,7 @@ namespace MathildaLib
 		                         Dictionary<Node, bool> history = null) {
 			if (history == null) {
 				history = new Dictionary<Node, bool> ();
+				history.Add (node, true);
 			}
 
 			var list = node as ListNode;
@@ -18,8 +19,12 @@ namespace MathildaLib
 
 			var states = new SortedList<Node, Operator> ();
 			ListNode.ForeachPairDelegate swap = (int i, int j) => {
-				var copy = list.Copy () as ListNode;
 				var op = new SwapOperator (i, j);
+				if (!op.Can (node)) {
+					return;
+				}
+
+				var copy = node.Copy () as ListNode;
 				op.Do (copy);
 				if (history.ContainsKey (copy)) {
 					return;
