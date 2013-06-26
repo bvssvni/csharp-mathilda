@@ -164,12 +164,7 @@ namespace MathildaLib
 
 		public static ListNode Multiply (this VariableNode a, ListNode b) {
 			if (b.Operation == ListNode.ListOperation.List) {
-				var list = new List<Node> ();
-				foreach (var item in b.List) {
-					list.Add (a.Multiply (item));
-				}
-				
-				return new ListNode (ListNode.ListOperation.List, list);
+				return new ListNode (ListNode.ListOperation.Product, a, b);
 			}
 			if (b.Operation == ListNode.ListOperation.Sum) {
 				var list = new List<Node> ();
