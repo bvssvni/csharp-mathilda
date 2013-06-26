@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace MathildaLib
 {
-	public class SumOperator : Operator
+	public class LiftOperator : Operator
 	{
-		public SumOperator()
+		public LiftOperator()
 		{
 		}
 
@@ -15,25 +15,30 @@ namespace MathildaLib
 			if (list == null) {
 				return false;
 			}
+			if (list.List.Count != 1) {
+				return false;
+			}
+			if (list.Operation == ListNode.ListOperation.List) {
+				return false;
+			}
 
-			return list.Operation == ListNode.ListOperation.Sum;
+			return true;
 		}
 
 		public override void Do(Node node, out Node result)
 		{
 			var list = node as ListNode;
-			list.Sum ();
-			result = list;
+			result = list.List [0];
 		}
 
-		public static void Sum (SortedList<Node, Operator> states, 
-		                        Node node, 
-		                        SortedList<Node, bool> history) {
-			var op = new SumOperator ();
+		public static void Lift (SortedList<Node, Operator> states, 
+		                  Node node, 
+		                  SortedList<Node, bool> history) {
+			var op = new LiftOperator ();
 			if (!op.Can (node)) {
 				return;
 			}
-
+			
 			var copy = node.Copy ();
 			op.Do (copy, out copy);
 			if (history.ContainsKey (copy)) {

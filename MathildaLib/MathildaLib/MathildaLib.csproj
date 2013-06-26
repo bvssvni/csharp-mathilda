@@ -51,6 +51,7 @@
     <Compile Include="Modules\EqualityModule.cs" />
     <Compile Include="Tests\TestEqualityModule.cs" />
     <Compile Include="Tests\TestOperations.cs" />
+    <Compile Include="Operators\LiftOperator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

@@ -20,6 +20,13 @@ namespace MathildaLib
 				new VariableNode ("a")});
 			Assert.True (a.IsEqualTo (b));
 		}
+
+		[Test()]
+		public void TestSumNumbers () {
+			var a = new NumberNode (1).Add (2).Add (3).Add (4);
+			var b = new NumberNode (10);
+			Assert.True (a.IsEqualTo (b));
+		}
 	}
 }
 

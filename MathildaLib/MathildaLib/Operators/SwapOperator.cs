@@ -19,10 +19,11 @@ namespace MathildaLib
 			return node is ListNode;
 		}
 
-		public override void Do(Node node)
+		public override void Do(Node node, out Node result)
 		{
 			var list = node as ListNode;
 			list.Swap (m_i, m_j);
+			result = list;
 		}
 
 		public static void Swap (SortedList<Node, Operator> states, 
@@ -39,8 +40,8 @@ namespace MathildaLib
 					return;
 				}
 				
-				var copy = node.Copy () as ListNode;
-				op.Do (copy);
+				var copy = node.Copy ();
+				op.Do (copy, out copy);
 				if (history.ContainsKey (copy)) {
 					return;
 				}

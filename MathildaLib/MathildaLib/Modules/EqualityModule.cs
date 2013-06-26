@@ -6,6 +6,8 @@ namespace MathildaLib
 	{
 		public static bool IsEqualTo (this Node a, Node b) {
 			var ops = new SearchModule.OperatorDelegate [] {
+				SumOperator.Sum,
+				LiftOperator.Lift,
 				SwapOperator.Swap,
 			};
 			a = a.Minimize (null, ops);

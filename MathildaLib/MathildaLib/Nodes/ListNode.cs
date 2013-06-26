@@ -22,6 +22,12 @@ namespace MathildaLib
 			}
 		}
 
+		public List<Node> List {
+			get {
+				return m_list;
+			}
+		}
+
 		public ListNode(ListOperation listOperation, List<Node> list)
 		{
 			m_listOperation = listOperation;
@@ -40,6 +46,7 @@ namespace MathildaLib
 			for (int i = 0; i < n - 1; i++) {
 				if (m_list [i] is NumberNode) {
 					firstNumberIndex = i;
+					break;
 				}
 			}
 
@@ -113,17 +120,45 @@ namespace MathildaLib
 		public override string ToString()
 		{
 			var strb = new StringBuilder ();
-			strb.Append ("{");
-			int n = m_list.Count;
-			for (int i = 0; i < n; i++) {
-				if (i != 0) {
-					strb.Append (",");
+
+			if (m_listOperation == ListOperation.List) {
+				strb.Append ("{");
+				int n = m_list.Count;
+				for (int i = 0; i < n; i++) {
+					if (i != 0) {
+						strb.Append (",");
+					}
+
+					strb.Append (m_list [i].ToString ());
 				}
 
-				strb.Append (m_list [i].ToString ());
+				strb.Append ("}");
+			} else if (m_listOperation == ListOperation.Sum) {
+				strb.Append ("(");
+				int n = m_list.Count;
+				for (int i = 0; i < n; i++) {
+					if (i != 0) {
+						strb.Append ("+");
+					}
+					
+					strb.Append (m_list [i].ToString ());
+				}
+				
+				strb.Append (")");
+			} else if (m_listOperation == ListOperation.Multiply) {
+				strb.Append ("(");
+				int n = m_list.Count;
+				for (int i = 0; i < n; i++) {
+					if (i != 0) {
+						strb.Append ("*");
+					}
+					
+					strb.Append (m_list [i].ToString ());
+				}
+				
+				strb.Append (")");
 			}
 
-			strb.Append ("}");
 			return strb.ToString ();
 		}
 

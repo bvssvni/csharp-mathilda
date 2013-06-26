@@ -21,7 +21,7 @@ namespace MathildaLib
 			var states = new SortedList<Node, Operator> ();
 			int n = operators.Length;
 			for (int i = 0; i < n; i++) {
-				SwapOperator.Swap (states, node, history);
+				operators [i] (states, node, history);
 			}
 
 			while (states.Count > 0) {
