@@ -6,10 +6,10 @@ namespace MathildaLib
 {
 	public class ListNode : Node
 	{
-		public enum ListOperation
+		public enum ListOperation : int
 		{
-			List,
-			Sum
+			List = 0,
+			Sum = 1
 		}
 
 		private ListOperation m_listOperation;
@@ -87,6 +87,11 @@ namespace MathildaLib
 			if (otherNode == null) {
 				// Return 2 to tell we do not know how to handle comparison.
 				return 2;
+			}
+
+			var compareOperation = m_listOperation.CompareTo (otherNode.m_listOperation);
+			if (compareOperation != 0) {
+				return compareOperation;
 			}
 
 			var compareCount = m_list.Count.CompareTo (otherNode.m_list.Count);

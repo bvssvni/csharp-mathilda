@@ -27,6 +27,14 @@ namespace MathildaLib
 				new NumberNode (1), new VariableNode ("hello")});
 			Assert.True (a.ToString () == "{1,hello}");
 		}
+
+		[Test()]
+		public void TestSumIsMoreThanList () {
+			var a = new ListNode (ListNode.ListOperation.List, new List<Node> ());
+			var b = new ListNode (ListNode.ListOperation.Sum, new List<Node> ());
+			Assert.True (a.CompareTo (b) == -1);
+			Assert.True (b.CompareTo (a) == 1);
+		}
 	}
 }
 
