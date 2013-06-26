@@ -29,8 +29,7 @@ namespace MathildaLib
 		{
 			var otherNode = other as NumberNode;
 			if (otherNode == null) {
-				// Return 2 to tell we do not know how to handle comparison.
-				return 2;
+				return this.TypeId ().CompareTo (other.TypeId ());
 			}
 
 			return m_value.CompareTo (otherNode.m_value);

@@ -47,6 +47,7 @@
     <Compile Include="Tests\TestSum.cs" />
     <Compile Include="Modules\SearchModule.cs" />
     <Compile Include="Tests\TestSearchModule.cs" />
+    <Compile Include="Modules\NodeTypeModule.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

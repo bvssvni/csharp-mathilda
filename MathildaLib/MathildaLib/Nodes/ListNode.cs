@@ -85,8 +85,7 @@ namespace MathildaLib
 		{
 			var otherNode = other as ListNode;
 			if (otherNode == null) {
-				// Return 2 to tell we do not know how to handle comparison.
-				return 2;
+				return this.TypeId ().CompareTo (other.TypeId ());
 			}
 
 			var compareOperation = m_listOperation.CompareTo (otherNode.m_listOperation);

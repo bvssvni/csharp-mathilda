@@ -18,7 +18,7 @@ namespace MathildaLib
 			Assert.True (b.CompareTo (a) == 1);
 
 			var c = new NumberNode (4);
-			Assert.True (a.CompareTo (c) == 2);
+			Assert.True (a.CompareTo (c) == 1);
 		}
 
 		[Test()]
