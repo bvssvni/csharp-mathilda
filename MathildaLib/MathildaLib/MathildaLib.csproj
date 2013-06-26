@@ -60,6 +60,11 @@
     <Compile Include="Modules\DotProductFlatteningModule.cs" />
     <Compile Include="Operators\ScalarProductOperator.cs" />
     <Compile Include="Operators\MultiplyOperator.cs" />
+    <Compile Include="Rules\Rule.cs" />
+    <Compile Include="Operators\ReplaceOperator.cs" />
+    <Compile Include="Rules\ComplexRule.cs" />
+    <Compile Include="Tests\TestComplexNumbers.cs" />
+    <Compile Include="Operators\MultiplyOneOperator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -67,5 +72,6 @@
     <Folder Include="Nodes\" />
     <Folder Include="Operators\" />
     <Folder Include="Modules\" />
+    <Folder Include="Rules\" />
   </ItemGroup>
 </Project>

@@ -4,9 +4,13 @@ namespace MathildaLib
 {
 	public static class EqualityModule
 	{
-		public static bool IsEqualTo (this Node a, Node b) {
-			a = a.Minimize (null, SearchModule.StandardOperations);
-			b = b.Minimize (null, SearchModule.StandardOperations);
+		public static bool IsEqualTo (this Node a, Node b, SearchModule.OperatorDelegate[] operators = null) {
+			if (operators == null) {
+				operators = SearchModule.CreateOperators ();
+			}
+
+			a = a.Minimize (null, operators);
+			b = b.Minimize (null, operators);
 			return a.CompareTo (b) == 0;
 		}
 	}

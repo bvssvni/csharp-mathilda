@@ -7,6 +7,12 @@ namespace MathildaLib
 	{
 		private string m_name;
 
+		public string Name {
+			get {
+				return m_name;
+			}
+		}
+
 		public VariableNode(string name)
 		{
 			m_name = name;

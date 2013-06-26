@@ -133,6 +133,24 @@ namespace MathildaLib
 			}
 		}
 
+		public void RemoveOnes () {
+			int n = m_list.Count;
+			for (int i = 0; i < n; i++) {
+				var item = m_list [i] as NumberNode;
+				if (item == null) {
+					continue;
+				}
+				
+				if (item.Value != 1) {
+					continue;
+				}
+				
+				m_list.RemoveAt (i);
+				n--;
+				i--;
+			}
+		}
+
 		public delegate void ForeachPairDelegate (int i, int j);
 
 		public void ForeachPair (ForeachPairDelegate f) {

@@ -7,15 +7,25 @@ namespace MathildaLib
 	{
 		public delegate void OperatorDelegate (Search search);
 
-		public static OperatorDelegate[] StandardOperations = new OperatorDelegate [] {
+		private static OperatorDelegate[] StandardOperations = new OperatorDelegate [] {
 			SumOperator.Sum,
 			ZeroMultiplyOperator.ZeroMultiply,
 			ZeroAddOperator.ZeroAdd,
+			MultiplyOneOperator.MultiplyOne,
 			ScalarProductOperator.Product,
 			MultiplyOperator.Multiply,
 			LiftOperator.Lift,
 			SwapOperator.Swap,
 		};
+
+		public static OperatorDelegate[] CreateOperators (params OperatorDelegate[] ops) {
+			int n = StandardOperations.Length + ops.Length;
+			var newOps = new OperatorDelegate [n];
+			StandardOperations.CopyTo (newOps, 0);
+			ops.CopyTo (newOps, StandardOperations.Length);
+
+			return newOps;
+		}
 
 		public struct Search {
 			public SortedList<Node, bool> History;
