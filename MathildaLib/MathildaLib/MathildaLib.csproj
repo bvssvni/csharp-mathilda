@@ -57,6 +57,8 @@
     <Compile Include="Operators\ProductOperator.cs" />
     <Compile Include="Modules\AddExtensionModule.cs" />
     <Compile Include="Modules\MultiplyExtensionModule.cs" />
+    <Compile Include="Tests\TestDotProduct.cs" />
+    <Compile Include="Modules\DotProductFlatteningModule.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

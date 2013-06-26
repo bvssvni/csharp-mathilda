@@ -34,6 +34,25 @@ namespace MathildaLib
 			m_list = list;
 		}
 
+		public ListNode (ListOperation listOperation, params Node[] items) {
+			m_listOperation = listOperation;
+			m_list = new List<Node> (items);
+		}
+
+		public ListNode (params Node[] items) {
+			m_listOperation = ListOperation.List;
+			m_list = new List<Node> (items);
+		}
+
+		public ListNode (params double[] numbers) {
+			m_listOperation = ListOperation.List;
+			int n = numbers.Length;
+			m_list = new List<Node> (n);
+			for (int i = 0; i < n; i++) {
+				m_list.Add (new NumberNode (numbers [i]));
+			}
+		}
+
 		public void Swap (int i, int j) {
 			var tmp = m_list [i];
 			m_list [i] = m_list [j];

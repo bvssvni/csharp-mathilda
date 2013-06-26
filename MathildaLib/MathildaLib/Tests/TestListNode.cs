@@ -35,6 +35,7 @@ namespace MathildaLib
 			Assert.True (a.CompareTo (b) == -1);
 			Assert.True (b.CompareTo (a) == 1);
 		}
+
 	}
 }
 
