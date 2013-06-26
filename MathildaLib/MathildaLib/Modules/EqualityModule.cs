@@ -8,6 +8,7 @@ namespace MathildaLib
 			var ops = new SearchModule.OperatorDelegate [] {
 				SumOperator.Sum,
 				ZeroMultiplyOperator.ZeroMultiply,
+				ZeroAddOperator.ZeroAdd,
 				LiftOperator.Lift,
 				SwapOperator.Swap,
 			};

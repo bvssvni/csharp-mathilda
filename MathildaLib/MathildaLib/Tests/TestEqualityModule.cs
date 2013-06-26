@@ -33,6 +33,19 @@ namespace MathildaLib
 			var a = new VariableNode ("a").Multiply (0);
 			var b = new NumberNode (0);
 			Assert.True (a.IsEqualTo (b));
+
+			var c = new VariableNode ("a").Add (0);
+			Assert.False (a.IsEqualTo (c));
+		}
+
+		[Test()]
+		public void TestZeroAdd () {
+			var a = new VariableNode ("a").Add (0);
+			var b = new VariableNode ("a");
+			Assert.True (a.IsEqualTo (b));
+
+			var c = new VariableNode ("a").Multiply (0);
+			Assert.False (c.IsEqualTo (b));
 		}
 	}
 }
