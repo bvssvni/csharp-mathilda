@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace MathildaLib
 {
@@ -22,6 +23,34 @@ namespace MathildaLib
 		{
 			var list = node as ListNode;
 			list.Swap (m_i, m_j);
+		}
+
+		public static void Swap (SortedList<Node, Operator> states, 
+		                         Node node, 
+		                         SortedList<Node, bool> history) {
+			var list = node as ListNode;
+			if (list == null) {
+				return;
+			}
+
+			ListNode.ForeachPairDelegate swap = (int i, int j) => {
+				var op = new SwapOperator (i, j);
+				if (!op.Can (node)) {
+					return;
+				}
+				
+				var copy = node.Copy () as ListNode;
+				op.Do (copy);
+				if (history.ContainsKey (copy)) {
+					return;
+				}
+				if (states.ContainsKey (copy)) {
+					return;
+				}
+				
+				states.Add (copy, op);
+			};
+			list.ForeachPair (swap);
 		}
 	}
 }

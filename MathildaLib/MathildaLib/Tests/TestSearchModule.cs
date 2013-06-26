@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace MathildaLib
 {
 	[TestFixture()]
-	public class TestSwapModule
+	public class TestSearchModule
 	{
 		[Test()]
 		public void TestCase()
@@ -14,7 +14,7 @@ namespace MathildaLib
 					new NumberNode (3),
 					new NumberNode (2),
 				new NumberNode (1)});
-			var b = SwapModule.Sort (a);
+			var b = a.Minimize ();
 			Console.WriteLine (b.ToString ());
 			var c = new ListNode (ListNode.ListOperation.List, new List<Node> () {
 				new NumberNode (1),
