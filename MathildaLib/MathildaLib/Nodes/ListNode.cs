@@ -125,6 +125,34 @@ namespace MathildaLib
 			strb.Append ("}");
 			return strb.ToString ();
 		}
+
+		public static ListNode operator + (ListNode a, double b) {
+			var items = new List<Node> (a.m_list);
+			items.Add (new NumberNode (b));
+			var list = new ListNode (ListOperation.Sum, items);
+			return list;
+		}
+
+		public static ListNode operator + (ListNode a, NumberNode b) {
+			var items = new List<Node> (a.m_list);
+			items.Add (b);
+			var list = new ListNode (ListOperation.Sum, items);
+			return list;
+		}
+
+		public static ListNode operator + (ListNode a, string b) {
+			var items = new List<Node> (a.m_list);
+			items.Add (new VariableNode (b));
+			var list = new ListNode (ListOperation.Sum, items);
+			return list;
+		}
+
+		public static ListNode operator + (ListNode a, VariableNode b) {
+			var items = new List<Node> (a.m_list);
+			items.Add (b);
+			var list = new ListNode (ListOperation.Sum, items);
+			return list;
+		}
 	}
 }
 

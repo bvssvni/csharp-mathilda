@@ -56,6 +56,32 @@ namespace MathildaLib
 			var c = new VariableNode ("a") + new VariableNode ("b");
 			Assert.True (c.CompareTo (b) == 0);
 		}
+
+		[Test()]
+		public void TestListAddNumber () {
+			var a = new ListNode (ListNode.ListOperation.List,
+			                      new List<Node> () {
+				new NumberNode (1)});
+			a += 2;
+			var b = new ListNode (ListNode.ListOperation.Sum,
+			                      new List<Node> () {
+				new NumberNode (1),
+				new NumberNode (2)});
+			Assert.True (a.CompareTo (b) == 0);
+		}
+
+		[Test()]
+		public void TestListAddVariable () {
+			var a = new ListNode (ListNode.ListOperation.List,
+			                      new List<Node> () {
+				new NumberNode (1)});
+			a += "a";
+			var b = new ListNode (ListNode.ListOperation.Sum,
+			                      new List<Node> () {
+				new NumberNode (1),
+				new VariableNode ("a")});
+			Assert.True (a.CompareTo (b) == 0);
+		}
 	}
 }
 
