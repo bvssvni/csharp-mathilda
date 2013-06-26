@@ -19,7 +19,7 @@ namespace MathildaLib
 	/// 		N	V	LL	SL	PL
 	/// 	N	2	2	3	2	3
 	/// 	V	2	2	3	2	3
-	/// 	LL	2	2	1
+	/// 	LL	2	2	-
 	/// 	SL
 	/// 	PL
 	/// 

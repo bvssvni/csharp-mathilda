@@ -19,11 +19,10 @@ namespace MathildaLib
 			return node is ListNode;
 		}
 
-		public override void Do(Node node, out Node result)
+		public override void Do(ref Node node)
 		{
 			var list = node as ListNode;
 			list.Swap (m_i, m_j);
-			result = list;
 		}
 
 		public static void Swap (SearchModule.Search search) {

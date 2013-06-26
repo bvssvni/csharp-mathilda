@@ -18,7 +18,7 @@ namespace MathildaLib
 				}
 				
 				var copy = Node.Copy ();
-				op.Do (copy, out copy);
+				op.Do (ref copy);
 				if (History.ContainsKey (copy)) {
 					return;
 				}

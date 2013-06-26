@@ -9,16 +9,13 @@ namespace MathildaLib
 				SumOperator.Sum,
 				ZeroMultiplyOperator.ZeroMultiply,
 				ZeroAddOperator.ZeroAdd,
-				ProductOperator.Product,
+				ScalarProductOperator.Product,
+				MultiplyOperator.Multiply,
 				LiftOperator.Lift,
 				SwapOperator.Swap,
 			};
 			a = a.Minimize (null, ops);
 			b = b.Minimize (null, ops);
-
-			// TEST
-			Console.WriteLine (a);
-			Console.WriteLine (b);
 
 			return a.CompareTo (b) == 0;
 		}

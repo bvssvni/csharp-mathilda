@@ -30,9 +30,9 @@ namespace MathildaLib
 			return false;
 		}
 
-		public override void Do(Node node, out Node result)
+		public override void Do(ref Node node)
 		{
-			result = new NumberNode (0);
+			node = new NumberNode (0);
 		}
 
 		public static void ZeroMultiply (SearchModule.Search search) {

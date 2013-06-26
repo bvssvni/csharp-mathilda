@@ -19,11 +19,10 @@ namespace MathildaLib
 			return list.Operation == ListNode.ListOperation.Sum;
 		}
 
-		public override void Do(Node node, out Node result)
+		public override void Do(ref Node node)
 		{
 			var list = node as ListNode;
 			list.Sum ();
-			result = list;
 		}
 
 		public static void Sum (SearchModule.Search search) {

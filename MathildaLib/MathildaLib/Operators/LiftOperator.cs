@@ -25,10 +25,10 @@ namespace MathildaLib
 			return true;
 		}
 
-		public override void Do(Node node, out Node result)
+		public override void Do(ref Node node)
 		{
 			var list = node as ListNode;
-			result = list.List [0];
+			node = list.List [0];
 		}
 
 		public static void Lift (SearchModule.Search search) {

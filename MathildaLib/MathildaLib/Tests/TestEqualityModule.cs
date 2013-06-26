@@ -55,7 +55,13 @@ namespace MathildaLib
 			Assert.False (c.IsEqualTo (b));
 		}
 
-		/*
+		[Test()]
+		public void TestMultiply () {
+			var a = new NumberNode (2).Multiply (5).Multiply (3);
+			var b = new NumberNode (30);
+			Assert.True (a.IsEqualTo (b));
+		}
+
 		[Test()]
 		public void TestNested1 () {
 			var a = new VariableNode ("a").Add ("b").Multiply ("c");
@@ -63,7 +69,6 @@ namespace MathildaLib
 				new VariableNode ("b").Multiply ("c"));
 			Assert.True (a.IsEqualTo (b));
 		}
-		*/
 	}
 }
 

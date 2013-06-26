@@ -2,9 +2,12 @@ using System;
 
 namespace MathildaLib
 {
-	public class ProductOperator : Operator
+	/// <summary>
+	/// Scalar product operator.
+	/// </summary>
+	public class ScalarProductOperator : Operator
 	{
-		public ProductOperator()
+		public ScalarProductOperator()
 		{
 		}
 
@@ -18,15 +21,14 @@ namespace MathildaLib
 			return list.Operation == ListNode.ListOperation.Product;
 		}
 
-		public override void Do(Node node, out Node result)
+		public override void Do(ref Node node)
 		{
 			var list = node as ListNode;
 			list.Product ();
-			result = list;
 		}
 
 		public static void Product (SearchModule.Search search) {
-			search.Alternative (new ProductOperator ());
+			search.Alternative (new ScalarProductOperator ());
 		}
 	}
 }

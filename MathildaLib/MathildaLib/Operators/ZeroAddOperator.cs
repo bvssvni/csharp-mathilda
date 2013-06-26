@@ -30,11 +30,10 @@ namespace MathildaLib
 			return false;
 		}
 
-		public override void Do(Node node, out Node result)
+		public override void Do(ref Node node)
 		{
 			var list = node as ListNode;
 			list.RemoveZeroes ();
-			result = list;
 		}
 
 		public static void ZeroAdd (SearchModule.Search search) {
