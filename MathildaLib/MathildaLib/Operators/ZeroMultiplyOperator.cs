@@ -14,7 +14,7 @@ namespace MathildaLib
 			if (list == null) {
 				return false;
 			}
-			if (list.Operation != ListNode.ListOperation.Multiply) {
+			if (list.Operation != ListNode.ListOperation.Product) {
 				return false;
 			}
 

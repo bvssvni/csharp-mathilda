@@ -64,6 +64,54 @@ namespace MathildaLib
 				a, b});
 			return list;
 		}
+
+		public static ListNode Add (this ListNode a, double b) {
+			if (a.Operation == ListNode.ListOperation.Sum) {
+				a.List.Add (new NumberNode (b));
+				return a;
+			}
+			
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<Node> () {
+				a, new NumberNode (b)});
+			return list;
+		}
+
+		public static ListNode Add (this ListNode a, Node b) {
+			if (a.Operation == ListNode.ListOperation.Sum) {
+				a.List.Add (b);
+				return a;
+			}
+			
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<Node> () {
+				a, b});
+			return list;
+		}
+
+		public static ListNode Add (this ListNode a, string b) {
+			if (a.Operation == ListNode.ListOperation.Sum) {
+				a.List.Add (new VariableNode (b));
+				return a;
+			}
+
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<Node> () {
+				a, new VariableNode (b)});
+			return list;
+		}
+
+		public static ListNode Add (this ListNode a, VariableNode b) {
+			if (a.Operation == ListNode.ListOperation.Sum) {
+				a.List.Add (b);
+				return a;
+			}
+			
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<Node> () {
+				a, b});
+			return list;
+		}
 	}
 }
 

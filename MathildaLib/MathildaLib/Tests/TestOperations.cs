@@ -24,7 +24,7 @@ namespace MathildaLib
 		public void TestNumberMultiplyNumber()
 		{
 			var a = new NumberNode (1).Multiply (2);
-			var b = new ListNode (ListNode.ListOperation.Multiply,
+			var b = new ListNode (ListNode.ListOperation.Product,
 			                      new List<Node> () {
 				new NumberNode (1),
 				new NumberNode (2)});
@@ -50,7 +50,7 @@ namespace MathildaLib
 		public void TestNumberMultiplyVariable ()
 		{
 			var a = new NumberNode (1).Multiply (new VariableNode ("a"));
-			var b = new ListNode (ListNode.ListOperation.Multiply,
+			var b = new ListNode (ListNode.ListOperation.Product,
 			                      new List<Node> () {
 				new NumberNode (1),
 				new VariableNode ("a")});
@@ -74,7 +74,7 @@ namespace MathildaLib
 		[Test()]
 		public void TestVariableMultiplyNumber () {
 			var a = new VariableNode ("a").Multiply (2);
-			var b = new ListNode (ListNode.ListOperation.Multiply,
+			var b = new ListNode (ListNode.ListOperation.Product,
 			                      new List<Node> () {
 				new VariableNode ("a"),
 				new NumberNode (2)});
@@ -98,7 +98,7 @@ namespace MathildaLib
 		[Test()]
 		public void TestVariableMultiplyVariable () {
 			var a = new VariableNode ("a").Multiply ("b");
-			var b = new ListNode (ListNode.ListOperation.Multiply,
+			var b = new ListNode (ListNode.ListOperation.Product,
 			                      new List<Node> () {
 				new VariableNode ("a"),
 				new VariableNode ("b")});
@@ -136,7 +136,7 @@ namespace MathildaLib
 		[Test()]
 		public void TestNumberAddNumberMultiplyNumber () {
 			var a = new NumberNode (1).Add (2).Multiply (3);
-			var b = new ListNode (ListNode.ListOperation.Multiply,
+			var b = new ListNode (ListNode.ListOperation.Product,
 			                      new List<Node> () {
 				new ListNode (ListNode.ListOperation.Sum,
 				              new List<Node> () {
@@ -151,7 +151,7 @@ namespace MathildaLib
 			var a = new NumberNode (1).Multiply (2).Add (3);
 			var b = new ListNode (ListNode.ListOperation.Sum,
 			                      new List<Node> () {
-				new ListNode (ListNode.ListOperation.Multiply,
+				new ListNode (ListNode.ListOperation.Product,
 				              new List<Node> () {
 					new NumberNode (1),
 					new NumberNode (2)}),
@@ -162,7 +162,7 @@ namespace MathildaLib
 		[Test()]
 		public void TestNumberAddNumberMultiplyVariable () {
 			var a = new NumberNode (1).Add (2).Multiply ("a");
-			var b = new ListNode (ListNode.ListOperation.Multiply,
+			var b = new ListNode (ListNode.ListOperation.Product,
 			                      new List<Node> () {
 				new ListNode (ListNode.ListOperation.Sum,
 				              new List<Node> () {
@@ -177,7 +177,7 @@ namespace MathildaLib
 			var a = new NumberNode (1).Multiply (2).Add ("a");
 			var b = new ListNode (ListNode.ListOperation.Sum,
 			                      new List<Node> () {
-				new ListNode (ListNode.ListOperation.Multiply,
+				new ListNode (ListNode.ListOperation.Product,
 				              new List<Node> () {
 					new NumberNode (1),
 					new NumberNode (2)}),

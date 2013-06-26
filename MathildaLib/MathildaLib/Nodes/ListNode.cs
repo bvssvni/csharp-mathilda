@@ -10,7 +10,7 @@ namespace MathildaLib
 		{
 			List = 0,
 			Sum = 1,
-			Multiply = 2,
+			Product = 2,
 		}
 
 		private ListOperation m_listOperation;
@@ -218,7 +218,7 @@ namespace MathildaLib
 				}
 				
 				strb.Append (")");
-			} else if (m_listOperation == ListOperation.Multiply) {
+			} else if (m_listOperation == ListOperation.Product) {
 				strb.Append ("(");
 				int n = m_list.Count;
 				for (int i = 0; i < n; i++) {
@@ -235,101 +235,7 @@ namespace MathildaLib
 			return strb.ToString ();
 		}
 
-		public ListNode Add (double b) {
-			if (m_listOperation == ListOperation.Sum) {
-				m_list.Add (new NumberNode (b));
-				return this;
-			}
 
-			var list = new ListNode (ListOperation.Sum,
-			                         new List<Node> () {
-				this, new NumberNode (b)});
-			return list;
-		}
-
-		public ListNode Multiply (double b) {
-			if (m_listOperation == ListOperation.Multiply) {
-				m_list.Add (new NumberNode (b));
-				return this;
-			}
-
-			var list = new ListNode (ListOperation.Multiply,
-			                         new List<Node> () {
-				this, new NumberNode (b)});
-			return list;
-		}
-
-		public ListNode Add (Node b) {
-			if (m_listOperation == ListOperation.Sum) {
-				m_list.Add (b);
-				return this;
-			}
-			
-			var list = new ListNode (ListOperation.Sum,
-			                         new List<Node> () {
-				this, b});
-			return list;
-		}
-
-		public ListNode Multiply (Node b) {
-			if (m_listOperation == ListOperation.Multiply) {
-				m_list.Add (b);
-				return this;
-			}
-			
-			var list = new ListNode (ListOperation.Multiply,
-			                         new List<Node> () {
-				this, b});
-			return list;
-		}
-
-		public ListNode Add (string b) {
-			if (m_listOperation == ListOperation.Sum) {
-				m_list.Add (new VariableNode (b));
-				return this;
-			}
-
-			var list = new ListNode (ListOperation.Sum,
-			                         new List<Node> () {
-				this, new VariableNode (b)});
-			return list;
-		}
-
-		public ListNode Add (VariableNode b) {
-			if (m_listOperation == ListOperation.Sum) {
-				m_list.Add (b);
-				return this;
-			}
-			
-			var list = new ListNode (ListOperation.Sum,
-			                         new List<Node> () {
-				this, b});
-			return list;
-		}
-
-		public ListNode Multiply (string b) {
-			if (m_listOperation == ListOperation.Multiply) {
-				m_list.Add (new VariableNode (b));
-				return this;
-			}
-
-			var list = new ListNode (ListOperation.Multiply,
-			                         new List<Node> () {
-				this, new VariableNode (b)});
-			return list;
-		}
-
-		public ListNode Multiply (VariableNode b) {
-			if (m_listOperation == ListOperation.Multiply) {
-				m_list.Add (b);
-				return this;
-			}
-			
-			var list = new ListNode (ListOperation.Multiply,
-			                         new List<Node> () {
-				this, b});
-			return list;
-		}
 	}
 }
 

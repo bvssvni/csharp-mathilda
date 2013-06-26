@@ -15,7 +15,7 @@ namespace MathildaLib
 				return false;
 			}
 			
-			return list.Operation == ListNode.ListOperation.Multiply;
+			return list.Operation == ListNode.ListOperation.Product;
 		}
 
 		public override void Do(Node node, out Node result)
