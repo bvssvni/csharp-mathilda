@@ -14,7 +14,7 @@ namespace MathildaLib
 	/// 
 	/// 		N	V	LL	SL	PL
 	/// 	N	2	2	2	2	2
-	/// 	V	2	2	2	2	2
+	/// 	V	2	2	3	2	3
 	/// 	LL	2	2	1
 	/// 	SL
 	/// 	PL
@@ -163,23 +163,12 @@ namespace MathildaLib
 		}
 
 		public static ListNode Multiply (this VariableNode a, ListNode b) {
-			if (b.Operation == ListNode.ListOperation.List) {
-				return new ListNode (ListNode.ListOperation.Product, a, b);
-			}
-			if (b.Operation == ListNode.ListOperation.Sum) {
-				var list = new List<Node> ();
-				foreach (var item in b.List) {
-					list.Add (a.Multiply (item));
-				}
-				
-				return new ListNode (ListNode.ListOperation.Sum, list);
-			}
 			if (b.Operation == ListNode.ListOperation.Product) {
 				b.List.Insert (0, a);
 				return b;
 			}
-			
-			return null;
+
+			return new ListNode (ListNode.ListOperation.Product, a, b);
 		}
 
 		public static Node Multiply (this Node a, Node b) {
