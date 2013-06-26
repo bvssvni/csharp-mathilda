@@ -9,6 +9,7 @@ namespace MathildaLib
 				SumOperator.Sum,
 				ZeroMultiplyOperator.ZeroMultiply,
 				ZeroAddOperator.ZeroAdd,
+				ProductOperator.Product,
 				LiftOperator.Lift,
 				SwapOperator.Swap,
 			};

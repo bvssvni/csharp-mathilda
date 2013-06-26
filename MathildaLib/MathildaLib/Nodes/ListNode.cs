@@ -68,6 +68,34 @@ namespace MathildaLib
 			}
 		}
 
+		public void Product () {
+			int n = m_list.Count;
+			var firstNumberIndex = -1;
+			for (int i = 0; i < n - 1; i++) {
+				if (m_list [i] is NumberNode) {
+					firstNumberIndex = i;
+					break;
+				}
+			}
+			
+			if (firstNumberIndex == -1) {
+				return;
+			}
+			
+			var a = m_list [firstNumberIndex] as NumberNode;
+			for (int i = firstNumberIndex + 1; i < n; i++) {
+				var b = m_list [i] as NumberNode;
+				if (b == null) {
+					continue;
+				}
+				
+				a.Value *= b.Value;
+				m_list.RemoveAt (i);
+				n--;
+				i--;
+			}
+		}
+
 		public void RemoveZeroes () {
 			int n = m_list.Count;
 			for (int i = 0; i < n; i++) {
