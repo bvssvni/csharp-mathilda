@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace MathildaLib
 {
 	[TestFixture()]
-	public class TestOperatorOverloading
+	public class TestOperations
 	{
 		[Test()]
 		public void TestNumberAddNumber()
@@ -130,6 +130,32 @@ namespace MathildaLib
 			                      new List<Node> () {
 				new NumberNode (1),
 				new VariableNode ("a")});
+			Assert.True (a.CompareTo (b) == 0);
+		}
+
+		[Test()]
+		public void TestNumberAddNumberMultiplyNumber () {
+			var a = new NumberNode (1).Add (2).Multiply (3);
+			var b = new ListNode (ListNode.ListOperation.Multiply,
+			                      new List<Node> () {
+				new ListNode (ListNode.ListOperation.Sum,
+				              new List<Node> () {
+					new NumberNode (1),
+					new NumberNode (2)}),
+				new NumberNode (3)});
+			Assert.True (a.CompareTo (b) == 0);
+		}
+
+		[Test()]
+		public void TestNumberMultiplyNumberAddNumber () {
+			var a = new NumberNode (1).Multiply (2).Add (3);
+			var b = new ListNode (ListNode.ListOperation.Sum,
+			                      new List<Node> () {
+				new ListNode (ListNode.ListOperation.Multiply,
+				              new List<Node> () {
+					new NumberNode (1),
+					new NumberNode (2)}),
+				new NumberNode (3)});
 			Assert.True (a.CompareTo (b) == 0);
 		}
 	}

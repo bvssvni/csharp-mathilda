@@ -128,13 +128,51 @@ namespace MathildaLib
 		}
 
 		public ListNode Add (double b) {
-			m_list.Add (new NumberNode (b));
-			return this;
+			if (m_listOperation == ListOperation.Sum) {
+				m_list.Add (new NumberNode (b));
+				return this;
+			}
+
+			var list = new ListNode (ListOperation.Sum,
+			                         new List<Node> () {
+				this, new NumberNode (b)});
+			return list;
+		}
+
+		public ListNode Multiply (double b) {
+			if (m_listOperation == ListOperation.Multiply) {
+				m_list.Add (new NumberNode (b));
+				return this;
+			}
+
+			var list = new ListNode (ListOperation.Multiply,
+			                         new List<Node> () {
+				this, new NumberNode (b)});
+			return list;
 		}
 
 		public ListNode Add (Node b) {
-			m_list.Add (b);
-			return this;
+			if (m_listOperation == ListOperation.Sum) {
+				m_list.Add (b);
+				return this;
+			}
+			
+			var list = new ListNode (ListOperation.Sum,
+			                         new List<Node> () {
+				this, b});
+			return list;
+		}
+
+		public ListNode Multiply (Node b) {
+			if (m_listOperation == ListOperation.Multiply) {
+				m_list.Add (b);
+				return this;
+			}
+			
+			var list = new ListNode (ListOperation.Multiply,
+			                         new List<Node> () {
+				this, b});
+			return list;
 		}
 
 		public ListNode Add (string b) {
