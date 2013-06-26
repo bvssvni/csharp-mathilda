@@ -158,6 +158,32 @@ namespace MathildaLib
 				new NumberNode (3)});
 			Assert.True (a.CompareTo (b) == 0);
 		}
+
+		[Test()]
+		public void TestNumberAddNumberMultiplyVariable () {
+			var a = new NumberNode (1).Add (2).Multiply ("a");
+			var b = new ListNode (ListNode.ListOperation.Multiply,
+			                      new List<Node> () {
+				new ListNode (ListNode.ListOperation.Sum,
+				              new List<Node> () {
+					new NumberNode (1),
+					new NumberNode (2)}),
+				new VariableNode ("a")});
+			Assert.True (a.CompareTo (b) == 0);
+		}
+
+		[Test()]
+		public void TestNumberMultiplyNumberAddVariable () {
+			var a = new NumberNode (1).Multiply (2).Add ("a");
+			var b = new ListNode (ListNode.ListOperation.Sum,
+			                      new List<Node> () {
+				new ListNode (ListNode.ListOperation.Multiply,
+				              new List<Node> () {
+					new NumberNode (1),
+					new NumberNode (2)}),
+				new VariableNode ("a")});
+			Assert.True (a.CompareTo (b) == 0);
+		}
 	}
 }
 
