@@ -277,6 +277,11 @@ namespace MathildaLib
 				if (compareItem != 0) {
 					return compareItem;
 				}
+
+				var compareInverted = m_inverted [i].CompareTo (otherNode.m_inverted [i]);
+				if (compareInverted != 0) {
+					return compareInverted;
+				}
 			}
 
 			return 0;
@@ -330,6 +335,11 @@ namespace MathildaLib
 				var compareItem = m_list [i].CompareTo (otherNode.m_list [i]);
 				if (compareItem != 0) {
 					return compareItem;
+				}
+
+				var compareInverted = m_inverted [i].CompareTo (otherNode.m_inverted [i]);
+				if (compareInverted != 0) {
+					return compareInverted;
 				}
 			}
 

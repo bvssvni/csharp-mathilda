@@ -114,6 +114,14 @@ namespace MathildaLib
 			var b = new NumberNode (1);
 			Assert.True (a.IsEqualTo (b));
 		}
+
+		[Test()]
+		public void TestInvertedInequality () {
+			// a * b != a / b
+			var a = new VariableNode ("a").Multiply ("b");
+			var b = new VariableNode ("a").Divide ("b");
+			Assert.False (a.IsEqualTo (b));
+		}
 	}
 }
 
