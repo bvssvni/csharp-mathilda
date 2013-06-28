@@ -68,9 +68,6 @@
     <Compile Include="Operators\AddOperator.cs" />
     <Compile Include="Tests\TestCompareIgnoreScalar.cs" />
     <Compile Include="Tests\TestCompare.cs" />
-    <Compile Include="Nodes\ListBaseNode.cs" />
-    <Compile Include="Nodes\SumNode.cs" />
-    <Compile Include="Nodes\ProductNode.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

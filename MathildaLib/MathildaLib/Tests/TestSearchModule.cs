@@ -10,13 +10,13 @@ namespace MathildaLib
 		[Test()]
 		public void TestCase()
 		{
-			var a = new ListNode (new List<Node> () {
+			var a = new ListNode (ListNode.ListOperation.List, new List<Node> () {
 					new NumberNode (3),
 					new NumberNode (2),
 				new NumberNode (1)});
 			var b = a.Minimize (null, SwapOperator.Swap);
 			Console.WriteLine (b.ToString ());
-			var c = new ListNode (new List<Node> () {
+			var c = new ListNode (ListNode.ListOperation.List, new List<Node> () {
 				new NumberNode (1),
 				new NumberNode (2),
 				new NumberNode (3)});
