@@ -38,6 +38,14 @@ namespace MathildaLib
 			}
 		}
 
+		public void SetInverted (int index, bool value) {
+			m_inverted [index] = value;
+		}
+
+		public bool GetInverted (int index) {
+			return m_inverted [index];
+		}
+
 		private List<Node> List {
 			get {
 				return m_list;
@@ -48,37 +56,57 @@ namespace MathildaLib
 		{
 			m_listOperation = listOperation;
 			m_list = list;
+			m_inverted = new List<bool> ();
+			int n = list.Count;
+			for (int i = 0; i < n; i++) {
+				m_inverted.Add (false);
+			}
 		}
 
 		public ListNode (ListOperation listOperation, params Node[] items) {
 			m_listOperation = listOperation;
 			m_list = new List<Node> (items);
+			int n = m_list.Count;
+			m_inverted = new List<bool> ();
+			for (int i = 0; i < n; i++) {
+				m_inverted.Add (false);
+			}
 		}
 
 		public ListNode (params Node[] items) {
 			m_listOperation = ListOperation.List;
 			m_list = new List<Node> (items);
+			m_inverted = new List<bool> ();
+			int n = m_list.Count;
+			for (int i = 0; i < n; i++) {
+				m_inverted.Add (false);
+			}
 		}
 
 		public ListNode (params double[] numbers) {
 			m_listOperation = ListOperation.List;
 			int n = numbers.Length;
 			m_list = new List<Node> (n);
+			m_inverted = new List<bool> ();
 			for (int i = 0; i < n; i++) {
 				m_list.Add (new NumberNode (numbers [i]));
+				m_inverted.Add (false);
 			}
 		}
 
 		public void AddNode (Node node) {
 			m_list.Add (node);
+			m_inverted.Add (false);
 		}
 
 		public void InsertNode (int index, Node node) {
 			m_list.Insert (index, node);
+			m_inverted.Insert (index, false);
 		}
 
 		public void RemoveNodeAt (int index) {
 			m_list.RemoveAt (index);
+			m_inverted.RemoveAt (index);
 		}
 
 		public void Swap (int i, int j) {
@@ -109,7 +137,7 @@ namespace MathildaLib
 				}
 
 				a.Value += b.Value;
-				m_list.RemoveAt (i);
+				RemoveNodeAt (i);
 				n--;
 				i--;
 			}
@@ -137,7 +165,7 @@ namespace MathildaLib
 				}
 				
 				a.Value *= b.Value;
-				m_list.RemoveAt (i);
+				RemoveNodeAt (i);
 				n--;
 				i--;
 			}
@@ -155,7 +183,7 @@ namespace MathildaLib
 					continue;
 				}
 
-				m_list.RemoveAt (i);
+				RemoveNodeAt (i);
 				n--;
 				i--;
 			}
@@ -172,8 +200,8 @@ namespace MathildaLib
 				if (item.Value != 1) {
 					continue;
 				}
-				
-				m_list.RemoveAt (i);
+
+				RemoveNodeAt (i);
 				n--;
 				i--;
 			}
@@ -204,7 +232,13 @@ namespace MathildaLib
 				newList.Add (item.Copy ());
 			}
 
-			return new ListNode (m_listOperation, newList);
+			var list = new ListNode (m_listOperation, newList);
+			int n = newList.Count;
+			for (int i = 0; i < n; i++) {
+				list.m_inverted [i] = m_inverted [i];
+			}
+
+			return list;
 		}
 
 		public int CompareToIgnoreScalar (Node other)
@@ -324,7 +358,9 @@ namespace MathildaLib
 				strb.Append ("(");
 				int n = m_list.Count;
 				for (int i = 0; i < n; i++) {
-					if (i != 0) {
+					if (m_inverted [i]) {
+						strb.Append ("-");
+					} else {
 						strb.Append ("+");
 					}
 					
@@ -336,7 +372,9 @@ namespace MathildaLib
 				strb.Append ("(");
 				int n = m_list.Count;
 				for (int i = 0; i < n; i++) {
-					if (i != 0) {
+					if (m_inverted [i]) {
+						strb.Append ("/");
+					} else {
 						strb.Append ("*");
 					}
 					
@@ -383,6 +421,7 @@ namespace MathildaLib
 			var remainder = address.Count - i;
 			if (remainder == 1) {
 				m_list [address [i]] = node;
+				m_inverted [address [i]] = false;
 			} else {
 				var subList = m_list [address [i]] as ListNode;
 				subList.SetByAddress (address, node, i + 1);

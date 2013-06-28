@@ -26,6 +26,12 @@ namespace MathildaLib
 			var a = new ListNode (ListNode.ListOperation.List, new List<Node> () {
 				new NumberNode (1), new VariableNode ("hello")});
 			Assert.True (a.ToString () == "List {1,hello}");
+
+			var b = new NumberNode (1).Add (1);
+			Assert.True (b.ToString () == "Sum (+1+1)");
+
+			var c = new NumberNode (1).Subtract (2);
+			Assert.True (c.ToString () == "Sum (+1-2)");
 		}
 
 		[Test()]
