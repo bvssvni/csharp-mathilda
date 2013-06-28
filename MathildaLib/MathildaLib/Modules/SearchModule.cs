@@ -15,6 +15,7 @@ namespace MathildaLib
 			ScalarProductOperator.Product,
 			MultiplyOperator.Multiply,
 			AddOperator.Add,
+			CancelVariableOperator.CancelVariable,
 			LiftOperator.Lift,
 			SwapOperator.Swap,
 		};

@@ -98,6 +98,22 @@ namespace MathildaLib
 			var b = new NumberNode (2).Multiply ("a");
 			Assert.True (a.IsEqualTo (b));
 		}
+
+		[Test()]
+		public void TestVariableCancellingSum () {
+			// a - a = 0
+			var a = new VariableNode ("a").Subtract ("a");
+			var b = new NumberNode (0);
+			Assert.True (a.IsEqualTo (b));
+		}
+
+		[Test()]
+		public void TestVariableCancellingProduct () {
+			// a / a = 1
+			var a = new VariableNode ("a").Divide ("a");
+			var b = new NumberNode (1);
+			Assert.True (a.IsEqualTo (b));
+		}
 	}
 }
 

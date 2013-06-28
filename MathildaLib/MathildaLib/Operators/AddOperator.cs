@@ -22,6 +22,10 @@ namespace MathildaLib
 			if (list.Operation != ListNode.ListOperation.Sum) {
 				return false;
 			}
+			if (list.GetInverted (m_i) != list.GetInverted (m_j)) {
+				// Do not add nodes that are not in same direction.
+				return false;
+			}
 
 			return true;
 		}
