@@ -12,6 +12,12 @@ namespace MathildaLib
 				return 1;
 			}
 			if (obj is ListNode) {
+				if (obj is ProductListNode) {
+					return 3;
+				} else if (obj is SumListNode) {
+					return 4;
+				}
+
 				return 2;
 			}
 

@@ -6,21 +6,7 @@ namespace MathildaLib
 {
 	public class ListNode : Node
 	{
-		public enum ListOperation : int
-		{
-			List = 0,
-			Product = 1,
-			Sum = 2,
-		}
-
-		private ListOperation m_listOperation;
 		private List<Node> m_list;
-
-		public ListOperation Operation {
-			get {
-				return m_listOperation;
-			}
-		}
 
 		public List<Node> List {
 			get {
@@ -28,24 +14,16 @@ namespace MathildaLib
 			}
 		}
 
-		public ListNode(ListOperation listOperation, List<Node> list)
+		public ListNode(List<Node> list)
 		{
-			m_listOperation = listOperation;
 			m_list = list;
 		}
 
-		public ListNode (ListOperation listOperation, params Node[] items) {
-			m_listOperation = listOperation;
-			m_list = new List<Node> (items);
-		}
-
 		public ListNode (params Node[] items) {
-			m_listOperation = ListOperation.List;
 			m_list = new List<Node> (items);
 		}
 
 		public ListNode (params double[] numbers) {
-			m_listOperation = ListOperation.List;
 			int n = numbers.Length;
 			m_list = new List<Node> (n);
 			for (int i = 0; i < n; i++) {
