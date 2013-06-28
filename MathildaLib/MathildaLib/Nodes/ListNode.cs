@@ -4,17 +4,15 @@ using System.Collections.Generic;
 
 namespace MathildaLib
 {
-	public class ListNode : Node
+	public class ListNode : ListBaseNode
 	{
 		public enum ListOperation : int
 		{
 			List = 0,
-			Product = 1,
-			Sum = 2,
+			Product = 1
 		}
 
 		private ListOperation m_listOperation;
-		private List<Node> m_list;
 
 		public ListOperation Operation {
 			get {
@@ -22,26 +20,12 @@ namespace MathildaLib
 			}
 		}
 
-		public List<Node> List {
-			get {
-				return m_list;
-			}
-		}
-
-		public ListNode(ListOperation listOperation, List<Node> list)
+		public ListNode(List<Node> list) : base (list)
 		{
-			m_listOperation = listOperation;
-			m_list = list;
 		}
 
-		public ListNode (ListOperation listOperation, params Node[] items) {
-			m_listOperation = listOperation;
-			m_list = new List<Node> (items);
-		}
+		public ListNode (params Node[] items) : base (items) {
 
-		public ListNode (params Node[] items) {
-			m_listOperation = ListOperation.List;
-			m_list = new List<Node> (items);
 		}
 
 		public ListNode (params double[] numbers) {
@@ -176,7 +160,7 @@ namespace MathildaLib
 				newList.Add (item.Copy ());
 			}
 
-			return new ListNode (m_listOperation, newList);
+			return new ListNode (newList);
 		}
 
 		public int CompareToIgnoreScalar (Node other)
@@ -292,18 +276,6 @@ namespace MathildaLib
 				}
 
 				strb.Append ("}");
-			} else if (m_listOperation == ListOperation.Sum) {
-				strb.Append ("(");
-				int n = m_list.Count;
-				for (int i = 0; i < n; i++) {
-					if (i != 0) {
-						strb.Append ("+");
-					}
-					
-					strb.Append (m_list [i].ToString ());
-				}
-				
-				strb.Append (")");
 			} else if (m_listOperation == ListOperation.Product) {
 				strb.Append ("(");
 				int n = m_list.Count;
