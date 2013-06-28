@@ -71,6 +71,7 @@
     <Compile Include="Modules\SubtractExtensionModule.cs" />
     <Compile Include="Operators\CancelVariableOperator.cs" />
     <Compile Include="Modules\DivideExtensionModule.cs" />
+    <Compile Include="Tests\TestMultiply.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

@@ -1,0 +1,3634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <UnitTestResult>
+      <TestDate>2013-06-29T00:22:21</TestDate>
+      <Passed>50</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 0,41ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2013-06-29T00:24:25</TestDate>
+      <Passed>50</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 0,35ms</Message>
+    </UnitTestResult>
+  </Results>
+  <Tests>
+    <TestRecord Name="MathildaLib">
+      <Results>
+        <UnitTestResult>
+          <TestDate>2013-06-29T00:22:21</TestDate>
+          <Passed>50</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 0,40ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2013-06-29T00:24:25</TestDate>
+          <Passed>50</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 0,34ms</Message>
+        </UnitTestResult>
+      </Results>
+      <Tests>
+        <TestRecord Name="TestMultiply">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:22:21</TestDate>
+              <Passed>3</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,01ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:24:25</TestDate>
+              <Passed>3</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,01ms</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="TestMultiply3">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:00:31</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NullReferenceException : Object reference not set to an instance of an object</Message>
+                  <StackTrace>  at MathildaLib.ListNode.Copy () [0x0003c] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:248 
+  at MathildaLib.ListNode.Copy () [0x0003c] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:248 
+  at MathildaLib.SearchModule+Search.Alternative (MathildaLib.Operator op) [0x0001d] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:53 
+  at MathildaLib.MultiplyOneOperator.MultiplyOne (Search search) [0x00000] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOneOperator.cs:31 
+  at (wrapper delegate-invoke) &lt;Module&gt;:invoke_void__this___SearchModule/Search (MathildaLib.SearchModule/Search)
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00085] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:105 
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00106] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:127 
+  at MathildaLib.EqualityModule.IsEqualTo (MathildaLib.Node a, MathildaLib.Node b, .OperatorDelegate[] operators) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/EqualityModule.cs:12 
+  at MathildaLib.TestMultiply.TestMultiply3 () [0x00074] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Tests/TestMultiply.cs:43 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>Product (*2*Sum (+a+b))
+Sum (+Product (*2*a)+Product (*2*b))
+Is null! 0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:00:47</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NullReferenceException : Object reference not set to an instance of an object</Message>
+                  <StackTrace>  at MathildaLib.ListNode.Copy () [0x0003c] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:248 
+  at MathildaLib.ListNode.Copy () [0x0003c] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:248 
+  at MathildaLib.SearchModule+Search.Alternative (MathildaLib.Operator op) [0x0001d] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:53 
+  at MathildaLib.MultiplyOneOperator.MultiplyOne (Search search) [0x00000] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOneOperator.cs:31 
+  at (wrapper delegate-invoke) &lt;Module&gt;:invoke_void__this___SearchModule/Search (MathildaLib.SearchModule/Search)
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00085] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:105 
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00106] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:127 
+  at MathildaLib.EqualityModule.IsEqualTo (MathildaLib.Node a, MathildaLib.Node b, .OperatorDelegate[] operators) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/EqualityModule.cs:12 
+  at MathildaLib.TestMultiply.TestMultiply3 () [0x00074] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Tests/TestMultiply.cs:43 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>Product (*2*Sum (+a+b))
+Sum (+Product (*2*a)+Product (*2*b))
+Is null! 0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:02:17</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NullReferenceException : Object reference not set to an instance of an object</Message>
+                  <StackTrace>  at MathildaLib.ListNode.Copy () [0x0003c] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:243 
+  at MathildaLib.ListNode.Copy () [0x0003c] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:243 
+  at MathildaLib.SearchModule+Search.Alternative (MathildaLib.Operator op) [0x0001d] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:53 
+  at MathildaLib.MultiplyOneOperator.MultiplyOne (Search search) [0x00000] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOneOperator.cs:31 
+  at (wrapper delegate-invoke) &lt;Module&gt;:invoke_void__this___SearchModule/Search (MathildaLib.SearchModule/Search)
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00085] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:105 
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00106] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:127 
+  at MathildaLib.EqualityModule.IsEqualTo (MathildaLib.Node a, MathildaLib.Node b, .OperatorDelegate[] operators) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/EqualityModule.cs:12 
+  at MathildaLib.TestMultiply.TestMultiply3 () [0x00074] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Tests/TestMultiply.cs:36 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>Product (*2*Sum (+a+b))
+Sum (+Product (*2*a)+Product (*2*b))
+Is null! 0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:06:54</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Is null in constructor!</Message>
+                  <StackTrace>  at MathildaLib.ListNode..ctor (ListOperation listOperation, System.Collections.Generic.List`1 list) [0x0005b] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:69 
+  at MathildaLib.MultiplyOperator.Do (MathildaLib.Node&amp; node) [0x0013a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:61 
+  at MathildaLib.SearchModule+Search.Alternative (MathildaLib.Operator op) [0x00029] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:54 
+  at MathildaLib.MultiplyOperator+&lt;Multiply&gt;c__AnonStorey4.&lt;&gt;m__4 (Int32 i, Int32 j) [0x00008] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:96 
+  at MathildaLib.ListNode.ForEachNeighborPair (MathildaLib.ForEachPairDelegate f) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:232 
+  at MathildaLib.MultiplyOperator.Multiply (Search search) [0x0003a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:98 
+  at (wrapper delegate-invoke) &lt;Module&gt;:invoke_void__this___SearchModule/Search (MathildaLib.SearchModule/Search)
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00085] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:105 
+  at MathildaLib.EqualityModule.IsEqualTo (MathildaLib.Node a, MathildaLib.Node b, .OperatorDelegate[] operators) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/EqualityModule.cs:12 
+  at MathildaLib.TestMultiply.TestMultiply3 () [0x00074] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Tests/TestMultiply.cs:36 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>Product (*2*Sum (+a+b))
+Sum (+Product (*2*a)+Product (*2*b))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:07:37</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Is null in constructor!</Message>
+                  <StackTrace>  at MathildaLib.ListNode..ctor (ListOperation listOperation, System.Collections.Generic.List`1 list) [0x0005b] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:69 
+  at MathildaLib.MultiplyOperator.Do (MathildaLib.Node&amp; node) [0x0013a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:61 
+  at MathildaLib.SearchModule+Search.Alternative (MathildaLib.Operator op) [0x00029] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:54 
+  at MathildaLib.MultiplyOperator+&lt;Multiply&gt;c__AnonStorey4.&lt;&gt;m__4 (Int32 i, Int32 j) [0x00008] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:96 
+  at MathildaLib.ListNode.ForEachNeighborPair (MathildaLib.ForEachPairDelegate f) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:242 
+  at MathildaLib.MultiplyOperator.Multiply (Search search) [0x0003a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:98 
+  at (wrapper delegate-invoke) &lt;Module&gt;:invoke_void__this___SearchModule/Search (MathildaLib.SearchModule/Search)
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00085] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:105 
+  at MathildaLib.EqualityModule.IsEqualTo (MathildaLib.Node a, MathildaLib.Node b, .OperatorDelegate[] operators) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/EqualityModule.cs:12 
+  at MathildaLib.TestMultiply.TestMultiply3 () [0x00074] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Tests/TestMultiply.cs:36 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>Product (*2*Sum (+a+b))
+Sum (+Product (*2*a)+Product (*2*b))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:08:37</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Is null in constructor!</Message>
+                  <StackTrace>  at MathildaLib.ListNode..ctor (ListOperation listOperation, System.Collections.Generic.List`1 list) [0x0005b] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:69 
+  at MathildaLib.MultiplyOperator.Do (MathildaLib.Node&amp; node) [0x0013a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:61 
+  at MathildaLib.SearchModule+Search.Alternative (MathildaLib.Operator op) [0x00029] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:54 
+  at MathildaLib.MultiplyOperator+&lt;Multiply&gt;c__AnonStorey4.&lt;&gt;m__4 (Int32 i, Int32 j) [0x00008] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:96 
+  at MathildaLib.ListNode.ForEachNeighborPair (MathildaLib.ForEachPairDelegate f) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:252 
+  at MathildaLib.MultiplyOperator.Multiply (Search search) [0x0003a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:98 
+  at (wrapper delegate-invoke) &lt;Module&gt;:invoke_void__this___SearchModule/Search (MathildaLib.SearchModule/Search)
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00085] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:105 
+  at MathildaLib.EqualityModule.IsEqualTo (MathildaLib.Node a, MathildaLib.Node b, .OperatorDelegate[] operators) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/EqualityModule.cs:12 
+  at MathildaLib.TestMultiply.TestMultiply3 () [0x00074] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Tests/TestMultiply.cs:36 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>Product (*2*Sum (+a+b))
+Sum (+Product (*2*a)+Product (*2*b))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:09:04</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Is null in constructor!</Message>
+                  <StackTrace>  at MathildaLib.ListNode..ctor (ListOperation listOperation, System.Collections.Generic.List`1 list) [0x0005b] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:69 
+  at MathildaLib.MultiplyOperator.Do (MathildaLib.Node&amp; node) [0x0013a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:61 
+  at MathildaLib.SearchModule+Search.Alternative (MathildaLib.Operator op) [0x00029] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:54 
+  at MathildaLib.MultiplyOperator+&lt;Multiply&gt;c__AnonStorey4.&lt;&gt;m__4 (Int32 i, Int32 j) [0x00008] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:96 
+  at MathildaLib.ListNode.ForEachNeighborPair (MathildaLib.ForEachPairDelegate f) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:255 
+  at MathildaLib.MultiplyOperator.Multiply (Search search) [0x0003a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:98 
+  at (wrapper delegate-invoke) &lt;Module&gt;:invoke_void__this___SearchModule/Search (MathildaLib.SearchModule/Search)
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00085] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:105 
+  at MathildaLib.EqualityModule.IsEqualTo (MathildaLib.Node a, MathildaLib.Node b, .OperatorDelegate[] operators) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/EqualityModule.cs:12 
+  at MathildaLib.TestMultiply.TestMultiply3 () [0x00074] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Tests/TestMultiply.cs:36 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>Product (*2*Sum (+a+b))
+Sum (+Product (*2*a)+Product (*2*b))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:11:04</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Is null in constructor!</Message>
+                  <StackTrace>  at MathildaLib.ListNode..ctor (ListOperation listOperation, System.Collections.Generic.List`1 list) [0x0005b] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:74 
+  at MathildaLib.MultiplyOperator.Do (MathildaLib.Node&amp; node) [0x0013a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:61 
+  at MathildaLib.SearchModule+Search.Alternative (MathildaLib.Operator op) [0x00029] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:54 
+  at MathildaLib.MultiplyOperator+&lt;Multiply&gt;c__AnonStorey4.&lt;&gt;m__4 (Int32 i, Int32 j) [0x00008] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:96 
+  at MathildaLib.ListNode.ForEachNeighborPair (MathildaLib.ForEachPairDelegate f) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:260 
+  at MathildaLib.MultiplyOperator.Multiply (Search search) [0x0003a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:98 
+  at (wrapper delegate-invoke) &lt;Module&gt;:invoke_void__this___SearchModule/Search (MathildaLib.SearchModule/Search)
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00085] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:105 
+  at MathildaLib.EqualityModule.IsEqualTo (MathildaLib.Node a, MathildaLib.Node b, .OperatorDelegate[] operators) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/EqualityModule.cs:12 
+  at MathildaLib.TestMultiply.TestMultiply3 () [0x00074] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Tests/TestMultiply.cs:36 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>Product (*2*Sum (+a+b))
+Sum (+Product (*2*a)+Product (*2*b))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:13:29</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Is null in constructor!</Message>
+                  <StackTrace>  at MathildaLib.ListNode..ctor (ListOperation listOperation, System.Collections.Generic.List`1 list) [0x0005b] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:74 
+  at MathildaLib.MultiplyOperator.Do (MathildaLib.Node&amp; node) [0x0013a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:61 
+  at MathildaLib.SearchModule+Search.Alternative (MathildaLib.Operator op) [0x00029] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:54 
+  at MathildaLib.MultiplyOperator+&lt;Multiply&gt;c__AnonStorey4.&lt;&gt;m__4 (Int32 i, Int32 j) [0x00008] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:96 
+  at MathildaLib.ListNode.ForEachNeighborPair (MathildaLib.ForEachPairDelegate f) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:260 
+  at MathildaLib.MultiplyOperator.Multiply (Search search) [0x0003a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:98 
+  at (wrapper delegate-invoke) &lt;Module&gt;:invoke_void__this___SearchModule/Search (MathildaLib.SearchModule/Search)
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00085] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:105 
+  at MathildaLib.EqualityModule.IsEqualTo (MathildaLib.Node a, MathildaLib.Node b, .OperatorDelegate[] operators) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/EqualityModule.cs:12 
+  at MathildaLib.TestMultiply.TestMultiply3 () [0x00074] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Tests/TestMultiply.cs:36 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>Product (*2*Sum (+a+b))
+Sum (+Product (*2*a)+Product (*2*b))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:15:03</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : Is null in constructor!</Message>
+                  <StackTrace>  at MathildaLib.ListNode..ctor (ListOperation listOperation, System.Collections.Generic.List`1 list) [0x0005b] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:68 
+  at MathildaLib.MultiplyOperator.Do (MathildaLib.Node&amp; node) [0x0013a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:61 
+  at MathildaLib.SearchModule+Search.Alternative (MathildaLib.Operator op) [0x00029] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:54 
+  at MathildaLib.MultiplyOperator+&lt;Multiply&gt;c__AnonStorey4.&lt;&gt;m__4 (Int32 i, Int32 j) [0x00008] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:96 
+  at MathildaLib.ListNode.ForEachNeighborPair (MathildaLib.ForEachPairDelegate f) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:254 
+  at MathildaLib.MultiplyOperator.Multiply (Search search) [0x0003a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:98 
+  at (wrapper delegate-invoke) &lt;Module&gt;:invoke_void__this___SearchModule/Search (MathildaLib.SearchModule/Search)
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00085] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:105 
+  at MathildaLib.EqualityModule.IsEqualTo (MathildaLib.Node a, MathildaLib.Node b, .OperatorDelegate[] operators) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/EqualityModule.cs:12 
+  at MathildaLib.TestMultiply.TestMultiply3 () [0x00074] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Tests/TestMultiply.cs:36 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>Product (*2*Sum (+a+b))
+Sum (+Product (*2*a)+Product (*2*b))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:17:24</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : null!</Message>
+                  <StackTrace>  at MathildaLib.MultiplyOperator.Do (MathildaLib.Node&amp; node) [0x001f9] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:90 
+  at MathildaLib.SearchModule+Search.Alternative (MathildaLib.Operator op) [0x00029] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:54 
+  at MathildaLib.MultiplyOperator+&lt;Multiply&gt;c__AnonStorey4.&lt;&gt;m__4 (Int32 i, Int32 j) [0x00008] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:103 
+  at MathildaLib.ListNode.ForEachNeighborPair (MathildaLib.ForEachPairDelegate f) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:254 
+  at MathildaLib.MultiplyOperator.Multiply (Search search) [0x0003a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:105 
+  at (wrapper delegate-invoke) &lt;Module&gt;:invoke_void__this___SearchModule/Search (MathildaLib.SearchModule/Search)
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00085] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:105 
+  at MathildaLib.EqualityModule.IsEqualTo (MathildaLib.Node a, MathildaLib.Node b, .OperatorDelegate[] operators) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/EqualityModule.cs:12 
+  at MathildaLib.TestMultiply.TestMultiply3 () [0x00074] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Tests/TestMultiply.cs:36 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>Product (*2*Sum (+a+b))
+Sum (+Product (*2*a)+Product (*2*b))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:18:12</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at MathildaLib.MultiplyExtensionModule.Multiply (MathildaLib.Node a, MathildaLib.Node b) [0x00178] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/MultiplyExtensionModule.cs:205 
+  at MathildaLib.MultiplyOperator.Do (MathildaLib.Node&amp; node) [0x00103] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:56 
+  at MathildaLib.SearchModule+Search.Alternative (MathildaLib.Operator op) [0x00029] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:54 
+  at MathildaLib.MultiplyOperator+&lt;Multiply&gt;c__AnonStorey4.&lt;&gt;m__4 (Int32 i, Int32 j) [0x00008] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:103 
+  at MathildaLib.ListNode.ForEachNeighborPair (MathildaLib.ForEachPairDelegate f) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:254 
+  at MathildaLib.MultiplyOperator.Multiply (Search search) [0x0003a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:105 
+  at (wrapper delegate-invoke) &lt;Module&gt;:invoke_void__this___SearchModule/Search (MathildaLib.SearchModule/Search)
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00085] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:105 
+  at MathildaLib.EqualityModule.IsEqualTo (MathildaLib.Node a, MathildaLib.Node b, .OperatorDelegate[] operators) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/EqualityModule.cs:12 
+  at MathildaLib.TestMultiply.TestMultiply3 () [0x00074] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Tests/TestMultiply.cs:36 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>Product (*2*Sum (+a+b))
+Sum (+Product (*2*a)+Product (*2*b))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:18:32</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at MathildaLib.MultiplyExtensionModule.Multiply (MathildaLib.Node a, MathildaLib.Node b) [0x00184] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/MultiplyExtensionModule.cs:209 
+  at MathildaLib.MultiplyOperator.Do (MathildaLib.Node&amp; node) [0x00103] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:56 
+  at MathildaLib.SearchModule+Search.Alternative (MathildaLib.Operator op) [0x00029] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:54 
+  at MathildaLib.MultiplyOperator+&lt;Multiply&gt;c__AnonStorey4.&lt;&gt;m__4 (Int32 i, Int32 j) [0x00008] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:103 
+  at MathildaLib.ListNode.ForEachNeighborPair (MathildaLib.ForEachPairDelegate f) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:254 
+  at MathildaLib.MultiplyOperator.Multiply (Search search) [0x0003a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:105 
+  at (wrapper delegate-invoke) &lt;Module&gt;:invoke_void__this___SearchModule/Search (MathildaLib.SearchModule/Search)
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00085] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:105 
+  at MathildaLib.EqualityModule.IsEqualTo (MathildaLib.Node a, MathildaLib.Node b, .OperatorDelegate[] operators) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/EqualityModule.cs:12 
+  at MathildaLib.TestMultiply.TestMultiply3 () [0x00074] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Tests/TestMultiply.cs:36 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>Product (*2*Sum (+a+b))
+Sum (+Product (*2*a)+Product (*2*b))
+
+a
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:19:42</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Exception : a is null!</Message>
+                  <StackTrace>  at MathildaLib.MultiplyExtensionModule.Multiply (MathildaLib.Node a, MathildaLib.Node b) [0x001ac] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/MultiplyExtensionModule.cs:218 
+  at MathildaLib.MultiplyOperator.Do (MathildaLib.Node&amp; node) [0x00103] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:56 
+  at MathildaLib.SearchModule+Search.Alternative (MathildaLib.Operator op) [0x00029] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:54 
+  at MathildaLib.MultiplyOperator+&lt;Multiply&gt;c__AnonStorey4.&lt;&gt;m__4 (Int32 i, Int32 j) [0x00008] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:103 
+  at MathildaLib.ListNode.ForEachNeighborPair (MathildaLib.ForEachPairDelegate f) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:254 
+  at MathildaLib.MultiplyOperator.Multiply (Search search) [0x0003a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:105 
+  at (wrapper delegate-invoke) &lt;Module&gt;:invoke_void__this___SearchModule/Search (MathildaLib.SearchModule/Search)
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00085] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:105 
+  at MathildaLib.EqualityModule.IsEqualTo (MathildaLib.Node a, MathildaLib.Node b, .OperatorDelegate[] operators) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/EqualityModule.cs:12 
+  at MathildaLib.TestMultiply.TestMultiply3 () [0x00074] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Tests/TestMultiply.cs:36 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>Product (*2*Sum (+a+b))
+Sum (+Product (*2*a)+Product (*2*b))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:21:00</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at MathildaLib.MultiplyOperator.Do (MathildaLib.Node&amp; node) [0x001f3] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:89 
+  at MathildaLib.SearchModule+Search.Alternative (MathildaLib.Operator op) [0x00029] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:54 
+  at MathildaLib.MultiplyOperator+&lt;Multiply&gt;c__AnonStorey4.&lt;&gt;m__4 (Int32 i, Int32 j) [0x00008] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:103 
+  at MathildaLib.ListNode.ForEachNeighborPair (MathildaLib.ForEachPairDelegate f) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:254 
+  at MathildaLib.MultiplyOperator.Multiply (Search search) [0x0003a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:105 
+  at (wrapper delegate-invoke) &lt;Module&gt;:invoke_void__this___SearchModule/Search (MathildaLib.SearchModule/Search)
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00085] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:105 
+  at MathildaLib.EqualityModule.IsEqualTo (MathildaLib.Node a, MathildaLib.Node b, .OperatorDelegate[] operators) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/EqualityModule.cs:12 
+  at MathildaLib.TestMultiply.TestMultiply3 () [0x00074] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Tests/TestMultiply.cs:36 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>Product (*2*Sum (+a+b))
+Sum (+Product (*2*a)+Product (*2*b))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:21:34</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NotImplementedException : The requested feature is not implemented.</Message>
+                  <StackTrace>  at MathildaLib.MultiplyOperator.Do (MathildaLib.Node&amp; node) [0x001ff] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:93 
+  at MathildaLib.SearchModule+Search.Alternative (MathildaLib.Operator op) [0x00029] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:54 
+  at MathildaLib.MultiplyOperator+&lt;Multiply&gt;c__AnonStorey4.&lt;&gt;m__4 (Int32 i, Int32 j) [0x00008] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:107 
+  at MathildaLib.ListNode.ForEachNeighborPair (MathildaLib.ForEachPairDelegate f) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Nodes/ListNode.cs:254 
+  at MathildaLib.MultiplyOperator.Multiply (Search search) [0x0003a] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Operators/MultiplyOperator.cs:109 
+  at (wrapper delegate-invoke) &lt;Module&gt;:invoke_void__this___SearchModule/Search (MathildaLib.SearchModule/Search)
+  at MathildaLib.SearchModule.Minimize (MathildaLib.Node node, System.Collections.Generic.SortedList`2 history, .OperatorDelegate[] operators) [0x00085] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/SearchModule.cs:105 
+  at MathildaLib.EqualityModule.IsEqualTo (MathildaLib.Node a, MathildaLib.Node b, .OperatorDelegate[] operators) [0x00013] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Modules/EqualityModule.cs:12 
+  at MathildaLib.TestMultiply.TestMultiply3 () [0x00074] in /Volumes/sven/csharp-mathilda/MathildaLib/MathildaLib/Tests/TestMultiply.cs:36 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d5] in /private/tmp/source/bockbuild/profiles/mono-2-10/build-root/mono-2.10.12/_build/mono-2.10.12.git/mcs/class/corlib/System.Reflection/MonoMethod.cs:226 </StackTrace>
+                  <ConsoleOutput>Product (*2*Sum (+a+b))
+Sum (+Product (*2*a)+Product (*2*b))
+2
+Sum (+a+b)
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:13</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,05ms</Message>
+                  <ConsoleOutput>Product (*2*Sum (+a+b))
+Sum (+Product (*2*a)+Product (*2*b))
+Swapping!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Sum (+Product (*2*a)+Product (*2*b))
+Sum (+Product (*2*a)+Product (*2*b))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Product (*2*Sum (+a+b))
+Sum (+Product (*2*a)+Product (*2*b))
+Swapping!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Sum (+Product (*2*a)+Product (*2*b))
+Sum (+Product (*2*a)+Product (*2*b))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestMultiply1">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+6
+6
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestMultiply2">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+        <TestRecord Name="TestEqualityModule">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:22:18</TestDate>
+              <Passed>12</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,24ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:22:21</TestDate>
+              <Passed>12</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,08ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:24:25</TestDate>
+              <Passed>12</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,04ms</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="TestVariableCancellingSum">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:07:35</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,04ms</Message>
+                  <ConsoleOutput>0
+0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:18</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+0
+0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+0
+0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestABvsBA">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:18</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,04ms</Message>
+                  <ConsoleOutput>Swapping!
+Swapping!
+Swapping!
+Sum (+a+b)
+Sum (+a+b)
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+Swapping!
+Swapping!
+Sum (+a+b)
+Sum (+a+b)
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestDuplicates">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:18</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,01ms</Message>
+                  <ConsoleOutput>Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+Swapping!
+Product (*2*a)
+Product (*2*a)
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+Swapping!
+Product (*2*a)
+Product (*2*a)
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestMultiply">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:18</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+Swapping!
+Swapping!
+30
+30
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+Swapping!
+Swapping!
+30
+30
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestMultiplyNumbers">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:18</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+Swapping!
+Swapping!
+Swapping!
+Swapping!
+Swapping!
+24
+24
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+Swapping!
+Swapping!
+Swapping!
+Swapping!
+Swapping!
+24
+24
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestNested1">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:18</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Sum (+Product (*a*c)+Product (*b*c))
+Sum (+Product (*a*c)+Product (*b*c))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Sum (+Product (*a*c)+Product (*b*c))
+Sum (+Product (*a*c)+Product (*b*c))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestNested2">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:18</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Sum (+Product (*2*a)+Product (*a*b))
+Sum (+Product (*2*a)+Product (*a*b))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,01ms</Message>
+                  <ConsoleOutput>Swapping!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Sum (+Product (*2*a)+Product (*a*b))
+Sum (+Product (*2*a)+Product (*a*b))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestNested3">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:18</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+Swapping!
+null!
+Sum (+Product (*a*b)+Product (*a*c*d))
+Sum (+Product (*a*b)+Product (*a*c*d))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+Swapping!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+Swapping!
+null!
+Swapping!
+null!
+Sum (+Product (*a*b)+Product (*a*c*d))
+Sum (+Product (*a*b)+Product (*a*c*d))
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestSumNumbers">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:18</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+Swapping!
+Swapping!
+Swapping!
+Swapping!
+Swapping!
+10
+10
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+Swapping!
+Swapping!
+Swapping!
+Swapping!
+Swapping!
+10
+10
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestVariableCancellingProduct">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:18</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+1
+1
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+1
+1
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestZeroAdd">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:18</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+a
+a
+Swapping!
+0
+a
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+a
+a
+Swapping!
+0
+a
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestZeroMultiply">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:18</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+0
+0
+Swapping!
+Swapping!
+0
+a
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+0
+0
+Swapping!
+Swapping!
+0
+a
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+        <TestRecord Name="TestCompare">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:22:21</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,02ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:24:25</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,02ms</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="TestProductListEquivalentToSumListWithOnlyOneElement">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,02ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,02ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+        <TestRecord Name="TestCompareIgnoreScalar">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:22:21</TestDate>
+              <Passed>2</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,01ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:24:25</TestDate>
+              <Passed>2</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,01ms</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="TestTwoVSNone">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestTwoVSOne">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+        <TestRecord Name="TestComplexNumbers">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:22:21</TestDate>
+              <Passed>3</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,04ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:24:25</TestDate>
+              <Passed>3</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,03ms</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="TestABA">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,02ms</Message>
+                  <ConsoleOutput>Swapping!
+Swapping!
+Swapping!
+Swapping!
+Swapping!
+Swapping!
+Swapping!
+b
+b
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,02ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestISquared">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+-1
+-1
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestNested1">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,01ms</Message>
+                  <ConsoleOutput>Swapping!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+null!
+null!
+Swapping!
+null!
+null!
+null!
+Swapping!
+Swapping!
+Swapping!
+Swapping!
+Sum (+-1+i)
+Sum (+-1+i)
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+        <TestRecord Name="TestDotProduct">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:22:21</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,00ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:24:25</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,00ms</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="Test1">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+        <TestRecord Name="TestListNode">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:22:21</TestDate>
+              <Passed>5</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,01ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:24:25</TestDate>
+              <Passed>5</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,02ms</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="TestComparison">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestForEachNode">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestForEachNode2">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestSumIsMoreThanList">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestToString">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+        <TestRecord Name="TestNumberNode">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:22:21</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,00ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:24:25</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,00ms</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="TestCase">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+        <TestRecord Name="TestOperations">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:22:21</TestDate>
+              <Passed>18</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,05ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:24:25</TestDate>
+              <Passed>18</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,05ms</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="TestListAddNumber">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestListAddVariable">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestNumberAddNumber">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestNumberAddNumberMultiplyNumber">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestNumberAddNumberMultiplyVariable">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestNumberAddVariable">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestNumberMultiplyList">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestNumberMultiplyNumber">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestNumberMultiplyNumberAddNumber">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestNumberMultiplyNumberAddVariable">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestNumberMultiplyProductList">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestNumberMultiplyVariable">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestVariableAddNumber">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestVariableAddVariable">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestVariableMultiplyList">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestVariableMultiplyNumber">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestVariableMultiplyProductList">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestVariableMultiplyVariable">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+        <TestRecord Name="TestSearchModule">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:22:21</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,00ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:24:25</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,00ms</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="TestCase">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>Swapping!
+Swapping!
+Swapping!
+Swapping!
+Swapping!
+Swapping!
+List {1,2,3}
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput>List {1,2,3}
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+        <TestRecord Name="TestSum">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:22:21</TestDate>
+              <Passed>2</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,00ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:24:25</TestDate>
+              <Passed>2</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,00ms</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="Test1Plus2Equals3">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TestIgnoringVariable">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+        <TestRecord Name="TestVariableNode">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:22:21</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,00ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-06-29T00:24:25</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,00ms</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="TestCase">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:22:21</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-06-29T00:24:25</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+      </Tests>
+    </TestRecord>
+  </Tests>
+</TestRecord>

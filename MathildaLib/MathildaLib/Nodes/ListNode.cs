@@ -46,12 +46,6 @@ namespace MathildaLib
 			return m_inverted [index];
 		}
 
-		private List<Node> List {
-			get {
-				return m_list;
-			}
-		}
-
 		public ListNode(ListOperation listOperation, List<Node> list)
 		{
 			m_listOperation = listOperation;
@@ -111,8 +105,11 @@ namespace MathildaLib
 
 		public void Swap (int i, int j) {
 			var tmp = m_list [i];
+			var tmpInverted = m_inverted [i];
 			m_list [i] = m_list [j];
+			m_inverted [i] = m_inverted [j];
 			m_list [j] = tmp;
+			m_inverted [j] = tmpInverted;
 		}
 
 		public void Sum () {
@@ -228,12 +225,13 @@ namespace MathildaLib
 		public override Node Copy()
 		{
 			var newList = new List<Node> ();
-			foreach (var item in m_list) {
+			int n = m_list.Count;
+			for (int i = 0; i < n; i++) {
+				var item = m_list [i];
 				newList.Add (item.Copy ());
 			}
 
 			var list = new ListNode (m_listOperation, newList);
-			int n = newList.Count;
 			for (int i = 0; i < n; i++) {
 				list.m_inverted [i] = m_inverted [i];
 			}
@@ -263,11 +261,11 @@ namespace MathildaLib
 				throw new Exception ("Requires product list to compare ignored");
 			}
 
-			var thisIndex = this.List [0] is NumberNode ? 1 : 0;
-			var otherIndex = otherNode.List [0] is NumberNode ? 1 : 0;
+			var thisIndex = m_list [0] is NumberNode ? 1 : 0;
+			var otherIndex = otherNode.m_list [0] is NumberNode ? 1 : 0;
 
-			var thisCount = this.List.Count - thisIndex;
-			var otherCount = otherNode.List.Count - otherIndex;
+			var thisCount = m_list.Count - thisIndex;
+			var otherCount = otherNode.m_list.Count - otherIndex;
 			var compareCount = thisCount.CompareTo (otherCount);
 			if (compareCount != 0) {
 				return compareCount;

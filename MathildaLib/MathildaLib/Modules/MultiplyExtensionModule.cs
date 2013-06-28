@@ -14,10 +14,11 @@ namespace MathildaLib
 	/// 
 	/// 1: Added code.
 	/// 2: Added to overriding extension operator.
-	/// 3: Added unit test.
+	/// 3: Added unit test for native type.
+	/// 4: Added unit test for overridden type.
 	/// 
 	/// 		N	V	LL	SL	PL
-	/// 	N	2	2	3	2	3
+	/// 	N	3	3	3	3	3
 	/// 	V	2	2	3	2	3
 	/// 	LL	2	2	-
 	/// 	SL
@@ -200,8 +201,8 @@ namespace MathildaLib
 				var bn = b as VariableNode;
 				return an.Multiply (bn);
 			}
-			
-			return null;
+
+			throw new NotImplementedException ();
 		}
 	}
 }
