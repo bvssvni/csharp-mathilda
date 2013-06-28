@@ -30,10 +30,10 @@ namespace MathildaLib
 		}
 
 		public struct Search {
-			public SortedList<Node, bool> History;
-			public Node Node;
+			public SortedList<IComparable, bool> History;
+			public IComparable Node;
 			public ListNode.Address Address;
-			public SortedList<Node, Operator> States;
+			public SortedList<IComparable, Operator> States;
 
 			public ListNode ActiveNode {
 				get {
@@ -50,8 +50,8 @@ namespace MathildaLib
 						return;
 					}
 					
-					var copy = Node.Copy ();
-					op.Do (ref copy);
+					IComparable copy = CopyModule.Copy (Node);
+					copy = op.Do (copy);
 
 					if (History.ContainsKey (copy)) {
 						return;
@@ -69,9 +69,9 @@ namespace MathildaLib
 						return;
 					}
 
-					var copy = Node.Copy () as ListNode;
-					subNode = copy [Address];
-					op.Do (ref subNode);
+					var copy = CopyModule.Copy (Node) as ListNode;
+					subNode = copy [Address] as Node;
+					subNode = op.Do (subNode);
 					copy [Address] = subNode;
 					if (History.ContainsKey (copy)) {
 						return;
@@ -85,16 +85,16 @@ namespace MathildaLib
 			}
 		}
 
-		public static Node Minimize (this Node node, 
-		                         SortedList<Node, bool> history = null,
+		public static IComparable Minimize (this IComparable node, 
+		                         SortedList<IComparable, bool> history = null,
 		                             params OperatorDelegate[] operators) {
 			if (history == null) {
-				history = new SortedList<Node, bool> ();
+				history = new SortedList<IComparable, bool> ();
 				history.Add (node, true);
 			}
 
 			// Collect the operations.
-			var states = new SortedList<Node, Operator> ();
+			var states = new SortedList<IComparable, Operator> ();
 			var search = new Search () {
 				History = history,
 				Node = node,

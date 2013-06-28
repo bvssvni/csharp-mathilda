@@ -7,14 +7,14 @@ namespace MathildaLib
 	{
 		public static ListNode Add (this NumberNode a, NumberNode b) {
 			var list = new ListNode (ListNode.ListOperation.Sum,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, b});
 			return list;
 		}
 
 		public static ListNode Add (this NumberNode a, double b) {
 			var list = new ListNode (ListNode.ListOperation.Sum,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a,
 				new NumberNode (b)});
 			return list;
@@ -22,7 +22,7 @@ namespace MathildaLib
 
 		public static ListNode Add (this NumberNode a, string b) {
 			var list = new ListNode (ListNode.ListOperation.Sum,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a,
 				new VariableNode (b)});
 			return list;
@@ -30,14 +30,14 @@ namespace MathildaLib
 
 		public static ListNode Add (this NumberNode a, VariableNode b) {
 			var list = new ListNode (ListNode.ListOperation.Sum,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, b});
 			return list;
 		}
 
 		public static ListNode Add (this VariableNode a, double b) {
 			var list = new ListNode (ListNode.ListOperation.Sum,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a,
 				new NumberNode (b)});
 			return list;
@@ -45,14 +45,14 @@ namespace MathildaLib
 
 		public static ListNode Add (this VariableNode a, NumberNode b) {
 			var list = new ListNode (ListNode.ListOperation.Sum,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, b});
 			return list;
 		}
 
 		public static ListNode Add (this VariableNode a, string b) {
 			var list = new ListNode (ListNode.ListOperation.Sum,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, 
 				new VariableNode (b)});
 			return list;
@@ -60,7 +60,7 @@ namespace MathildaLib
 
 		public static ListNode Add (this VariableNode a, VariableNode b) {
 			var list = new ListNode (ListNode.ListOperation.Sum,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, b});
 			return list;
 		}
@@ -72,7 +72,7 @@ namespace MathildaLib
 			}
 			
 			var list = new ListNode (ListNode.ListOperation.Sum,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, new NumberNode (b)});
 			return list;
 		}
@@ -84,7 +84,7 @@ namespace MathildaLib
 			}
 			
 			var list = new ListNode (ListNode.ListOperation.Sum,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, b});
 			return list;
 		}
@@ -96,7 +96,7 @@ namespace MathildaLib
 			}
 
 			var list = new ListNode (ListNode.ListOperation.Sum,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, new VariableNode (b)});
 			return list;
 		}
@@ -108,7 +108,7 @@ namespace MathildaLib
 			}
 
 			var list = new ListNode (ListNode.ListOperation.Sum,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, b});
 			return list;
 		}
@@ -120,7 +120,7 @@ namespace MathildaLib
 			}
 			
 			var list = new ListNode (ListNode.ListOperation.Sum,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, b});
 			return list;
 		}

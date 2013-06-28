@@ -8,7 +8,7 @@ namespace MathildaLib
 		{
 		}
 
-		public override bool Can(Node node)
+		public override bool Can(IComparable node)
 		{
 			var list = node as ListNode;
 			if (list == null) {
@@ -32,10 +32,11 @@ namespace MathildaLib
 			return false;
 		}
 
-		public override void Do(ref Node node)
+		public override IComparable Do(IComparable node)
 		{
 			var list = node as ListNode;
 			list.RemoveZeroes ();
+			return list;
 		}
 
 		public static void ZeroAdd (SearchModule.Search search) {

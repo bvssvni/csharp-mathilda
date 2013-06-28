@@ -14,7 +14,7 @@ namespace MathildaLib
 			m_j = j;
 		}
 
-		public override bool Can(Node node)
+		public override bool Can(IComparable node)
 		{
 			var list = node as ListNode;
 			if (list == null) {
@@ -24,7 +24,7 @@ namespace MathildaLib
 			return true;
 		}
 
-		public override void Do(ref Node node)
+		public override IComparable Do(IComparable node)
 		{
 			var list = node as ListNode;
 			var a = list [m_i];
@@ -34,22 +34,22 @@ namespace MathildaLib
 				var bn = b as NumberNode;
 				an.Value *= bn.Value;
 				list.RemoveNodeAt (m_j);
-				return;
+				return node;
 			}
 			if (a is NumberNode && b is VariableNode) {
-				return;
+				return node;
 			}
 			if (a is VariableNode && b is NumberNode) {
-				return;
+				return node;
 			}
 			if (a is VariableNode && b is VariableNode) {
-				return;
+				return node;
 			}
 			if (a is NumberNode && b is ListNode) {
 				var an = a as NumberNode;
 				var bn = b as ListNode;
 				if (bn.Operation == ListNode.ListOperation.Sum) {
-					var newList = new List<Node> ();
+					var newList = new List<IComparable> ();
 					int n = bn.NodeCount;
 					for (int i = 0; i < n; i++) {
 						var item = bn [i];
@@ -61,14 +61,14 @@ namespace MathildaLib
 					list.RemoveNodeAt (m_j);
 					list.RemoveNodeAt (m_i);
 					list.InsertNode (m_i, new ListNode (ListNode.ListOperation.Sum, newList));
-					return;
+					return node;
 				}
 			}
 			if (a is VariableNode && b is ListNode) {
 				var an = a as VariableNode;
 				var bn = b as ListNode;
 				if (bn.Operation == ListNode.ListOperation.Sum) {
-					var newList = new List<Node> ();
+					var newList = new List<IComparable> ();
 					int n = bn.NodeCount;
 					for (int i = 0; i < n; i++) {
 						var item = bn [i];
@@ -80,13 +80,13 @@ namespace MathildaLib
 					list.RemoveNodeAt (m_j);
 					list.RemoveNodeAt (m_i);
 					list.InsertNode (m_i, new ListNode (ListNode.ListOperation.Sum, newList));
-					return;
+					return node;
 				}
 			}
 			if (a is ListNode) {
 				var an = a as ListNode;
 				if (an.Operation == ListNode.ListOperation.Sum) {
-					var newList = new List<Node> ();
+					var newList = new List<IComparable> ();
 					int n = an.NodeCount;
 					for (int i = 0; i < n; i++) {
 						var item = an [i];
@@ -96,7 +96,7 @@ namespace MathildaLib
 					list.RemoveNodeAt (m_j);
 					list.RemoveNodeAt (m_i);
 					list.InsertNode (m_i, new ListNode (ListNode.ListOperation.Sum, newList));
-					return;
+					return node;
 				}
 			}
 

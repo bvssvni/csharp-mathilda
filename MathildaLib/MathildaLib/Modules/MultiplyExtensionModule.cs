@@ -29,7 +29,7 @@ namespace MathildaLib
 	{
 		public static ListNode Multiply (this NumberNode a, double b) {
 			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a,
 				new NumberNode (b)});
 			return list;
@@ -37,7 +37,7 @@ namespace MathildaLib
 
 		public static ListNode Multiply (this Node a, string b) {
 			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a,
 				new VariableNode (b)});
 			return list;
@@ -45,28 +45,28 @@ namespace MathildaLib
 
 		public static ListNode Multiply (this Node a, VariableNode b) {
 			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, b});
 			return list;
 		}
 
 		public static ListNode Multiply (this NumberNode a, NumberNode b) {
 			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, b});
 			return list;
 		}
 
 		public static ListNode Multiply (this NumberNode a, VariableNode b) {
 			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, b});
 			return list;
 		}
 
 		public static ListNode Multiply (this VariableNode a, double b) {
 			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a,
 				new NumberNode (b)});
 			return list;
@@ -74,14 +74,14 @@ namespace MathildaLib
 
 		public static ListNode Multiply (this VariableNode a, NumberNode b) {
 			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, b});
 			return list;
 		}
 
 		public static ListNode Multiply (this VariableNode a, string b) {
 			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, 
 				new VariableNode (b)});
 			return list;
@@ -89,7 +89,7 @@ namespace MathildaLib
 
 		public static ListNode Multiply (this VariableNode a, VariableNode b) {
 			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, b});
 			return list;
 		}
@@ -101,7 +101,7 @@ namespace MathildaLib
 			}
 			
 			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, new NumberNode (b)});
 			return list;
 		}
@@ -113,7 +113,7 @@ namespace MathildaLib
 			}
 
 			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, b});
 			return list;
 		}
@@ -125,7 +125,7 @@ namespace MathildaLib
 			}
 			
 			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, new VariableNode (b)});
 			return list;
 		}
@@ -137,7 +137,7 @@ namespace MathildaLib
 			}
 			
 			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, b});
 			return list;
 		}
@@ -160,7 +160,7 @@ namespace MathildaLib
 			return new ListNode (ListNode.ListOperation.Product, a, b);
 		}
 
-		public static Node Multiply (this Node a, Node b) {
+		public static Node Multiply (this IComparable a, IComparable b) {
 			if (a is NumberNode && b is NumberNode) {
 				var an = a as NumberNode;
 				var bn = b as NumberNode;

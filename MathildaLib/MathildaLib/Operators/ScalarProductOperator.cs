@@ -11,7 +11,7 @@ namespace MathildaLib
 		{
 		}
 
-		public override bool Can(Node node)
+		public override bool Can(IComparable node)
 		{
 			var list = node as ListNode;
 			if (list == null) {
@@ -21,10 +21,11 @@ namespace MathildaLib
 			return list.Operation == ListNode.ListOperation.Product;
 		}
 
-		public override void Do(ref Node node)
+		public override IComparable Do(IComparable node)
 		{
 			var list = node as ListNode;
 			list.Product ();
+			return node;
 		}
 
 		public static void Product (SearchModule.Search search) {

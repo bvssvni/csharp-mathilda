@@ -4,7 +4,7 @@ namespace MathildaLib
 {
 	public static class NodeTypeModule
 	{
-		public static int TypeId (this Node obj) {
+		public static int TypeId (this object obj) {
 			if (obj is NumberNode) {
 				return 0;
 			}
