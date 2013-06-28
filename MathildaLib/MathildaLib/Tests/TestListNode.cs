@@ -10,8 +10,8 @@ namespace MathildaLib
 		[Test()]
 		public void TestComparison()
 		{
-			var a = new ListNode (new List<Node> () {new NumberNode (1)});
-			var b = new ListNode (new List<Node> () {
+			var a = new ListNode (ListNode.ListOperation.List, new List<Node> () {new NumberNode (1)});
+			var b = new ListNode (ListNode.ListOperation.List, new List<Node> () {
 				new NumberNode (1),
 				new NumberNode (2)});
 			Assert.True (a.CompareTo (b) == -1);
@@ -23,15 +23,15 @@ namespace MathildaLib
 
 		[Test()]
 		public void TestToString () {
-			var a = new ListNode (new List<Node> () {
+			var a = new ListNode (ListNode.ListOperation.List, new List<Node> () {
 				new NumberNode (1), new VariableNode ("hello")});
 			Assert.True (a.ToString () == "List {1,hello}");
 		}
 
 		[Test()]
 		public void TestSumIsMoreThanList () {
-			var a = new ListNode (new List<Node> ());
-			var b = new SumNode (new List<Node> ());
+			var a = new ListNode (ListNode.ListOperation.List, new List<Node> ());
+			var b = new ListNode (ListNode.ListOperation.Sum, new List<Node> ());
 			Assert.True (a.CompareTo (b) == -1);
 			Assert.True (b.CompareTo (a) == 1);
 		}
