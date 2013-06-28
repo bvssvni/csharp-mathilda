@@ -31,7 +31,7 @@ namespace MathildaLib
 			Assert.True (b.ToString () == "Sum (+1+1)");
 
 			var c = new NumberNode (1).Subtract (2);
-			Assert.True (c.ToString () == "Sum (+1-2)");
+			Assert.True (c.ToString () == "Sum (+1+-2)");
 		}
 
 		[Test()]

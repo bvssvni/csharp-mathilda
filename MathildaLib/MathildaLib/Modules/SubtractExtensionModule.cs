@@ -6,10 +6,10 @@ namespace MathildaLib
 	public static class SubtractExtensionModule
 	{
 		public static ListNode Subtract (this NumberNode a, NumberNode b) {
+			b.Value = -b.Value;
 			var list = new ListNode (ListNode.ListOperation.Sum,
 			                         new List<Node> () {
 				a, b});
-			list.SetInverted (1, true);
 			return list;
 		}
 		
@@ -17,8 +17,7 @@ namespace MathildaLib
 			var list = new ListNode (ListNode.ListOperation.Sum,
 			                         new List<Node> () {
 				a,
-				new NumberNode (b)});
-			list.SetInverted (1, true);
+				new NumberNode (-b)});
 			return list;
 		}
 	}
