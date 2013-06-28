@@ -18,7 +18,7 @@ namespace MathildaLib
 		public void TestMultiply2 () {
 			// 2 * a
 			var a = new NumberNode (2).Multiply ("a");
-			Assert.True (a.ToString () == "Product (*2*a)");
+			Assert.True (a.ToString () == "(*2*a)");
 		}
 
 		[Test()]
@@ -36,14 +36,14 @@ namespace MathildaLib
 		public void TestMultiply4 () {
 			// a * 2
 			var a = new VariableNode ("a").Multiply (2);
-			Assert.True (a.ToString () == "Product (*a*2)");
+			Assert.True (a.ToString () == "(*a*2)");
 		}
 
 		[Test()]
 		public void TestMultiply5 () {
 			// a * b
 			var a = new VariableNode ("a").Multiply ("b");
-			Assert.True (a.ToString () == "Product (*a*b)");
+			Assert.True (a.ToString () == "(*a*b)");
 		}
 
 		[Test()]

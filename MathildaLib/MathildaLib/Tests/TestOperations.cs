@@ -186,15 +186,6 @@ namespace MathildaLib
 		}
 
 		[Test()]
-		public void TestVariableMultiplyList () {
-			var a = new VariableNode ("a").Multiply (new ListNode (1, 2));
-			var b = new ListNode (ListNode.ListOperation.Product,
-			                      new VariableNode ("a"),
-			                      new ListNode (1, 2));
-			Assert.True (a.CompareTo (b) == 0);
-		}
-
-		[Test()]
 		public void TestVariableMultiplyProductList () {
 			var a = new VariableNode ("a").Multiply (
 				new NumberNode (1).Multiply (2));
@@ -202,15 +193,6 @@ namespace MathildaLib
 			                      new VariableNode ("a"),
 			                      new NumberNode (1),
 			                      new NumberNode (2));
-			Assert.True (a.CompareTo (b) == 0);
-		}
-
-		[Test()]
-		public void TestNumberMultiplyList () {
-			var a = new NumberNode (3).Multiply (new ListNode (1, 2));
-			var b = new ListNode (ListNode.ListOperation.Product,
-			                      new NumberNode (3),
-			                      new ListNode (1, 2));
 			Assert.True (a.CompareTo (b) == 0);
 		}
 		

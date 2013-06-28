@@ -34,9 +34,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Tests\TestNumberNode.cs" />
-    <Compile Include="Tests\TestVariableNode.cs" />
-    <Compile Include="Tests\TestListNode.cs" />
     <Compile Include="Nodes\Node.cs" />
     <Compile Include="Nodes\NumberNode.cs" />
     <Compile Include="Nodes\ListNode.cs" />
@@ -46,7 +43,6 @@
     <Compile Include="Operators\SumOperator.cs" />
     <Compile Include="Tests\TestSum.cs" />
     <Compile Include="Modules\SearchModule.cs" />
-    <Compile Include="Tests\TestSearchModule.cs" />
     <Compile Include="Modules\NodeTypeModule.cs" />
     <Compile Include="Modules\EqualityModule.cs" />
     <Compile Include="Tests\TestEqualityModule.cs" />
@@ -56,8 +52,6 @@
     <Compile Include="Operators\ZeroAddOperator.cs" />
     <Compile Include="Modules\AddExtensionModule.cs" />
     <Compile Include="Modules\MultiplyExtensionModule.cs" />
-    <Compile Include="Tests\TestDotProduct.cs" />
-    <Compile Include="Modules\DotProductFlatteningModule.cs" />
     <Compile Include="Operators\ScalarProductOperator.cs" />
     <Compile Include="Operators\MultiplyOperator.cs" />
     <Compile Include="Rules\Rule.cs" />

@@ -18,9 +18,6 @@ namespace MathildaLib
 			if (list.NodeCount != 1) {
 				return false;
 			}
-			if (list.Operation == ListNode.ListOperation.List) {
-				return false;
-			}
 
 			return true;
 		}

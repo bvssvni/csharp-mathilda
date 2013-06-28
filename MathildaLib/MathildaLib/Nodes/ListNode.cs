@@ -8,7 +8,6 @@ namespace MathildaLib
 	{
 		public enum ListOperation : int
 		{
-			List = 0,
 			Product = 1,
 			Sum = 2,
 		}
@@ -63,27 +62,6 @@ namespace MathildaLib
 			int n = m_list.Count;
 			m_inverted = new List<bool> ();
 			for (int i = 0; i < n; i++) {
-				m_inverted.Add (false);
-			}
-		}
-
-		public ListNode (params Node[] items) {
-			m_listOperation = ListOperation.List;
-			m_list = new List<Node> (items);
-			m_inverted = new List<bool> ();
-			int n = m_list.Count;
-			for (int i = 0; i < n; i++) {
-				m_inverted.Add (false);
-			}
-		}
-
-		public ListNode (params double[] numbers) {
-			m_listOperation = ListOperation.List;
-			int n = numbers.Length;
-			m_list = new List<Node> (n);
-			m_inverted = new List<bool> ();
-			for (int i = 0; i < n; i++) {
-				m_list.Add (new NumberNode (numbers [i]));
 				m_inverted.Add (false);
 			}
 		}
@@ -349,20 +327,7 @@ namespace MathildaLib
 		public override string ToString()
 		{
 			var strb = new StringBuilder ();
-			strb.Append (m_listOperation.ToString() + " ");
-			if (m_listOperation == ListOperation.List) {
-				strb.Append ("{");
-				int n = m_list.Count;
-				for (int i = 0; i < n; i++) {
-					if (i != 0) {
-						strb.Append (",");
-					}
-
-					strb.Append (m_list [i].ToString ());
-				}
-
-				strb.Append ("}");
-			} else if (m_listOperation == ListOperation.Sum) {
+			if (m_listOperation == ListOperation.Sum) {
 				strb.Append ("(");
 				int n = m_list.Count;
 				for (int i = 0; i < n; i++) {
