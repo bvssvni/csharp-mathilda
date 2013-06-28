@@ -67,7 +67,7 @@ namespace MathildaLib
 
 		public static ListNode Add (this ListNode a, double b) {
 			if (a.Operation == ListNode.ListOperation.Sum) {
-				a.List.Add (new NumberNode (b));
+				a.AddNode (new NumberNode (b));
 				return a;
 			}
 			
@@ -79,7 +79,7 @@ namespace MathildaLib
 
 		public static ListNode Add (this ListNode a, Node b) {
 			if (a.Operation == ListNode.ListOperation.Sum) {
-				a.List.Add (b);
+				a.AddNode (b);
 				return a;
 			}
 			
@@ -91,7 +91,7 @@ namespace MathildaLib
 
 		public static ListNode Add (this ListNode a, string b) {
 			if (a.Operation == ListNode.ListOperation.Sum) {
-				a.List.Add (new VariableNode (b));
+				a.AddNode (new VariableNode (b));
 				return a;
 			}
 
@@ -103,7 +103,7 @@ namespace MathildaLib
 
 		public static ListNode Add (this VariableNode a, ListNode b) {
 			if (b.Operation == ListNode.ListOperation.Sum) {
-				b.List.Insert (0, a);
+				b.InsertNode (0, a);
 				return b;
 			}
 
@@ -115,7 +115,7 @@ namespace MathildaLib
 
 		public static ListNode Add (this ListNode a, VariableNode b) {
 			if (a.Operation == ListNode.ListOperation.Sum) {
-				a.List.Add (b);
+				a.AddNode (b);
 				return a;
 			}
 			

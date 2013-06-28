@@ -29,8 +29,8 @@ namespace MathildaLib
 		public override void Do(ref Node node)
 		{
 			var list = node as ListNode;
-			var a = list.List [m_i];
-			var b = list.List [m_j];
+			var a = list [m_i];
+			var b = list [m_j];
 			if (a is VariableNode && b is VariableNode) {
 				var an = a as VariableNode;
 				var bn = b as VariableNode;
@@ -40,9 +40,9 @@ namespace MathildaLib
 
 				var newNode = new ListNode (ListNode.ListOperation.Product,
 				                            new NumberNode (2), a);
-				list.List.RemoveAt (m_j);
-				list.List.RemoveAt (m_i);
-				list.List.Insert (m_i, newNode);
+				list.RemoveNodeAt (m_j);
+				list.RemoveNodeAt (m_i);
+				list.InsertNode (m_i, newNode);
 				return;
 			}
 			if (a is ListNode && b is ListNode) {
@@ -57,14 +57,14 @@ namespace MathildaLib
 				}
 
 				// Add numbers together.
-				var aIndex = an.List [0] is NumberNode ? 0 : -1;
-				var aValue = aIndex == 0 ? ((NumberNode)an.List [0]).Value : 0;
-				var bValue = bn.List [0] is NumberNode ? ((NumberNode)bn.List [0]).Value : 0;
-				list.List.RemoveAt (m_j);
+				var aIndex = an [0] is NumberNode ? 0 : -1;
+				var aValue = aIndex == 0 ? ((NumberNode)an [0]).Value : 0;
+				var bValue = bn [0] is NumberNode ? ((NumberNode)bn [0]).Value : 0;
+				list.RemoveNodeAt (m_j);
 				if (aIndex == -1) {
-					an.List.Insert (0, new NumberNode (aValue + bValue));
+					an.InsertNode (0, new NumberNode (aValue + bValue));
 				} else {
-					an.List [0] = new NumberNode (aValue + bValue);
+					an [0] = new NumberNode (aValue + bValue);
 				}
 
 				return;

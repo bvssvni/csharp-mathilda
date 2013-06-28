@@ -13,16 +13,16 @@ namespace MathildaLib
 				throw new Exception ("Expected list type in parameter 'b'");
 			}
 
-			int n = a.List.Count;
-			int m = b.List.Count;
+			int n = a.NodeCount;
+			int m = b.NodeCount;
 			if (n != m) {
 				throw new Exception ("Lists not of same size");
 			}
 			
 			var list = new List<Node> ();
 			for (int i = 0; i < n; i++) {
-				var aItem = a.List [i];
-				var bItem = b.List [i];
+				var aItem = a [i];
+				var bItem = b [i];
 				list.Add (aItem.Multiply (bItem));
 			}
 			

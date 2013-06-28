@@ -27,13 +27,13 @@ namespace MathildaLib
 		public override void Do(ref Node node)
 		{
 			var list = node as ListNode;
-			var a = list.List [m_i];
-			var b = list.List [m_j];
+			var a = list [m_i];
+			var b = list [m_j];
 			if (a is NumberNode && b is NumberNode) {
 				var an = a as NumberNode;
 				var bn = b as NumberNode;
 				an.Value *= bn.Value;
-				list.List.RemoveAt (m_j);
+				list.RemoveNodeAt (m_j);
 				return;
 			}
 			if (a is NumberNode && b is VariableNode) {
@@ -50,13 +50,15 @@ namespace MathildaLib
 				var bn = b as ListNode;
 				if (bn.Operation == ListNode.ListOperation.Sum) {
 					var newList = new List<Node> ();
-					foreach (var item in bn.List) {
+					int n = bn.NodeCount;
+					for (int i = 0; i < n; i++) {
+						var item = bn [i];
 						newList.Add (an.Multiply (item));
 					}
 
-					list.List.RemoveAt (m_j);
-					list.List.RemoveAt (m_i);
-					list.List.Insert (m_i, new ListNode (ListNode.ListOperation.Sum, newList));
+					list.RemoveNodeAt (m_j);
+					list.RemoveNodeAt (m_i);
+					list.InsertNode (m_i, new ListNode (ListNode.ListOperation.Sum, newList));
 					return;
 				}
 			}
@@ -64,13 +66,15 @@ namespace MathildaLib
 				var an = a as ListNode;
 				if (an.Operation == ListNode.ListOperation.Sum) {
 					var newList = new List<Node> ();
-					foreach (var item in an.List) {
+					int n = an.NodeCount;
+					for (int i = 0; i < n; i++) {
+						var item = an [i];
 						newList.Add (item.Multiply (b));
 					}
 
-					list.List.RemoveAt (m_j);
-					list.List.RemoveAt (m_i);
-					list.List.Insert (m_i, new ListNode (ListNode.ListOperation.Sum, newList));
+					list.RemoveNodeAt (m_j);
+					list.RemoveNodeAt (m_i);
+					list.InsertNode (m_i, new ListNode (ListNode.ListOperation.Sum, newList));
 					return;
 				}
 			}

@@ -24,8 +24,8 @@ namespace MathildaLib
 			}
 
 			list.ForEachNeighborPair ((int i, int j) => {
-				var a = list.List [i] as VariableNode;
-				var b = list.List [j] as VariableNode;
+				var a = list [i] as VariableNode;
+				var b = list [j] as VariableNode;
 				if (a == null || b == null) {
 					return;
 				}

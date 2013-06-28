@@ -28,9 +28,9 @@ namespace MathildaLib
 		public override void Do(ref Node node)
 		{
 			var list = node as ListNode;
-			list.List.RemoveAt (m_j);
-			list.List.RemoveAt (m_i);
-			list.List.Insert (m_i, m_node);
+			list.RemoveNodeAt (m_j);
+			list.RemoveNodeAt (m_i);
+			list.InsertNode (m_i, m_node);
 		}
 	}
 }

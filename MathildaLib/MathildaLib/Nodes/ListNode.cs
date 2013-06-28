@@ -15,6 +15,7 @@ namespace MathildaLib
 
 		private ListOperation m_listOperation;
 		private List<Node> m_list;
+		private List<bool> m_inverted;
 
 		public ListOperation Operation {
 			get {
@@ -22,7 +23,22 @@ namespace MathildaLib
 			}
 		}
 
-		public List<Node> List {
+		public int NodeCount {
+			get {
+				return m_list.Count;
+			}
+		}
+
+		public Node this [int index] {
+			get {
+				return m_list [index];
+			}
+			set {
+				m_list [index] = value;
+			}
+		}
+
+		private List<Node> List {
 			get {
 				return m_list;
 			}
@@ -51,6 +67,18 @@ namespace MathildaLib
 			for (int i = 0; i < n; i++) {
 				m_list.Add (new NumberNode (numbers [i]));
 			}
+		}
+
+		public void AddNode (Node node) {
+			m_list.Add (node);
+		}
+
+		public void InsertNode (int index, Node node) {
+			m_list.Insert (index, node);
+		}
+
+		public void RemoveNodeAt (int index) {
+			m_list.RemoveAt (index);
 		}
 
 		public void Swap (int i, int j) {

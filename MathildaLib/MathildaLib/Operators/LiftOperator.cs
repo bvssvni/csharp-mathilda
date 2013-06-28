@@ -15,7 +15,7 @@ namespace MathildaLib
 			if (list == null) {
 				return false;
 			}
-			if (list.List.Count != 1) {
+			if (list.NodeCount != 1) {
 				return false;
 			}
 			if (list.Operation == ListNode.ListOperation.List) {
@@ -28,7 +28,7 @@ namespace MathildaLib
 		public override void Do(ref Node node)
 		{
 			var list = node as ListNode;
-			node = list.List [0];
+			node = list [0];
 		}
 
 		public static void Lift (SearchModule.Search search) {

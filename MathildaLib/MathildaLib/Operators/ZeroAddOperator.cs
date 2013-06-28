@@ -17,8 +17,10 @@ namespace MathildaLib
 			if (list.Operation != ListNode.ListOperation.Sum) {
 				return false;
 			}
-			
-			foreach (var item in list.List) {
+
+			int n = list.NodeCount;
+			for (int i = 0; i < n; i++) {
+				var item = list [i];
 				var number = item as NumberNode;
 				if (number == null) {
 					continue;
