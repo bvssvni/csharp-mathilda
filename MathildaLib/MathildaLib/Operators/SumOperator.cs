@@ -11,12 +11,12 @@ namespace MathildaLib
 
 		public override bool Can(Node node)
 		{
-			var list = node as ListNode;
-			if (list == null) {
+			var sum = node as SumNode;
+			if (sum == null) {
 				return false;
 			}
 
-			return list.Operation == ListNode.ListOperation.Sum;
+			return true;
 		}
 
 		public override void Do(ref Node node)
