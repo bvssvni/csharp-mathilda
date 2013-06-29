@@ -116,6 +116,7 @@ namespace MathildaLib
 					var newList = new List<Node> ();
 					var bInverted = list.GetInverted (m_j);
 					if (bInverted && an.CompareTo (b) == 0) {
+						// (a + 1) / (a + 1) -> 1
 						list.RemoveNodeAt (m_j);
 						list.RemoveNodeAt (m_i);
 						list.InsertNode (m_i, new NumberNode (1));

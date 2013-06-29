@@ -20,7 +20,7 @@ namespace MathildaLib
 	/// 		N	V	SL	PL
 	/// 	N	3	3	3	3
 	/// 	V	3	3	3	3
-	/// 	SL	3	3
+	/// 	SL	3	3	3	3
 	/// 	PL	
 	/// 
 	/// </summary>
@@ -184,6 +184,16 @@ namespace MathildaLib
 					a, b});
 				list.SetInverted (1, true);
 				return list;
+			}
+			if (a.Operation == ListNode.ListOperation.Sum &&
+			    b.Operation == ListNode.ListOperation.Product) {
+				int n = b.NodeCount;
+				for (int i = 0; i < n; i++) {
+					b.SetInverted (i, !b.GetInverted (i));
+				}
+
+				b.InsertNode (0, a);
+				return b;
 			}
 
 			throw new NotImplementedException ();
