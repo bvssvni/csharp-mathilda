@@ -23,8 +23,8 @@ namespace MathildaLib
 
 		[Test()]
 		public void TestSumNumbers () {
-			var a = new NumberNode (1).Add (2).Add (3).Add (4);
-			var b = new NumberNode (10);
+			var a = Node.Number (1).Add (2).Add (3).Add (4);
+			var b = Node.Number (10);
 			Assert.True (a.IsEqualTo (b));
 		}
 

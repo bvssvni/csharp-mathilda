@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using NumberNode = MathildaLib.ListNode.NumberNode;
 
 namespace MathildaLib
 {
