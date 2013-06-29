@@ -1,7 +1,7 @@
 csharp-mathilda
 ===============
 
-A mathematical expression search library.
+A mathematical expression search library.  
 ![LGPL3 license](http://opensource.org/licenses/lgpl-3.0.html)
 
 ##Why The Name 'Mathilda'
