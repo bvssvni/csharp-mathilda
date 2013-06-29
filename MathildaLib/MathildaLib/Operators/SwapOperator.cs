@@ -14,16 +14,15 @@ namespace MathildaLib
 			m_j = j;
 		}
 
-		public override bool Can(IComparable node)
+		public override bool Can(Node node)
 		{
 			return node is ListNode;
 		}
 
-		public override IComparable Do(IComparable node)
+		public override void Do(ref Node node)
 		{
 			var list = node as ListNode;
 			list.Swap (m_i, m_j);
-			return node;
 		}
 
 		public static void Swap (SearchModule.Search search) {
