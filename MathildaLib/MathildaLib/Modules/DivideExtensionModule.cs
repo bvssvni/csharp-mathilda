@@ -19,8 +19,8 @@ namespace MathildaLib
 	/// 
 	/// 		N	V	SL	PL
 	/// 	N	3	3	3	3
-	/// 	V	3	3
-	/// 	SL	
+	/// 	V	3	3	3	3
+	/// 	SL	3	3
 	/// 	PL	
 	/// 
 	/// </summary>

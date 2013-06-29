@@ -114,10 +114,15 @@ namespace MathildaLib
 				var an = a as ListNode;
 				if (an.Operation == ListNode.ListOperation.Sum) {
 					var newList = new List<Node> ();
+					var bInverted = list.GetInverted (m_j);
 					int n = an.NodeCount;
 					for (int i = 0; i < n; i++) {
 						var item = an [i];
-						newList.Add (item.Multiply (b));
+						if (bInverted) {
+							newList.Add (item.Divide (b));
+						} else {
+							newList.Add (item.Multiply (b));
+						}
 					}
 
 					list.RemoveNodeAt (m_j);
