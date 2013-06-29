@@ -175,6 +175,23 @@ namespace MathildaLib
 			list.SetInverted (1, true);
 			return list;
 		}
+
+		public static ListNode Subtract (this ListNode a, ListNode b) {
+			if (a.Operation == ListNode.ListOperation.Sum) {
+				int n = b.NodeCount;
+				int m = a.NodeCount;
+				for (int i = 0; i < n; i++) {
+					a.AddNode (b [i]);
+					a.SetInverted (m + i, !b.GetInverted (i));
+				}
+
+				return a;
+			}
+
+			throw new NotImplementedException ();
+		}
+
+	
 	}
 }
 

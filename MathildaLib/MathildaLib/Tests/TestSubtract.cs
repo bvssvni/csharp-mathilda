@@ -86,6 +86,15 @@ namespace MathildaLib
 			var b = new NumberNode (4).Subtract ("a");
 			Assert.True (a.IsEqualTo (b));
 		}
+
+		[Test()]
+		public void TestSubtract11 () {
+			// (1 + 2) - (3 + 4)
+			var a = new NumberNode (1).Add (2).Subtract(
+				new NumberNode (3).Add (4));
+			var b = new NumberNode (-4);
+			Assert.True (a.IsEqualTo (b));
+		}
 	}
 }
 
