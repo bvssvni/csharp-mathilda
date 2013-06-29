@@ -14,6 +14,9 @@ namespace MathildaLib
 			if (list == null) {
 				return false;
 			}
+			if (list.Operation != ListNode.ListOperation.Sum) {
+				return false;
+			}
 
 			int n = list.NodeCount;
 			for (int i = 0; i < n; i++) {
