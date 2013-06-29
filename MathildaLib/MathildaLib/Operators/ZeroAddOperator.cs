@@ -21,12 +21,12 @@ namespace MathildaLib
 			int n = list.NodeCount;
 			for (int i = 0; i < n; i++) {
 				var item = list [i];
-				var number = item as NumberNode;
-				if (number == null) {
+				if (!(item is double)) {
 					continue;
 				}
-				
-				if (number.Value == 0) return true;
+
+				var number = (double)item;
+				if (number == 0) return true;
 			}
 			
 			return false;

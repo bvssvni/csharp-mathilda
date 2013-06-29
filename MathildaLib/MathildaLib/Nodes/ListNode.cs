@@ -8,8 +8,8 @@ namespace MathildaLib
 	{
 		public enum ListOperation : int
 		{
-			Product = 0,
-			Sum = 1,
+			Product = 1,
+			Sum = 2,
 		}
 
 		private ListOperation m_listOperation;
@@ -56,6 +56,14 @@ namespace MathildaLib
 			}
 		}
 
+		public static ListNode Product (IComparable a, IComparable b) {
+			return new ListNode (ListNode.ListOperation.Product, a, b);
+		}
+
+		public static ListNode Sum (IComparable a, IComparable b) {
+			return new ListNode (ListNode.ListOperation.Sum, a, b);
+		}
+
 		public ListNode (ListOperation listOperation, params IComparable[] items) {
 			m_listOperation = listOperation;
 			m_list = new List<IComparable> (items);
@@ -94,7 +102,7 @@ namespace MathildaLib
 			int n = m_list.Count;
 			var firstNumberIndex = -1;
 			for (int i = 0; i < n - 1; i++) {
-				if (m_list [i] is NumberNode) {
+				if (m_list [i] is double) {
 					firstNumberIndex = i;
 					break;
 				}
@@ -104,14 +112,14 @@ namespace MathildaLib
 				return;
 			}
 
-			var a = m_list [firstNumberIndex] as NumberNode;
+			var a = (double)m_list [firstNumberIndex];
 			for (int i = firstNumberIndex + 1; i < n; i++) {
-				var b = m_list [i] as NumberNode;
-				if (b == null) {
+				var b = m_list [i];
+				if (!(b is double)) {
 					continue;
 				}
 
-				a.Value += b.Value;
+				a += (double)b;
 				RemoveNodeAt (i);
 				n--;
 				i--;
@@ -122,7 +130,7 @@ namespace MathildaLib
 			int n = m_list.Count;
 			var firstNumberIndex = -1;
 			for (int i = 0; i < n - 1; i++) {
-				if (m_list [i] is NumberNode) {
+				if (m_list [i] is double) {
 					firstNumberIndex = i;
 					break;
 				}
@@ -132,14 +140,14 @@ namespace MathildaLib
 				return;
 			}
 			
-			var a = m_list [firstNumberIndex] as NumberNode;
+			var a = (double)m_list [firstNumberIndex];
 			for (int i = firstNumberIndex + 1; i < n; i++) {
-				var b = m_list [i] as NumberNode;
-				if (b == null) {
+				var b = m_list [i];
+				if (!(b is double)) {
 					continue;
 				}
 				
-				a.Value *= b.Value;
+				a *= (double)b;
 				RemoveNodeAt (i);
 				n--;
 				i--;
@@ -149,12 +157,12 @@ namespace MathildaLib
 		public void RemoveZeroes () {
 			int n = m_list.Count;
 			for (int i = 0; i < n; i++) {
-				var item = m_list [i] as NumberNode;
-				if (item == null) {
+				var item = m_list [i];
+				if (!(item is double)) {
 					continue;
 				}
 
-				if (item.Value != 0) {
+				if ((double)item != 0) {
 					continue;
 				}
 
@@ -167,12 +175,12 @@ namespace MathildaLib
 		public void RemoveOnes () {
 			int n = m_list.Count;
 			for (int i = 0; i < n; i++) {
-				var item = m_list [i] as NumberNode;
-				if (item == null) {
+				var item = m_list [i];
+				if (!(item is double)) {
 					continue;
 				}
 				
-				if (item.Value != 1) {
+				if ((double)item != 1) {
 					continue;
 				}
 
@@ -239,8 +247,8 @@ namespace MathildaLib
 				throw new Exception ("Requires product list to compare ignored");
 			}
 
-			var thisIndex = m_list [0] is NumberNode ? 1 : 0;
-			var otherIndex = otherNode.m_list [0] is NumberNode ? 1 : 0;
+			var thisIndex = m_list [0] is double ? 1 : 0;
+			var otherIndex = otherNode.m_list [0] is double ? 1 : 0;
 
 			var thisCount = m_list.Count - thisIndex;
 			var otherCount = otherNode.m_list.Count - otherIndex;
