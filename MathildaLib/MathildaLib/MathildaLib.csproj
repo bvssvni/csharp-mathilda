@@ -35,7 +35,6 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Nodes\Node.cs" />
-    <Compile Include="Nodes\NumberNode.cs" />
     <Compile Include="Nodes\ListNode.cs" />
     <Compile Include="Nodes\VariableNode.cs" />
     <Compile Include="Operators\Operator.cs" />
@@ -46,7 +45,6 @@
     <Compile Include="Modules\NodeTypeModule.cs" />
     <Compile Include="Modules\EqualityModule.cs" />
     <Compile Include="Tests\TestEqualityModule.cs" />
-    <Compile Include="Tests\TestOperations.cs" />
     <Compile Include="Operators\LiftOperator.cs" />
     <Compile Include="Operators\ZeroMultiplyOperator.cs" />
     <Compile Include="Operators\ZeroAddOperator.cs" />

@@ -27,14 +27,6 @@ namespace MathildaLib
 	/// </summary>
 	public static class MultiplyExtensionModule
 	{
-		public static ListNode Multiply (this NumberNode a, double b) {
-			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<IComparable> () {
-				a,
-				new NumberNode (b)});
-			return list;
-		}
-
 		public static ListNode Multiply (this Node a, string b) {
 			var list = new ListNode (ListNode.ListOperation.Product,
 			                         new List<IComparable> () {
@@ -50,32 +42,11 @@ namespace MathildaLib
 			return list;
 		}
 
-		public static ListNode Multiply (this NumberNode a, NumberNode b) {
-			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<IComparable> () {
-				a, b});
-			return list;
-		}
-
-		public static ListNode Multiply (this NumberNode a, VariableNode b) {
-			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<IComparable> () {
-				a, b});
-			return list;
-		}
-
 		public static ListNode Multiply (this VariableNode a, double b) {
 			var list = new ListNode (ListNode.ListOperation.Product,
 			                         new List<IComparable> () {
 				a,
-				new NumberNode (b)});
-			return list;
-		}
-
-		public static ListNode Multiply (this VariableNode a, NumberNode b) {
-			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<IComparable> () {
-				a, b});
+				b});
 			return list;
 		}
 
@@ -96,22 +67,10 @@ namespace MathildaLib
 
 		public static ListNode Multiply (this ListNode a, double b) {
 			if (a.Operation == ListNode.ListOperation.Product) {
-				a.AddNode (new NumberNode (b));
-				return a;
-			}
-			
-			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<IComparable> () {
-				a, new NumberNode (b)});
-			return list;
-		}
-
-		public static ListNode Multiply (this ListNode a, NumberNode b) {
-			if (a.Operation == ListNode.ListOperation.Product) {
 				a.AddNode (b);
 				return a;
 			}
-
+			
 			var list = new ListNode (ListNode.ListOperation.Product,
 			                         new List<IComparable> () {
 				a, b});
@@ -140,15 +99,6 @@ namespace MathildaLib
 			                         new List<IComparable> () {
 				a, b});
 			return list;
-		}
-
-		public static ListNode Multiply (this NumberNode a, ListNode b) {
-			if (b.Operation == ListNode.ListOperation.Product) {
-				b.InsertNode (0, a);
-				return b;
-			}
-			
-			return new ListNode (ListNode.ListOperation.Product, a, b);
 		}
 
 		public static ListNode Multiply (this VariableNode a, ListNode b) {
