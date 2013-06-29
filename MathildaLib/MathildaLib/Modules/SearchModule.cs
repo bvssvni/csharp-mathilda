@@ -8,6 +8,7 @@ namespace MathildaLib
 		public delegate void OperatorDelegate (Search search);
 
 		private static OperatorDelegate[] StandardOperations = new OperatorDelegate [] {
+			FixSignOperator.FixSign,
 			SumOperator.Sum,
 			ZeroMultiplyOperator.ZeroMultiply,
 			ZeroAddOperator.ZeroAdd,
@@ -70,9 +71,11 @@ namespace MathildaLib
 					}
 
 					var copy = Node.Copy () as ListNode;
+					var inverted = copy.GetInvertedByAddress (Address);
 					subNode = copy [Address];
 					op.Do (ref subNode);
 					copy [Address] = subNode;
+					copy.SetInvertedByAddress (Address, inverted);
 					if (History.ContainsKey (copy)) {
 						return;
 					}

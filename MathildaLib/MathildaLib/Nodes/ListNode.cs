@@ -105,13 +105,21 @@ namespace MathildaLib
 			}
 
 			var a = m_list [firstNumberIndex] as NumberNode;
+			if (m_inverted [firstNumberIndex]) {
+				a.Value = -a.Value;
+				m_inverted [firstNumberIndex] = false;
+			}
 			for (int i = firstNumberIndex + 1; i < n; i++) {
 				var b = m_list [i] as NumberNode;
 				if (b == null) {
 					continue;
 				}
 
-				a.Value += b.Value;
+				if (m_inverted [i]) {
+					a.Value -= b.Value;
+				} else {
+					a.Value += b.Value;
+				}
 				RemoveNodeAt (i);
 				n--;
 				i--;
@@ -390,6 +398,16 @@ namespace MathildaLib
 			}
 		}
 
+		public bool GetInvertedByAddress (Address address, int i = 0) {
+			var remainder = address.Count - i;
+			if (remainder == 1) {
+				return m_inverted [address [i]];
+			} else {
+				var subList = m_list [address [i]] as ListNode;
+				return subList.GetInvertedByAddress (address, i + 1);
+			}
+		}
+
 		private void SetByAddress (Address address, Node node, int i = 0) {
 			var remainder = address.Count - i;
 			if (remainder == 1) {
@@ -398,6 +416,16 @@ namespace MathildaLib
 			} else {
 				var subList = m_list [address [i]] as ListNode;
 				subList.SetByAddress (address, node, i + 1);
+			}
+		}
+
+		public void SetInvertedByAddress (Address address, bool value, int i = 0) {
+			var remainder = address.Count - i;
+			if (remainder == 1) {
+				m_inverted [address [i]] = value;
+			} else {
+				var subList = m_list [address [i]] as ListNode;
+				subList.SetInvertedByAddress (address, value, i + 1);
 			}
 		}
 
