@@ -5,11 +5,48 @@ namespace MathildaLib
 {
 	public static class AddExtensionModule
 	{
+		public static ListNode Add (this NumberNode a, NumberNode b) {
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<IComparable> () {
+				a, b});
+			return list;
+		}
+
+		public static ListNode Add (this NumberNode a, double b) {
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<IComparable> () {
+				a,
+				new NumberNode (b)});
+			return list;
+		}
+
+		public static ListNode Add (this NumberNode a, string b) {
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<IComparable> () {
+				a,
+				new VariableNode (b)});
+			return list;
+		}
+
+		public static ListNode Add (this NumberNode a, VariableNode b) {
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<IComparable> () {
+				a, b});
+			return list;
+		}
+
 		public static ListNode Add (this VariableNode a, double b) {
 			var list = new ListNode (ListNode.ListOperation.Sum,
 			                         new List<IComparable> () {
 				a,
-				b});
+				new NumberNode (b)});
+			return list;
+		}
+
+		public static ListNode Add (this VariableNode a, NumberNode b) {
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<IComparable> () {
+				a, b});
 			return list;
 		}
 
@@ -30,13 +67,13 @@ namespace MathildaLib
 
 		public static ListNode Add (this ListNode a, double b) {
 			if (a.Operation == ListNode.ListOperation.Sum) {
-				a.AddNode (b);
+				a.AddNode (new NumberNode (b));
 				return a;
 			}
 			
 			var list = new ListNode (ListNode.ListOperation.Sum,
 			                         new List<IComparable> () {
-				a, b});
+				a, new NumberNode (b)});
 			return list;
 		}
 

@@ -21,12 +21,12 @@ namespace MathildaLib
 			int n = list.NodeCount;
 			for (int i = 0; i < n; i++) {
 				var item = list [i];
-				if (!(item is double)) {
+				var number = item as NumberNode;
+				if (number == null) {
 					continue;
 				}
 
-				var number = (double)item;
-				if (number == 0) return true;
+				if (number.Value == 0) return true;
 			}
 
 			return false;
@@ -34,7 +34,7 @@ namespace MathildaLib
 
 		public override IComparable Do(IComparable node)
 		{
-			node = 0.0;
+			node = new NumberNode (0);
 			return node;
 		}
 
