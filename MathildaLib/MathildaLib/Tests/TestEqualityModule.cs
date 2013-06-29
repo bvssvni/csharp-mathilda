@@ -23,22 +23,22 @@ namespace MathildaLib
 
 		[Test()]
 		public void TestSumNumbers () {
-			var a = new ListNode (ListNode.ListOperation.Sum, 1.0, 2.0, 3.0, 4.0);
-			var b = 10.0;
+			var a = new NumberNode (1).Add (2).Add (3).Add (4);
+			var b = new NumberNode (10);
 			Assert.True (a.IsEqualTo (b));
 		}
 
 		[Test()]
 		public void TestMultiplyNumbers () {
-			var a = new ListNode (ListNode.ListOperation.Product, 1.0, 2.0, 3.0, 4.0);
-			var b = 24.0;
+			var a = new NumberNode (1).Multiply (2).Multiply (3).Multiply (4);
+			var b = new NumberNode (24);
 			Assert.True (a.IsEqualTo (b));
 		}
 
 		[Test()]
 		public void TestZeroMultiply () {
 			var a = new VariableNode ("a").Multiply (0);
-			var b = 0.0;
+			var b = new NumberNode (0);
 			Assert.True (a.IsEqualTo (b));
 
 			var c = new VariableNode ("a").Add (0);
@@ -57,8 +57,8 @@ namespace MathildaLib
 
 		[Test()]
 		public void TestMultiply () {
-			var a = new ListNode (ListNode.ListOperation.Product, 2, 5, 3);
-			var b = 30.0;
+			var a = new NumberNode (2).Multiply (5).Multiply (3);
+			var b = new NumberNode (30);
 			Assert.True (a.IsEqualTo (b));
 		}
 
@@ -95,7 +95,7 @@ namespace MathildaLib
 			// a + a
 			var a = new VariableNode ("a").Add ("a");
 			// 2 * a
-			var b = ListNode.Product (2, "a");
+			var b = new NumberNode (2).Multiply ("a");
 			Assert.True (a.IsEqualTo (b));
 		}
 
@@ -103,7 +103,7 @@ namespace MathildaLib
 		public void TestVariableCancellingSum () {
 			// a - a = 0
 			var a = new VariableNode ("a").Subtract ("a");
-			var b = 0.0;
+			var b = new NumberNode (0);
 			Assert.True (a.IsEqualTo (b));
 		}
 
@@ -111,7 +111,7 @@ namespace MathildaLib
 		public void TestVariableCancellingProduct () {
 			// a / a = 1
 			var a = new VariableNode ("a").Divide ("a");
-			var b = 1.0;
+			var b = new NumberNode (1);
 			Assert.True (a.IsEqualTo (b));
 		}
 
