@@ -4,7 +4,7 @@ namespace MathildaLib
 {
 	public static class EqualityModule
 	{
-		public static bool IsEqualTo (this IComparable a, IComparable b, SearchModule.OperatorDelegate[] operators = null) {
+		public static bool IsEqualTo (this Node a, Node b, SearchModule.OperatorDelegate[] operators = null) {
 			if (operators == null) {
 				operators = SearchModule.CreateOperators ();
 			}

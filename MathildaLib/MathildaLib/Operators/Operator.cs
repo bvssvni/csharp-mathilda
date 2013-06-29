@@ -4,8 +4,8 @@ namespace MathildaLib
 {
 	public abstract class Operator
 	{
-		public abstract bool Can (IComparable node);
-		public abstract IComparable Do (IComparable node);
+		public abstract bool Can (Node node);
+		public abstract void Do (ref Node node);
 	}
 }
 

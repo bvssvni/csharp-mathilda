@@ -13,7 +13,7 @@ namespace MathildaLib
 			m_j = j;
 		}
 
-		public override bool Can(IComparable node)
+		public override bool Can(Node node)
 		{
 			var list = node as ListNode;
 			if (list == null) {
@@ -39,7 +39,7 @@ namespace MathildaLib
 			return true;
 		}
 
-		public override IComparable Do(IComparable node)
+		public override void Do(ref Node node)
 		{
 			var list = node as ListNode;
 			list.RemoveNodeAt (m_j);
@@ -49,8 +49,6 @@ namespace MathildaLib
 			} else if (list.Operation == ListNode.ListOperation.Product) {
 				list.InsertNode (m_i, new NumberNode (1));
 			}
-
-			return node;
 		}
 
 		public static void CancelVariable (SearchModule.Search search) {

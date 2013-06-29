@@ -20,18 +20,17 @@ namespace MathildaLib
 			m_node = node;
 		}
 
-		public override bool Can(IComparable node)
+		public override bool Can(Node node)
 		{
 			return node is ListNode;
 		}
 
-		public override IComparable Do(IComparable node)
+		public override void Do(ref Node node)
 		{
 			var list = node as ListNode;
 			list.RemoveNodeAt (m_j);
 			list.RemoveNodeAt (m_i);
 			list.InsertNode (m_i, m_node);
-			return node;
 		}
 	}
 }
