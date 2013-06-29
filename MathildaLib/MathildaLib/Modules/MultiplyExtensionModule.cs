@@ -17,11 +17,10 @@ namespace MathildaLib
 	/// 3: Added unit test for native type.
 	/// 4: Added unit test for overridden type.
 	/// 
-	/// 		N	V	LL	SL	PL
-	/// 	N	3	3	3	3	3
-	/// 	V	3	3	3	3	3
-	/// 	LL	2	2	-
-	/// 	SL
+	/// 		N	V	SL	PL
+	/// 	N	3	3	3	3
+	/// 	V	3	3	3	3
+	/// 	SL	3	3	3	3
 	/// 	PL
 	/// 
 	/// </summary>
@@ -160,6 +159,39 @@ namespace MathildaLib
 			return new ListNode (ListNode.ListOperation.Product, a, b);
 		}
 
+		public static ListNode Multiply (this ListNode a, ListNode b) {
+			if (a.Operation == ListNode.ListOperation.Sum &&
+			    b.Operation == ListNode.ListOperation.Sum) {
+				var newList = new List<Node> ();
+				int n = a.NodeCount;
+				int m = b.NodeCount;
+				for (int i = 0; i < n; i++) {
+					for (int j = 0; j < m; j++) {
+						var ai = a [i];
+						var bj = b [j];
+						newList.Add (ai.Multiply (bj));
+					}
+				}
+
+				return new ListNode (ListNode.ListOperation.Sum, newList);
+			}
+
+			if (a.Operation == ListNode.ListOperation.Sum &&
+			    b.Operation == ListNode.ListOperation.Product) {
+				var newList = new List<Node> ();
+				int n = a.NodeCount;
+				for (int i = 0; i < n; i++) {
+					var copy = b.Copy () as ListNode;
+					copy.InsertNode (0, a [i].Copy ());
+					newList.Add (copy);
+				}
+
+				return new ListNode (ListNode.ListOperation.Sum, newList);
+			}
+
+			throw new NotImplementedException ();
+		}
+
 		public static Node Multiply (this Node a, Node b) {
 			if (a is NumberNode && b is NumberNode) {
 				var an = a as NumberNode;
@@ -199,6 +231,11 @@ namespace MathildaLib
 			if (a is ListNode && b is VariableNode) {
 				var an = a as ListNode;
 				var bn = b as VariableNode;
+				return an.Multiply (bn);
+			}
+			if (a is ListNode && b is ListNode) {
+				var an = a as ListNode;
+				var bn = b as ListNode;
 				return an.Multiply (bn);
 			}
 
