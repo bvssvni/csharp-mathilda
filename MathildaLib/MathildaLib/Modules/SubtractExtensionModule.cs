@@ -20,7 +20,7 @@ namespace MathildaLib
 	/// 		N	V	SL	PL
 	/// 	N	3	3	3	3
 	/// 	V	3	3	3	3
-	/// 	SL	3
+	/// 	SL	3	3
 	/// 	PL	
 	/// 
 	/// </summary>
@@ -145,6 +145,34 @@ namespace MathildaLib
 			var list = new ListNode (ListNode.ListOperation.Sum,
 			                         new List<Node> () {
 				a, new NumberNode (-b.Value)});
+			return list;
+		}
+
+		public static ListNode Subtract (this ListNode a, string b) {
+			if (a.Operation == ListNode.ListOperation.Sum) {
+				a.AddNode (new VariableNode (b));
+				a.SetInverted (a.NodeCount - 1, true);
+				return a;
+			}
+			
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<Node> () {
+				a, new VariableNode (b)});
+			list.SetInverted (1, true);
+			return list;
+		}
+
+		public static ListNode Subtract (this ListNode a, VariableNode b) {
+			if (a.Operation == ListNode.ListOperation.Sum) {
+				a.AddNode (b);
+				a.SetInverted (a.NodeCount - 1, true);
+				return a;
+			}
+			
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<Node> () {
+				a, b});
+			list.SetInverted (1, true);
 			return list;
 		}
 	}
