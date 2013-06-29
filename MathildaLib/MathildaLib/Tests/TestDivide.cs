@@ -81,6 +81,19 @@ namespace MathildaLib
 				new NumberNode (2).Divide ("a"));
 			Assert.True (a.IsEqualTo (b));
 		}
+
+		[Test()]
+		public void TestDivide11 () {
+			// (a + 2) / (a + 2)
+			var a = new VariableNode ("a").Add (2).Divide (
+				new VariableNode ("a").Add (2));
+			var b = new NumberNode (1);
+
+			// TEST
+			Console.WriteLine (a);
+
+			Assert.True (a.IsEqualTo (b));
+		}
 	}
 }
 

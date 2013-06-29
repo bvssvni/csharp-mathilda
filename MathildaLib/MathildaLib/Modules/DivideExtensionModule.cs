@@ -177,6 +177,15 @@ namespace MathildaLib
 		}
 		
 		public static ListNode Divide (this ListNode a, ListNode b) {
+			if (a.Operation == ListNode.ListOperation.Sum &&
+			    b.Operation == ListNode.ListOperation.Sum) {
+				var list = new ListNode (ListNode.ListOperation.Product,
+				                         new List<Node> () {
+					a, b});
+				list.SetInverted (1, true);
+				return list;
+			}
+
 			throw new NotImplementedException ();
 		}
 		

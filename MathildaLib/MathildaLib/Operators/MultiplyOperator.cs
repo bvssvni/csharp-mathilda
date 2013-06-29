@@ -115,6 +115,13 @@ namespace MathildaLib
 				if (an.Operation == ListNode.ListOperation.Sum) {
 					var newList = new List<Node> ();
 					var bInverted = list.GetInverted (m_j);
+					if (bInverted && an.CompareTo (b) == 0) {
+						list.RemoveNodeAt (m_j);
+						list.RemoveNodeAt (m_i);
+						list.InsertNode (m_i, new NumberNode (1));
+						return;
+					}
+
 					int n = an.NodeCount;
 					for (int i = 0; i < n; i++) {
 						var item = an [i];
