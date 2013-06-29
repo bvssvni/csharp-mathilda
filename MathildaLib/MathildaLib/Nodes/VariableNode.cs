@@ -23,7 +23,7 @@ namespace MathildaLib
 			return new VariableNode (m_name);
 		}
 
-		public override int CompareTo(Node other)
+		public override int CompareTo(object other)
 		{
 			var otherNode = other as VariableNode;
 			if (otherNode == null) {

@@ -9,7 +9,7 @@ namespace MathildaLib
 		{
 		}
 
-		public override bool Can(Node node)
+		public override bool Can(IComparable node)
 		{
 			var list = node as ListNode;
 			if (list == null) {
@@ -19,10 +19,11 @@ namespace MathildaLib
 			return list.Operation == ListNode.ListOperation.Sum;
 		}
 
-		public override void Do(ref Node node)
+		public override IComparable Do(IComparable node)
 		{
 			var list = node as ListNode;
 			list.Sum ();
+			return node;
 		}
 
 		public static void Sum (SearchModule.Search search) {

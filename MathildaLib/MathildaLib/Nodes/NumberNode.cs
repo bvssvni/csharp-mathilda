@@ -26,7 +26,7 @@ namespace MathildaLib
 			return new NumberNode (m_value);
 		}
 
-		public override int CompareTo(Node other)
+		public override int CompareTo(object other)
 		{
 			var otherNode = other as NumberNode;
 			if (otherNode == null) {

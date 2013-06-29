@@ -7,7 +7,7 @@ namespace MathildaLib
 	{
 		public static ListNode Divide (this VariableNode a, string b) {
 			var list = new ListNode (ListNode.ListOperation.Product,
-			                         new List<Node> () {
+			                         new List<IComparable> () {
 				a, 
 				new VariableNode (b)});
 			list.SetInverted (1, true);

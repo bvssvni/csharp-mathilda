@@ -8,12 +8,12 @@ namespace MathildaLib
 	{
 		public enum ListOperation : int
 		{
-			Product = 1,
-			Sum = 2,
+			Product = 0,
+			Sum = 1,
 		}
 
 		private ListOperation m_listOperation;
-		private List<Node> m_list;
+		private List<IComparable> m_list;
 		private List<bool> m_inverted;
 
 		public ListOperation Operation {
@@ -28,7 +28,7 @@ namespace MathildaLib
 			}
 		}
 
-		public Node this [int index] {
+		public IComparable this [int index] {
 			get {
 				return m_list [index];
 			}
@@ -45,7 +45,7 @@ namespace MathildaLib
 			return m_inverted [index];
 		}
 
-		public ListNode(ListOperation listOperation, List<Node> list)
+		public ListNode(ListOperation listOperation, List<IComparable> list)
 		{
 			m_listOperation = listOperation;
 			m_list = list;
@@ -56,9 +56,9 @@ namespace MathildaLib
 			}
 		}
 
-		public ListNode (ListOperation listOperation, params Node[] items) {
+		public ListNode (ListOperation listOperation, params IComparable[] items) {
 			m_listOperation = listOperation;
-			m_list = new List<Node> (items);
+			m_list = new List<IComparable> (items);
 			int n = m_list.Count;
 			m_inverted = new List<bool> ();
 			for (int i = 0; i < n; i++) {
@@ -66,12 +66,12 @@ namespace MathildaLib
 			}
 		}
 
-		public void AddNode (Node node) {
+		public void AddNode (IComparable node) {
 			m_list.Add (node);
 			m_inverted.Add (false);
 		}
 
-		public void InsertNode (int index, Node node) {
+		public void InsertNode (int index, IComparable node) {
 			m_list.Insert (index, node);
 			m_inverted.Insert (index, false);
 		}
@@ -202,10 +202,10 @@ namespace MathildaLib
 
 		public override Node Copy()
 		{
-			var newList = new List<Node> ();
+			var newList = new List<IComparable> ();
 			int n = m_list.Count;
 			for (int i = 0; i < n; i++) {
-				var item = m_list [i];
+				var item = m_list [i] as Node;
 				newList.Add (item.Copy ());
 			}
 
@@ -282,7 +282,7 @@ namespace MathildaLib
 			return count;
 		}
 
-		public override int CompareTo (Node other)
+		public override int CompareTo (object other)
 		{
 			var otherNode = other as ListNode;
 			if (otherNode == null) {
@@ -380,7 +380,7 @@ namespace MathildaLib
 			}
 		}
 
-		private Node GetByAddress (Address address, int i = 0) {
+		private IComparable GetByAddress (Address address, int i = 0) {
 			var remainder = address.Count - i;
 			if (remainder == 1) {
 				return m_list [address [i]];
@@ -390,7 +390,7 @@ namespace MathildaLib
 			}
 		}
 
-		private void SetByAddress (Address address, Node node, int i = 0) {
+		private void SetByAddress (Address address, IComparable node, int i = 0) {
 			var remainder = address.Count - i;
 			if (remainder == 1) {
 				m_list [address [i]] = node;
@@ -401,7 +401,7 @@ namespace MathildaLib
 			}
 		}
 
-		public Node this [Address address] {
+		public IComparable this [Address address] {
 			get {
 				return GetByAddress (address, 0);
 			}

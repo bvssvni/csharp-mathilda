@@ -13,7 +13,7 @@ namespace MathildaLib
 			m_j = j;
 		}
 
-		public override bool Can(Node node)
+		public override bool Can(IComparable node)
 		{
 			var list = node as ListNode;
 			if (list == null) {
@@ -30,7 +30,7 @@ namespace MathildaLib
 			return true;
 		}
 
-		public override void Do(ref Node node)
+		public override IComparable Do(IComparable node)
 		{
 			var list = node as ListNode;
 			var a = list [m_i];
@@ -39,7 +39,7 @@ namespace MathildaLib
 				var an = a as VariableNode;
 				var bn = b as VariableNode;
 				if (an.Name != bn.Name) {
-					return;
+					return node;
 				}
 
 				var newNode = new ListNode (ListNode.ListOperation.Product,
@@ -47,17 +47,17 @@ namespace MathildaLib
 				list.RemoveNodeAt (m_j);
 				list.RemoveNodeAt (m_i);
 				list.InsertNode (m_i, newNode);
-				return;
+				return node;
 			}
 			if (a is ListNode && b is ListNode) {
 				var an = a as ListNode;
 				var bn = b as ListNode;
 				if (an.Operation != ListNode.ListOperation.Sum ||
 				    bn.Operation != ListNode.ListOperation.Sum) {
-					return;
+					return node;
 				}
 				if (an.CompareToIgnoreScalar (bn) != 0) {
-					return;
+					return node;
 				}
 
 				// Add numbers together.
@@ -71,8 +71,10 @@ namespace MathildaLib
 					an [0] = new NumberNode (aValue + bValue);
 				}
 
-				return;
+				return node;
 			}
+
+			return node;
 		}
 
 		public static void Add (SearchModule.Search search) {

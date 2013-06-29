@@ -12,7 +12,7 @@ namespace MathildaLib
 		{
 			var a = new NumberNode (1).Add (2);
 			var b = new ListNode (ListNode.ListOperation.Sum,
-			                      new List<Node> () {
+			                      new List<IComparable> () {
 				new NumberNode (1),
 				new NumberNode (2)});
 			Assert.True (a.CompareTo (b) == 0);
@@ -25,7 +25,7 @@ namespace MathildaLib
 		{
 			var a = new NumberNode (1).Multiply (2);
 			var b = new ListNode (ListNode.ListOperation.Product,
-			                      new List<Node> () {
+			                      new List<IComparable> () {
 				new NumberNode (1),
 				new NumberNode (2)});
 			Assert.True (a.CompareTo (b) == 0);
@@ -38,7 +38,7 @@ namespace MathildaLib
 		{
 			var a = new NumberNode (1).Add (new VariableNode ("a"));
 			var b = new ListNode (ListNode.ListOperation.Sum,
-			                      new List<Node> () {
+			                      new List<IComparable> () {
 			    new NumberNode (1),
 				new VariableNode ("a")});
 			Assert.True (a.CompareTo (b) == 0);
@@ -51,7 +51,7 @@ namespace MathildaLib
 		{
 			var a = new NumberNode (1).Multiply (new VariableNode ("a"));
 			var b = new ListNode (ListNode.ListOperation.Product,
-			                      new List<Node> () {
+			                      new List<IComparable> () {
 				new NumberNode (1),
 				new VariableNode ("a")});
 			Assert.True (a.CompareTo (b) == 0);
@@ -63,7 +63,7 @@ namespace MathildaLib
 		public void TestVariableAddNumber () {
 			var a = new VariableNode ("a").Add (2);
 			var b = new ListNode (ListNode.ListOperation.Sum,
-			                      new List<Node> () {
+			                      new List<IComparable> () {
 				new VariableNode ("a"),
 				new NumberNode (2)});
 			Assert.True (a.CompareTo (b) == 0);
@@ -75,7 +75,7 @@ namespace MathildaLib
 		public void TestVariableMultiplyNumber () {
 			var a = new VariableNode ("a").Multiply (2);
 			var b = new ListNode (ListNode.ListOperation.Product,
-			                      new List<Node> () {
+			                      new List<IComparable> () {
 				new VariableNode ("a"),
 				new NumberNode (2)});
 			Assert.True (a.CompareTo (b) == 0);
@@ -87,7 +87,7 @@ namespace MathildaLib
 		public void TestVariableAddVariable () {
 			var a = new VariableNode ("a").Add ("b");
 			var b = new ListNode (ListNode.ListOperation.Sum,
-			                      new List<Node> () {
+			                      new List<IComparable> () {
 				new VariableNode ("a"),
 				new VariableNode ("b")});
 			Assert.True (a.CompareTo (b) == 0);
@@ -99,7 +99,7 @@ namespace MathildaLib
 		public void TestVariableMultiplyVariable () {
 			var a = new VariableNode ("a").Multiply ("b");
 			var b = new ListNode (ListNode.ListOperation.Product,
-			                      new List<Node> () {
+			                      new List<IComparable> () {
 				new VariableNode ("a"),
 				new VariableNode ("b")});
 			Assert.True (a.CompareTo (b) == 0);
@@ -110,11 +110,11 @@ namespace MathildaLib
 		[Test()]
 		public void TestListAddNumber () {
 			var a = new ListNode (ListNode.ListOperation.Sum,
-			                      new List<Node> () {
+			                      new List<IComparable> () {
 				new NumberNode (1)});
 			a.Add (2);
 			var b = new ListNode (ListNode.ListOperation.Sum,
-			                      new List<Node> () {
+			                      new List<IComparable> () {
 				new NumberNode (1),
 				new NumberNode (2)});
 			Assert.True (a.CompareTo (b) == 0);
@@ -123,11 +123,11 @@ namespace MathildaLib
 		[Test()]
 		public void TestListAddVariable () {
 			var a = new ListNode (ListNode.ListOperation.Sum,
-			                      new List<Node> () {
+			                      new List<IComparable> () {
 				new NumberNode (1)});
 			a.Add ("a");
 			var b = new ListNode (ListNode.ListOperation.Sum,
-			                      new List<Node> () {
+			                      new List<IComparable> () {
 				new NumberNode (1),
 				new VariableNode ("a")});
 			Assert.True (a.CompareTo (b) == 0);
@@ -137,9 +137,9 @@ namespace MathildaLib
 		public void TestNumberAddNumberMultiplyNumber () {
 			var a = new NumberNode (1).Add (2).Multiply (3);
 			var b = new ListNode (ListNode.ListOperation.Product,
-			                      new List<Node> () {
+			                      new List<IComparable> () {
 				new ListNode (ListNode.ListOperation.Sum,
-				              new List<Node> () {
+				              new List<IComparable> () {
 					new NumberNode (1),
 					new NumberNode (2)}),
 				new NumberNode (3)});
@@ -150,9 +150,9 @@ namespace MathildaLib
 		public void TestNumberMultiplyNumberAddNumber () {
 			var a = new NumberNode (1).Multiply (2).Add (3);
 			var b = new ListNode (ListNode.ListOperation.Sum,
-			                      new List<Node> () {
+			                      new List<IComparable> () {
 				new ListNode (ListNode.ListOperation.Product,
-				              new List<Node> () {
+				              new List<IComparable> () {
 					new NumberNode (1),
 					new NumberNode (2)}),
 				new NumberNode (3)});
@@ -163,9 +163,9 @@ namespace MathildaLib
 		public void TestNumberAddNumberMultiplyVariable () {
 			var a = new NumberNode (1).Add (2).Multiply ("a");
 			var b = new ListNode (ListNode.ListOperation.Product,
-			                      new List<Node> () {
+			                      new List<IComparable> () {
 				new ListNode (ListNode.ListOperation.Sum,
-				              new List<Node> () {
+				              new List<IComparable> () {
 					new NumberNode (1),
 					new NumberNode (2)}),
 				new VariableNode ("a")});
@@ -176,9 +176,9 @@ namespace MathildaLib
 		public void TestNumberMultiplyNumberAddVariable () {
 			var a = new NumberNode (1).Multiply (2).Add ("a");
 			var b = new ListNode (ListNode.ListOperation.Sum,
-			                      new List<Node> () {
+			                      new List<IComparable> () {
 				new ListNode (ListNode.ListOperation.Product,
-				              new List<Node> () {
+				              new List<IComparable> () {
 					new NumberNode (1),
 					new NumberNode (2)}),
 				new VariableNode ("a")});

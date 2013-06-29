@@ -11,11 +11,11 @@ namespace MathildaLib
 		public void TestABvsBA()
 		{
 			var a = new ListNode (ListNode.ListOperation.Sum,
-			                      new List<Node> () {
+			                      new List<IComparable> () {
 				new VariableNode ("a"),
 				new VariableNode ("b")});
 			var b = new ListNode (ListNode.ListOperation.Sum,
-			                      new List<Node> () {
+			                      new List<IComparable> () {
 				new VariableNode ("b"),
 				new VariableNode ("a")});
 			Assert.True (a.IsEqualTo (b));
