@@ -14,10 +14,6 @@ namespace MathildaLib
 			if (list == null) {
 				return false;
 			}
-			if (list.Operation != ListNode.ListOperation.Sum) {
-				return false;
-			}
-
 			int n = list.NodeCount;
 			for (int i = 0; i < n; i++) {
 				if (list.GetInverted (i) && list [i] is NumberNode) {
@@ -35,7 +31,12 @@ namespace MathildaLib
 			for (int i = 0; i < n; i++) {
 				if (list.GetInverted (i) && list [i] is NumberNode) {
 					var number = list [i] as NumberNode;
-					number.Value = -number.Value;
+					if (list.Operation == ListNode.ListOperation.Sum) {
+						number.Value = -number.Value;
+					} else {
+						number.Value = 1.0 / number.Value;
+					}
+
 					list.SetInverted (i, false);
 				}
 			}

@@ -21,7 +21,7 @@ namespace MathildaLib
 	/// 	N	3	3	3	3
 	/// 	V	3	3	3	3
 	/// 	SL	3	3	3	3
-	/// 	PL	
+	/// 	PL	3	3	3	3
 	/// 
 	/// </summary>
 	public static class DivideExtensionModule
@@ -193,6 +193,26 @@ namespace MathildaLib
 				}
 
 				b.InsertNode (0, a);
+				return b;
+			}
+			if (a.Operation == ListNode.ListOperation.Product &&
+			    b.Operation == ListNode.ListOperation.Sum) {
+				a.AddNode (b);
+				a.SetInverted (a.NodeCount - 1, true);
+				return a;
+			}
+			if (a.Operation == ListNode.ListOperation.Product &&
+			    b.Operation == ListNode.ListOperation.Product) {
+				int n = b.NodeCount;
+				for (int i = 0; i < n; i++) {
+					b.SetInverted (i, !b.GetInverted (i));
+				}
+
+				int m = a.NodeCount;
+				for (int i = 0; i < m; i++) {
+					b.AddNode (a [i]);
+				}
+
 				return b;
 			}
 

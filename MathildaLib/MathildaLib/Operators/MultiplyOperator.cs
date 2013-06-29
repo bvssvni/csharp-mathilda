@@ -69,6 +69,13 @@ namespace MathildaLib
 					list.InsertNode (m_i, new ListNode (ListNode.ListOperation.Sum, newList));
 					return;
 				}
+				if (bn.Operation == ListNode.ListOperation.Product) {
+					if (list.GetInverted (m_j)) {
+						bn.InsertNode (0, new NumberNode (1.0 / an.Value));
+						list.RemoveNodeAt (m_i);
+						return;
+					}
+				}
 			}
 			if (a is VariableNode && b is ListNode) {
 				var an = a as VariableNode;
@@ -101,9 +108,8 @@ namespace MathildaLib
 								return;
 							}
 
-							// (*a/(*2*a)) -> (/(*1*a))
-							var scalar = bn [0] as NumberNode;
-							scalar.Value -= 1;
+							// (*a/(*2*a)) -> (/(*2))
+							bn.RemoveNodeAt (1);
 							list.RemoveNodeAt (m_i);
 							return;
 						}
@@ -139,6 +145,11 @@ namespace MathildaLib
 					return;
 				}
 			}
+
+			// TEST
+			Console.WriteLine ("hello!");
+			Console.WriteLine (a);
+			Console.WriteLine (b);
 
 			throw new NotImplementedException ();
 		}

@@ -53,7 +53,7 @@ namespace MathildaLib
 		public void TestDivide7 () {
 			var a = new VariableNode ("a").Divide (
 				new VariableNode ("a").Add ("a"));
-			var b = new NumberNode (1).Divide ("a");
+			var b = new NumberNode (0.5);
 			Assert.True (a.IsEqualTo (b));
 		}
 
@@ -100,6 +100,36 @@ namespace MathildaLib
 			var b = new NumberNode (0.5).Add (
 				new NumberNode (1).Divide ("a"));
 			Assert.True (a.IsEqualTo (b));
+		}
+
+		[Test()]
+		public void TestDivide13 () {
+			// (a * 2) / 2
+			var a = new VariableNode ("a").Multiply (2).Divide (2);
+			Assert.True (a.IsEqualTo (new VariableNode ("a")));
+		}
+
+		[Test()]
+		public void TestDivide14 () {
+			// (a * 2) / a
+			var a = new VariableNode ("a").Multiply (2).Divide ("a");
+			Assert.True (a.IsEqualTo (new NumberNode (2)));
+		}
+
+		[Test()]
+		public void TestDivide15 () {
+			// (a * 2) / (a + a)
+			var a = new VariableNode ("a").Multiply (2).Divide (
+				new VariableNode ("a").Add ("a"));
+			Assert.True (a.IsEqualTo (new NumberNode (1)));
+		}
+
+		[Test()]
+		public void TestDivide16 () {
+			// (a * 2) / (a * 2)
+			var a = new VariableNode ("a").Multiply (2).Divide (
+				new VariableNode ("a").Multiply (2));
+			Assert.True (a.IsEqualTo (new NumberNode (1)));
 		}
 	}
 }
