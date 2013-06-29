@@ -157,6 +157,56 @@ namespace MathildaLib
 				a, b});
 			return list;
 		}
+
+		public static Node Add (this Node a, Node b) {
+			if (a is NumberNode && b is NumberNode) {
+				var an = a as NumberNode;
+				var bn = b as NumberNode;
+				return an.Add (bn);
+			}
+			if (a is NumberNode && b is VariableNode) {
+				var an = a as NumberNode;
+				var bn = b as VariableNode;
+				return an.Add (bn);
+			}
+			if (a is NumberNode && b is ListNode) {
+				var an = a as NumberNode;
+				var bn = b as ListNode;
+				return an.Add (bn);
+			}
+			if (a is VariableNode && b is NumberNode) {
+				var an = a as VariableNode;
+				var bn = b as NumberNode;
+				return an.Add (bn);
+			}
+			if (a is VariableNode && b is VariableNode) {
+				var an = a as VariableNode;
+				var bn = b as VariableNode;
+				return an.Add (bn);
+			}
+			if (a is VariableNode && b is ListNode) {
+				var an = a as VariableNode;
+				var bn = b as ListNode;
+				return an.Multiply (bn);
+			}
+			if (a is ListNode && b is NumberNode) {
+				var an = a as ListNode;
+				var bn = b as NumberNode;
+				return an.Multiply (bn);
+			}
+			if (a is ListNode && b is VariableNode) {
+				var an = a as ListNode;
+				var bn = b as VariableNode;
+				return an.Multiply (bn);
+			}
+			if (a is ListNode && b is ListNode) {
+				var an = a as ListNode;
+				var bn = b as ListNode;
+				return an.Multiply (bn);
+			}
+
+			throw new NotImplementedException ();
+		}
 	}
 }
 
