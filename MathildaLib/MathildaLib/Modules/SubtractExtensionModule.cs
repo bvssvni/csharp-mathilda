@@ -21,7 +21,7 @@ namespace MathildaLib
 	/// 	N	3	3	3	3
 	/// 	V	3	3	3	3
 	/// 	SL	3	3	3	3
-	/// 	PL	
+	/// 	PL	3	3	3	3
 	/// 
 	/// </summary>
 	public static class SubtractExtensionModule
@@ -194,11 +194,75 @@ namespace MathildaLib
 				a.SetInverted (a.NodeCount - 1, true);
 				return a;
 			}
+			if (a.Operation == ListNode.ListOperation.Product &&
+			    b.Operation == ListNode.ListOperation.Sum) {
+				int n = b.NodeCount;
+				for (int i = 0; i < n; i++) {
+					b.SetInverted (i, !b.GetInverted (i));
+				}
+				b.InsertNode (0, a);
+				return b;
+			}
+			if (a.Operation == ListNode.ListOperation.Product &&
+			    b.Operation == ListNode.ListOperation.Product) {
+				var res = new ListNode (ListNode.ListOperation.Sum,
+				                        a, b);
+				res.SetInverted (1, true);
+				return res;
+			}
 
 			throw new NotImplementedException ();
 		}
 
-	
+		public static ListNode Subtract (this Node a, Node b) {
+			if (a is NumberNode && b is NumberNode) {
+				var an = a as NumberNode;
+				var bn = b as NumberNode;
+				return an.Subtract (bn);
+			}
+			if (a is NumberNode && b is VariableNode) {
+				var an = a as NumberNode;
+				var bn = b as VariableNode;
+				return an.Subtract (bn);
+			}
+			if (a is NumberNode && b is ListNode) {
+				var an = a as NumberNode;
+				var bn = b as ListNode;
+				return an.Subtract (bn);
+			}
+			if (a is VariableNode && b is NumberNode) {
+				var an = a as VariableNode;
+				var bn = b as NumberNode;
+				return an.Subtract (bn);
+			}
+			if (a is VariableNode && b is VariableNode) {
+				var an = a as VariableNode;
+				var bn = b as VariableNode;
+				return an.Subtract (bn);
+			}
+			if (a is VariableNode && b is ListNode) {
+				var an = a as VariableNode;
+				var bn = b as ListNode;
+				return an.Subtract (bn);
+			}
+			if (a is ListNode && b is NumberNode) {
+				var an = a as ListNode;
+				var bn = b as NumberNode;
+				return an.Subtract (bn);
+			}
+			if (a is ListNode && b is VariableNode) {
+				var an = a as ListNode;
+				var bn = b as VariableNode;
+				return an.Subtract (bn);
+			}
+			if (a is ListNode && b is ListNode) {
+				var an = a as ListNode;
+				var bn = b as ListNode;
+				return an.Subtract (bn);
+			}
+
+			throw new NotImplementedException ();
+		}
 	}
 }
 
