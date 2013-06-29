@@ -12,12 +12,12 @@ namespace MathildaLib
 		{
 			var a = new ListNode (ListNode.ListOperation.Sum,
 			                      new List<Node> () {
-				Node.Number (1),
-				Node.Number (2)});
+				new NumberNode (1),
+				new NumberNode (2)});
 			a.Sum ();
 			var b = new ListNode (ListNode.ListOperation.Sum,
 			                      new List<Node> () {
-				Node.Number (3)});
+				new NumberNode (3)});
 			Assert.True (a.CompareTo (b) == 0);
 		}
 
@@ -26,13 +26,13 @@ namespace MathildaLib
 			var a = new ListNode (ListNode.ListOperation.Sum,
 			                      new List<Node> () {
 				new VariableNode ("hello"),
-				Node.Number (2),
-				Node.Number (5)});
+				new NumberNode (2),
+				new NumberNode (5)});
 			a.Sum ();
 			var b = new ListNode (ListNode.ListOperation.Sum,
 			                      new List<Node> () {
 				new VariableNode ("hello"),
-				Node.Number (7)});
+				new NumberNode (7)});
 			Assert.True (a.CompareTo (b) == 0);
 		}
 	}

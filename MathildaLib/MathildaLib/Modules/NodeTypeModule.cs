@@ -1,5 +1,4 @@
 using System;
-using NumberNode = MathildaLib.ListNode.NumberNode;
 
 namespace MathildaLib
 {
