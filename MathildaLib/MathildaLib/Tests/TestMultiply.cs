@@ -91,6 +91,38 @@ namespace MathildaLib
 			var b = new NumberNode (36);
 			Assert.True (a.IsEqualTo (b));
 		}
+
+		[Test()]
+		public void TestMultiply11 () {
+			// (1 * 2) * 3
+			var a = new NumberNode (1).Multiply (2).Multiply (3);
+			Assert.True (a.IsEqualTo (new NumberNode (6)));
+		}
+
+		[Test()]
+		public void TestMultiply12 () {
+			// (1 * 2) * a
+			var a = new NumberNode (1).Multiply (2).Multiply ("a");
+			Assert.True (a.IsEqualTo (new NumberNode (2).Multiply ("a")));
+		}
+
+		[Test()]
+		public void TestMultiply13 () {
+			// (1 * 2) * (3 + 4)
+			var a = new NumberNode (1).Multiply (2).Multiply (
+				new NumberNode (3).Add (4));
+			var b = new NumberNode (14);
+			Assert.True (a.IsEqualTo (b));
+		}
+
+		[Test()]
+		public void TestMultiply14 () {
+			// (1 * 2) * (3 * 4)
+			var a = new NumberNode (1).Multiply (2).Multiply (
+				new NumberNode (3).Multiply (4));
+			var b = new NumberNode (24);
+			Assert.True (a.IsEqualTo (b));
+		}
 	}
 }
 

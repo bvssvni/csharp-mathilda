@@ -21,7 +21,7 @@ namespace MathildaLib
 	/// 	N	3	3	3	3
 	/// 	V	3	3	3	3
 	/// 	SL	3	3	3	3
-	/// 	PL
+	/// 	PL	3	3	3	3
 	/// 
 	/// </summary>
 	public static class MultiplyExtensionModule
@@ -187,6 +187,30 @@ namespace MathildaLib
 				}
 
 				return new ListNode (ListNode.ListOperation.Sum, newList);
+			}
+
+			if (a.Operation == ListNode.ListOperation.Product &&
+			    b.Operation == ListNode.ListOperation.Sum) {
+				var newList = new List<Node> ();
+				int n = b.NodeCount;
+				for (int i = 0; i < n; i++) {
+					var copy = a.Copy () as ListNode;
+					copy.AddNode (b [i].Copy ());
+					newList.Add (copy);
+				}
+
+				return new ListNode (ListNode.ListOperation.Sum, newList);
+			}
+
+			if (a.Operation == ListNode.ListOperation.Product &&
+			    b.Operation == ListNode.ListOperation.Product) {
+				var res = a.Copy () as ListNode;
+				int n = b.NodeCount;
+				for (int i = 0; i < n; i++) {
+					res.AddNode (b [i].Copy ());
+				}
+
+				return res;
 			}
 
 			throw new NotImplementedException ();
