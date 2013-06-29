@@ -18,6 +18,9 @@ namespace MathildaLib
 			if (list.NodeCount != 1) {
 				return false;
 			}
+			if (list.GetInverted (0)) {
+				return false;
+			}
 
 			return true;
 		}

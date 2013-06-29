@@ -141,13 +141,21 @@ namespace MathildaLib
 			}
 			
 			var a = m_list [firstNumberIndex] as NumberNode;
+			if (m_inverted [firstNumberIndex]) {
+				a.Value = 1.0 / a.Value;
+				m_inverted [firstNumberIndex] = false;
+			}
 			for (int i = firstNumberIndex + 1; i < n; i++) {
 				var b = m_list [i] as NumberNode;
 				if (b == null) {
 					continue;
 				}
-				
-				a.Value *= b.Value;
+
+				if (m_inverted [i]) {
+					a.Value /= b.Value;
+				} else {
+					a.Value *= b.Value;
+				}
 				RemoveNodeAt (i);
 				n--;
 				i--;

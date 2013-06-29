@@ -10,6 +10,10 @@ namespace MathildaLib
 			}
 
 			a = a.Minimize (null, operators);
+
+			// TEST
+			Console.WriteLine ("========");
+
 			b = b.Minimize (null, operators);
 			return a.CompareTo (b) == 0;
 		}

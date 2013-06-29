@@ -20,6 +20,9 @@ namespace MathildaLib
 			if (list == null) {
 				return false;
 			}
+			if (list.Operation != ListNode.ListOperation.Product) {
+				return false;
+			}
 
 			return true;
 		}
@@ -49,12 +52,15 @@ namespace MathildaLib
 				var an = a as NumberNode;
 				var bn = b as ListNode;
 				if (bn.Operation == ListNode.ListOperation.Sum) {
+					if (list.GetInverted (m_j)) {
+						return;
+					}
+
 					var newList = new List<Node> ();
 					int n = bn.NodeCount;
 					for (int i = 0; i < n; i++) {
 						var item = bn [i];
 						var mul = an.Multiply (item);
-
 						newList.Add (mul);
 					}
 					
@@ -68,6 +74,10 @@ namespace MathildaLib
 				var an = a as VariableNode;
 				var bn = b as ListNode;
 				if (bn.Operation == ListNode.ListOperation.Sum) {
+					if (list.GetInverted (m_j)) {
+						return;
+					}
+
 					var newList = new List<Node> ();
 					int n = bn.NodeCount;
 					for (int i = 0; i < n; i++) {
@@ -81,6 +91,23 @@ namespace MathildaLib
 					list.RemoveNodeAt (m_i);
 					list.InsertNode (m_i, new ListNode (ListNode.ListOperation.Sum, newList));
 					return;
+				}
+				if (bn.Operation == ListNode.ListOperation.Product) {
+					if (list.GetInverted (m_j)) {
+						var bIndex = bn [0] is NumberNode ? 1 : 0;
+						if (bIndex == 1 && bn.NodeCount == 2 && bn [1] is VariableNode) {
+							var bvar = bn [1] as VariableNode;
+							if (bvar.Name != an.Name) {
+								return;
+							}
+
+							// (*a/(*2*a)) -> (/(*1*a))
+							var scalar = bn [0] as NumberNode;
+							scalar.Value -= 1;
+							list.RemoveNodeAt (m_i);
+							return;
+						}
+					}
 				}
 			}
 			if (a is ListNode) {
