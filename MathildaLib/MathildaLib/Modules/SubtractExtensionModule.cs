@@ -18,9 +18,9 @@ namespace MathildaLib
 	/// 4: Added unit test for overridden type.
 	/// 
 	/// 		N	V	SL	PL
-	/// 	N	3	3	3
-	/// 	V	
-	/// 	SL	
+	/// 	N	3	3	3	3
+	/// 	V	3	3	3	3
+	/// 	SL	3
 	/// 	PL	
 	/// 
 	/// </summary>
@@ -77,11 +77,74 @@ namespace MathildaLib
 			return list;
 		}
 
+		public static ListNode Subtract (this VariableNode a, double b) {
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<Node> () {
+				a, new NumberNode (-b)});
+			return list;
+		}
+
+		public static ListNode Subtract (this VariableNode a, NumberNode b) {
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<Node> () {
+				a, new NumberNode (-b.Value)});
+			return list;
+		}
+
 		public static ListNode Subtract (this VariableNode a, string b) {
 			var list = new ListNode (ListNode.ListOperation.Sum,
 			                         new List<Node> () {
 				a, new VariableNode (b)});
 			list.SetInverted (1, true);
+			return list;
+		}
+
+		public static ListNode Subtract (this VariableNode a, VariableNode b) {
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<Node> () {
+				a, b});
+			list.SetInverted (1, true);
+			return list;
+		}
+
+		public static ListNode Subtract (this VariableNode a, ListNode b) {
+			if (b.Operation == ListNode.ListOperation.Sum) {
+				b.InsertNode (0, a);
+				int n = b.NodeCount;
+				for (int i = 1; i < n; i++) {
+					b.SetInverted (i, !b.GetInverted (i));
+				}
+				return b;
+			}
+
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<Node> () {
+				a, b});
+			list.SetInverted (1, true);
+			return list;
+		}
+
+		public static ListNode Subtract (this ListNode a, double b) {
+			if (a.Operation == ListNode.ListOperation.Sum) {
+				a.AddNode (new NumberNode (-b));
+				return a;
+			}
+
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<Node> () {
+				a, new NumberNode (-b)});
+			return list;
+		}
+
+		public static ListNode Subtract (this ListNode a, NumberNode b) {
+			if (a.Operation == ListNode.ListOperation.Sum) {
+				a.AddNode (new NumberNode (-b.Value));
+				return a;
+			}
+			
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<Node> () {
+				a, new NumberNode (-b.Value)});
 			return list;
 		}
 	}

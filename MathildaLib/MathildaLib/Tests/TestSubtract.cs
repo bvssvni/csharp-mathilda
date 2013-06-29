@@ -38,6 +38,46 @@ namespace MathildaLib
 			var b = new NumberNode (-5);
 			Assert.True (a.IsEqualTo (b));
 		}
+
+		[Test()]
+		public void TestSubtract5 () {
+			// a - 1
+			var a = new VariableNode ("a").Subtract (1);
+			Assert.True (a.ToString () == "(+a+-1)");
+		}
+
+		[Test()]
+		public void TestSubtract6 () {
+			// a - b
+			var a = new VariableNode ("a").Subtract ("b");
+			Assert.True (a.ToString () == "(+a-b)");
+		}
+
+		[Test()]
+		public void TestSubtract7 () {
+			// a - (1 + 2)
+			var a = new VariableNode ("a").Subtract (
+				new NumberNode (1).Add (2));
+			var b = new VariableNode ("a").Add (-3);
+			Assert.True (a.IsEqualTo (b));
+		}
+
+		[Test()]
+		public void TestSubtract8 () {
+			// a - (1 * 2)
+			var a = new VariableNode ("a").Subtract (
+				new NumberNode (1).Multiply (2));
+			var b = new VariableNode ("a").Subtract (2);
+			Assert.True (a.IsEqualTo (b));
+		}
+
+		[Test()]
+		public void TestSubtract9 () {
+			// (1 + 2) - 3
+			var a = new NumberNode (1).Add (2).Subtract (3);
+			var b = new NumberNode (0);
+			Assert.True (a.IsEqualTo (b));
+		}
 	}
 }
 
