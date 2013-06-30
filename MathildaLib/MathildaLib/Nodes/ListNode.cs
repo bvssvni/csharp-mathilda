@@ -321,6 +321,26 @@ namespace MathildaLib
 				return this.TypeId ().CompareTo (other.TypeId ());
 			}
 
+			// TEST
+			/*
+			// Smart lift comparison.
+			var lift = new SmartLiftOperator ();
+			if (lift.Can (otherNode)) {
+				var copy = otherNode.Copy ();
+				lift.Do (ref copy);
+				if (copy.CompareTo (this) == 0) {
+					return -1;
+				}
+			}
+			if (lift.Can (this)) {
+				var copy = this.Copy ();
+				lift.Do (ref copy);
+				if (copy.CompareTo (otherNode) == 0) {
+					return 1;
+				}
+			}
+			*/
+
 			if (this.m_list.Count == 1 &&
 			    m_list [0].CompareTo (otherNode) == 0) {
 				return 1;

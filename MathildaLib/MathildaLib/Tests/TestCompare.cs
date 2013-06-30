@@ -107,9 +107,25 @@ namespace MathildaLib
 		}
 
 		[Test()]
-		public void Test6 () {
-			// (*(-i)*(+b+(*c*(-i))))
-			// (+(*(-i)*b)+(+(*(-i)*c*(-i))))
+		public void TestCompareSmartList () {
+			// (+(*a*c)+(*a*d)+(*b*c)+(*b*d))
+			var a = new VariableNode ("a").Multiply ("c").Add (
+				new VariableNode ("a").Multiply ("d")).Add (
+				new VariableNode ("b").Multiply ("c")).Add (
+				new VariableNode ("b").Multiply ("d"));
+			Assert.True (a.ToString () == "(+(*a*c)+(*a*d)+(*b*c)+(*b*d))");
+			// (+(*(+(*a*c)+(*a*d)))+(*(+(*b*c)+(*b*d))))
+			var b = new ListNode (ListNode.ListOperation.Sum,
+			                      new ListNode (ListNode.ListOperation.Product,
+			                      new VariableNode ("a").Multiply ("c").Add (
+				new VariableNode ("a").Multiply ("d"))),
+			                      new ListNode (ListNode.ListOperation.Product,
+			                      new VariableNode ("b").Multiply ("c").Add (
+				new VariableNode ("b").Multiply ("d"))));
+			Assert.True (b.ToString () == "(+(*(+(*a*c)+(*a*d)))+(*(+(*b*c)+(*b*d))))");
+			int compareResult = a.CompareTo (b);
+			Assert.True (compareResult == -1);
+			Assert.True (b.CompareTo (a) == 1);
 		}
 	}
 }

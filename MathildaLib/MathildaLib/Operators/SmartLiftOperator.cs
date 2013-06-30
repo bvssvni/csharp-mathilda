@@ -32,7 +32,10 @@ namespace MathildaLib
 
 				if (item.Operation == ListNode.ListOperation.Product &&
 				    item.NodeCount == 1) {
-					var subItem = item [i] as ListNode;
+					var subItem = item [0] as ListNode;
+					if (subItem == null) {
+						continue;
+					}
 					if (subItem.Operation == ListNode.ListOperation.Sum) {
 						return true;
 					}

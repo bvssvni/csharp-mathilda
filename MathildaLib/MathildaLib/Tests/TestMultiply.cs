@@ -133,7 +133,8 @@ namespace MathildaLib
 
 			// TEST
 			Console.WriteLine (res.ToString ());
-			Assert.False (true);
+
+			Assert.True (res.ToString () == "(+(*a*c)+(*a*d)+(*b*c)+(*b*d))");
 		}
 
 		[Test()]
