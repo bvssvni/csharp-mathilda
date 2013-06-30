@@ -7,6 +7,16 @@ namespace MathildaLib
 	{
 		private double m_value;
 
+		public override bool Equals(object obj)
+		{
+			return base.Equals(obj);
+		}
+
+		public override int GetHashCode()
+		{
+			return base.GetHashCode();
+		}
+
 		public NumberNode(double value)
 		{
 			m_value = value;
