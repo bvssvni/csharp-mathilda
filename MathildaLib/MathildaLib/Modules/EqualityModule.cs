@@ -9,12 +9,12 @@ namespace MathildaLib
 				operators = SearchModule.CreateOperators ();
 			}
 
-			a = a.Minimize (null, operators);
+			a = a.Minimize (operators);
 
 			// TEST
 			Console.WriteLine ("========");
 
-			b = b.Minimize (null, operators);
+			b = b.Minimize (operators);
 			return a.CompareTo (b) == 0;
 		}
 	}

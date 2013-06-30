@@ -14,6 +14,7 @@ namespace MathildaLib
 			ZeroAddOperator.ZeroAdd,
 			MultiplyOneOperator.MultiplyOne,
 			ScalarProductOperator.Product,
+			NegativeProductOperator.NegativeProduct,
 			MultiplyOperator.Multiply,
 			AddOperator.Add,
 			CancelVariableOperator.CancelVariable,
@@ -88,9 +89,8 @@ namespace MathildaLib
 			}
 		}
 
-		public static Node Minimize (this Node node, 
-		                         SortedList<Node, bool> history = null,
-		                             params OperatorDelegate[] operators) {
+		public static Node Minimize (this Node node, OperatorDelegate[] operators,
+		                         SortedList<Node, bool> history = null) {
 			if (history == null) {
 				history = new SortedList<Node, bool> ();
 				history.Add (node, true);
@@ -125,13 +125,14 @@ namespace MathildaLib
 
 			while (states.Count > 0) {
 				var min = states.Keys [0];
+
 				if (min.CompareTo (node) < 0) {
 
 					// TEST
 					Console.WriteLine ("{0}: {1}", states.Values [0], min);
 
 					history.Add (min, true);
-					node = Minimize (min, history, operators);
+					node = Minimize (min, operators, history);
 				}
 
 				states.RemoveAt (0);

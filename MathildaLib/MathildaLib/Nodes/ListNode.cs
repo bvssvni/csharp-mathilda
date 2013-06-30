@@ -195,7 +195,6 @@ namespace MathildaLib
 				if (item == null) {
 					continue;
 				}
-				
 				if (item != 1) {
 					continue;
 				}
@@ -248,11 +247,11 @@ namespace MathildaLib
 				return this.TypeId ().CompareTo (other.TypeId ());
 			}
 			
-			var thisSubLists = this.NumberOfNonProductSubLists ();
-			var otherSubLists = otherNode.NumberOfNonProductSubLists ();
-			var compareSubLists = thisSubLists.CompareTo (otherSubLists);
-			if (compareSubLists != 0) {
-				return compareSubLists;
+			var thisNonProductSubLists = this.NumberOfNonProductSubLists ();
+			var otherNonProductSubLists = otherNode.NumberOfNonProductSubLists ();
+			var compareNonProductSubLists = thisNonProductSubLists.CompareTo (otherNonProductSubLists);
+			if (compareNonProductSubLists != 0) {
+				return compareNonProductSubLists;
 			}
 			
 			var compareOperation = m_listOperation.CompareTo (otherNode.m_listOperation);
@@ -306,6 +305,36 @@ namespace MathildaLib
 			return count;
 		}
 
+		private int NestedLifts () {
+			if (new LiftOperator ().Can (this)) {
+				var subList = this.m_list [0] as ListNode;
+				if (subList == null) {
+					return 1;
+				}
+
+				return 1 + subList.NestedLifts ();
+			}
+
+			return 0;
+		}
+
+		private int Depth () {
+			int maxDepth = 0;
+			for (int i = 0; i < m_list.Count; i++) {
+				var subList = this.m_list [i] as ListNode;
+				if (subList == null) {
+					continue;
+				}
+
+				int d = subList.Depth ();
+				if (d > maxDepth) {
+					maxDepth = d;
+				}
+			}
+
+			return maxDepth + 1;
+		}
+
 		public override int CompareTo (Node other)
 		{
 			var otherNode = other as ListNode;
@@ -313,11 +342,11 @@ namespace MathildaLib
 				return this.TypeId ().CompareTo (other.TypeId ());
 			}
 
-			var thisSubLists = this.NumberOfNonProductSubLists ();
-			var otherSubLists = otherNode.NumberOfNonProductSubLists ();
-			var compareSubLists = thisSubLists.CompareTo (otherSubLists);
-			if (compareSubLists != 0) {
-				return compareSubLists;
+			var thisNonProductSubLists = this.NumberOfNonProductSubLists ();
+			var otherNonProductSubLists = otherNode.NumberOfNonProductSubLists ();
+			var compareNonProductSubLists = thisNonProductSubLists.CompareTo (otherNonProductSubLists);
+			if (compareNonProductSubLists != 0) {
+				return compareNonProductSubLists;
 			}
 
 			var compareOperation = m_listOperation.CompareTo (otherNode.m_listOperation);
@@ -327,8 +356,6 @@ namespace MathildaLib
 
 			var compareCount = m_list.Count.CompareTo (otherNode.m_list.Count);
 			if (compareCount != 0) {
-
-
 				return compareCount;
 			}
 
@@ -386,18 +413,26 @@ namespace MathildaLib
 
 		public delegate void ForEachNodeDelegate (Address address);
 
-		public void ForEachNode (ForEachNodeDelegate f, Address address = null) {
+		public void ForEachNode (ForEachNodeDelegate f, Address address = null, ListNode parent = null) {
 			if (address == null) {
 				address = new Address ();
+			}
+			if (parent == null) {
+				parent = this;
 			}
 
 			int n = m_list.Count;
 			for (int i = 0; i < n; i++) {
 				address.Add (i);
+				var oldNode = parent [address];
 				f (address);
-				var subList = m_list [i] as ListNode;
-				if (subList != null) {
-					subList.ForEachNode (f, address);
+				var newNode = parent [address];
+				// Don't seek in sub tree if changed the node.
+				if (ReferenceEquals (oldNode, newNode)) {
+					var subList = m_list [i] as ListNode;
+					if (subList != null) {
+						subList.ForEachNode (f, address, parent);
+					}
 				}
 
 				address.RemoveAt (address.Count - 1);
@@ -496,6 +531,7 @@ namespace MathildaLib
 				strb.Append ("}");
 				return strb.ToString ();
 			}
+
 		}
 	}
 }

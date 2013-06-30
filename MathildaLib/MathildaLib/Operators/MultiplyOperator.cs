@@ -126,6 +126,10 @@ namespace MathildaLib
 							list.RemoveNodeAt (m_i);
 							return;
 						}
+					} else {
+						bn.InsertNode (0, a);
+						list.RemoveNodeAt (m_i);
+						return;
 					}
 				}
 			}
@@ -160,7 +164,7 @@ namespace MathildaLib
 			}
 
 			// TEST
-			Console.WriteLine ("hello!");
+			Console.WriteLine ("unsupported multiply!");
 			Console.WriteLine (a);
 			Console.WriteLine (b);
 

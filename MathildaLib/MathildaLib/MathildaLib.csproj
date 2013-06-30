@@ -70,6 +70,9 @@
     <Compile Include="Tests\TestSubtract.cs" />
     <Compile Include="Operators\FixSignOperator.cs" />
     <Compile Include="Tests\TestDivide.cs" />
+    <Compile Include="Modules\ConjugateModule.cs" />
+    <Compile Include="Tests\TestConjugate.cs" />
+    <Compile Include="Operators\NegativeProductOperator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

@@ -136,7 +136,7 @@ namespace MathildaLib
 		public void TestDivideByZero () {
 			var a = new NumberNode (1).Divide (0);
 			Assert.True (a.ToString () == "(*1/0)");
-			var b = a.Minimize (null, SearchModule.CreateOperators ());
+			var b = a.Minimize (SearchModule.CreateOperators ());
 			Assert.True (b.ToString () == "(/0)");
 		}
 	}
