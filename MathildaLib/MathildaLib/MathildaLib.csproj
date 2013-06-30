@@ -70,7 +70,6 @@
     <Compile Include="Tests\TestSubtract.cs" />
     <Compile Include="Operators\FixSignOperator.cs" />
     <Compile Include="Tests\TestDivide.cs" />
-    <Compile Include="Tests\TestNumberNode.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
