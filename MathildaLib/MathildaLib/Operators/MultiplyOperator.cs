@@ -36,15 +36,16 @@ namespace MathildaLib
 				var an = a as NumberNode;
 				var bn = b as NumberNode;
 				if (list.GetInverted (m_j)) {
-					if (bn.Value == 0.0) {
+					if (bn == 0.0) {
 						return;
 					}
 
-					an.Value /= bn.Value;
+					an /= bn;
 				} else {
-					an.Value *= bn.Value;
+					an *= bn;
 				}
 				list.RemoveNodeAt (m_j);
+				list [m_i] = an;
 				return;
 			}
 			if (a is NumberNode && b is VariableNode) {
@@ -59,6 +60,10 @@ namespace MathildaLib
 			if (a is NumberNode && b is ListNode) {
 				var an = a as NumberNode;
 				var bn = b as ListNode;
+				if (an == 0) {
+					return;
+				}
+
 				if (bn.Operation == ListNode.ListOperation.Sum) {
 					if (list.GetInverted (m_j)) {
 						return;
@@ -79,7 +84,7 @@ namespace MathildaLib
 				}
 				if (bn.Operation == ListNode.ListOperation.Product) {
 					if (list.GetInverted (m_j)) {
-						bn.InsertNode (0, new NumberNode (1.0 / an.Value));
+						bn.InsertNode (0, 1.0 / an);
 						list.RemoveNodeAt (m_i);
 						return;
 					}

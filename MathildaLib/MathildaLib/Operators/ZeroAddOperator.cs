@@ -26,7 +26,7 @@ namespace MathildaLib
 					continue;
 				}
 				
-				if (number.Value == 0) return true;
+				if (number == 0) return true;
 			}
 			
 			return false;

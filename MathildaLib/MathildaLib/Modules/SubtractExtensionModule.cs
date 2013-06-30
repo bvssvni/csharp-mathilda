@@ -27,7 +27,7 @@ namespace MathildaLib
 	public static class SubtractExtensionModule
 	{
 		public static ListNode Subtract (this NumberNode a, NumberNode b) {
-			b.Value = -b.Value;
+			b = -b;
 			var list = new ListNode (ListNode.ListOperation.Sum,
 			                         new List<Node> () {
 				a, b});
@@ -87,7 +87,7 @@ namespace MathildaLib
 		public static ListNode Subtract (this VariableNode a, NumberNode b) {
 			var list = new ListNode (ListNode.ListOperation.Sum,
 			                         new List<Node> () {
-				a, new NumberNode (-b.Value)});
+				a, -b});
 			return list;
 		}
 
@@ -138,13 +138,13 @@ namespace MathildaLib
 
 		public static ListNode Subtract (this ListNode a, NumberNode b) {
 			if (a.Operation == ListNode.ListOperation.Sum) {
-				a.AddNode (new NumberNode (-b.Value));
+				a.AddNode (-b);
 				return a;
 			}
 			
 			var list = new ListNode (ListNode.ListOperation.Sum,
 			                         new List<Node> () {
-				a, new NumberNode (-b.Value)});
+				a, -b});
 			return list;
 		}
 

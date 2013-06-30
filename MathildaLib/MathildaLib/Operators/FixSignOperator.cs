@@ -32,15 +32,16 @@ namespace MathildaLib
 				if (list.GetInverted (i) && list [i] is NumberNode) {
 					var number = list [i] as NumberNode;
 					if (list.Operation == ListNode.ListOperation.Sum) {
-						number.Value = -number.Value;
+						number = -number;
 					} else {
-						if (number.Value == 0.0) {
+						if (number == 0.0) {
 							continue;
 						}
 
-						number.Value = 1.0 / number.Value;
+						number = 1.0 / number;
 					}
 
+					list [i] = number;
 					list.SetInverted (i, false);
 				}
 			}

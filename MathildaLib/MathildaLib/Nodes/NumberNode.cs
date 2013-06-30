@@ -7,15 +7,6 @@ namespace MathildaLib
 	{
 		private double m_value;
 
-		public double Value {
-			get {
-				return m_value;
-			}
-			set {
-				m_value = value;
-			}
-		}
-
 		public NumberNode(double value)
 		{
 			m_value = value;
@@ -24,6 +15,38 @@ namespace MathildaLib
 		public override Node Copy()
 		{
 			return new NumberNode (m_value);
+		}
+
+		public static NumberNode operator - (NumberNode a) {
+			return new NumberNode (-a.m_value);
+		}
+
+		public static NumberNode operator - (NumberNode a, NumberNode b) {
+			return new NumberNode (a.m_value - b.m_value);
+		}
+
+		public static NumberNode operator + (NumberNode a, NumberNode b) {
+			return new NumberNode (a.m_value + b.m_value);
+		}
+
+		public static NumberNode operator / (double a, NumberNode b) {
+			return new NumberNode (a / b.m_value);
+		}
+
+		public static NumberNode operator / (NumberNode a, NumberNode b) {
+			return new NumberNode (a.m_value / b.m_value);
+		}
+
+		public static NumberNode operator * (NumberNode a, NumberNode b) {
+			return new NumberNode (a.m_value * b.m_value);
+		}
+
+		public static bool operator == (NumberNode a, double b) {
+			return a.m_value == b;
+		}
+
+		public static bool operator != (NumberNode a, double b) {
+			return a.m_value != b;
 		}
 
 		public override int CompareTo(Node other)

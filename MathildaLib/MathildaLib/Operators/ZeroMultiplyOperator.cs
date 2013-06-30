@@ -26,7 +26,7 @@ namespace MathildaLib
 					continue;
 				}
 
-				if (number.Value == 0 && !list.GetInverted (i)) {
+				if (number == 0 && !list.GetInverted (i)) {
 					return true;
 				}
 			}

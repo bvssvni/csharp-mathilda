@@ -106,7 +106,7 @@ namespace MathildaLib
 
 			var a = m_list [firstNumberIndex] as NumberNode;
 			if (m_inverted [firstNumberIndex]) {
-				a.Value = -a.Value;
+				a = -a;
 				m_inverted [firstNumberIndex] = false;
 			}
 			for (int i = firstNumberIndex + 1; i < n; i++) {
@@ -116,14 +116,16 @@ namespace MathildaLib
 				}
 
 				if (m_inverted [i]) {
-					a.Value -= b.Value;
+					a -= b;
 				} else {
-					a.Value += b.Value;
+					a += b;
 				}
 				RemoveNodeAt (i);
 				n--;
 				i--;
 			}
+
+			m_list [firstNumberIndex] = a;
 		}
 
 		public void Product () {
@@ -142,7 +144,7 @@ namespace MathildaLib
 			
 			var a = m_list [firstNumberIndex] as NumberNode;
 			if (m_inverted [firstNumberIndex]) {
-				a.Value = 1.0 / a.Value;
+				a = 1.0 / a;
 				m_inverted [firstNumberIndex] = false;
 			}
 			for (int i = firstNumberIndex + 1; i < n; i++) {
@@ -152,18 +154,20 @@ namespace MathildaLib
 				}
 
 				if (m_inverted [i]) {
-					if (b.Value == 0.0) {
+					if (b == 0.0) {
 						continue;
 					}
 
-					a.Value /= b.Value;
+					a /= b;
 				} else {
-					a.Value *= b.Value;
+					a *= b;
 				}
 				RemoveNodeAt (i);
 				n--;
 				i--;
 			}
+
+			m_list [firstNumberIndex] = a;
 		}
 
 		public void RemoveZeroes () {
@@ -174,7 +178,7 @@ namespace MathildaLib
 					continue;
 				}
 
-				if (item.Value != 0) {
+				if (item != 0) {
 					continue;
 				}
 
@@ -192,7 +196,7 @@ namespace MathildaLib
 					continue;
 				}
 				
-				if (item.Value != 1) {
+				if (item != 1) {
 					continue;
 				}
 

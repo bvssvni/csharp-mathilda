@@ -62,13 +62,13 @@ namespace MathildaLib
 
 				// Add numbers together.
 				var aIndex = an [0] is NumberNode ? 0 : -1;
-				var aValue = aIndex == 0 ? ((NumberNode)an [0]).Value : 0;
-				var bValue = bn [0] is NumberNode ? ((NumberNode)bn [0]).Value : 0;
+				var aValue = aIndex == 0 ? ((NumberNode)an [0]) : new NumberNode (0);
+				var bValue = bn [0] is NumberNode ? ((NumberNode)bn [0]) : new NumberNode (0);
 				list.RemoveNodeAt (m_j);
 				if (aIndex == -1) {
-					an.InsertNode (0, new NumberNode (aValue + bValue));
+					an.InsertNode (0, aValue + bValue);
 				} else {
-					an [0] = new NumberNode (aValue + bValue);
+					an [0] = aValue + bValue;
 				}
 
 				return;

@@ -89,7 +89,7 @@ namespace MathildaLib
 		public static ListNode Divide (this VariableNode a, NumberNode b) {
 			var list = new ListNode (ListNode.ListOperation.Product,
 			                         new List<Node> () {
-				a, new NumberNode (b.Value)});
+				a, b});
 			list.SetInverted (1, true);
 			return list;
 		}
@@ -143,14 +143,14 @@ namespace MathildaLib
 		
 		public static ListNode Divide (this ListNode a, NumberNode b) {
 			if (a.Operation == ListNode.ListOperation.Product) {
-				a.AddNode (new NumberNode (b.Value));
+				a.AddNode (b);
 				a.SetInverted (a.NodeCount - 1, true);
 				return a;
 			}
 			
 			var list = new ListNode (ListNode.ListOperation.Product,
 			                         new List<Node> () {
-				a, new NumberNode (b.Value)});
+				a, b});
 			list.SetInverted (1, true);
 			return list;
 		}
