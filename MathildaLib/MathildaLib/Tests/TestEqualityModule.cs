@@ -122,6 +122,17 @@ namespace MathildaLib
 			var b = new VariableNode ("a").Divide ("b");
 			Assert.False (a.IsEqualTo (b));
 		}
+
+		[Test()]
+		public void TestNegativeVariable () {
+			var a = new NumberNode (-1).Multiply ("a");
+			var res = a.Minimize (SearchModule.CreateOperators ());
+
+			// TEST
+			Console.WriteLine (res.ToString ());
+
+			Assert.True (res.ToString () == "(-a)");
+		}
 	}
 }
 

@@ -136,6 +136,10 @@ namespace MathildaLib
 			if (a is ListNode) {
 				var an = a as ListNode;
 				if (an.Operation == ListNode.ListOperation.Sum) {
+
+					// TEST
+					Console.WriteLine ("hello");
+
 					var newList = new List<Node> ();
 					var bInverted = list.GetInverted (m_j);
 					if (bInverted && an.CompareTo (b) == 0) {
@@ -149,6 +153,12 @@ namespace MathildaLib
 					int n = an.NodeCount;
 					for (int i = 0; i < n; i++) {
 						var item = an [i];
+						if (an.GetInverted (i)) {
+							// Avoid making it more complicated.
+							// (*(-i)*(+b+(*c*(-i)))) -> (*(*(-i)*(+b+(*c*(-i)))))
+							return;
+						}
+
 						if (bInverted) {
 							newList.Add (item.Divide (b));
 						} else {

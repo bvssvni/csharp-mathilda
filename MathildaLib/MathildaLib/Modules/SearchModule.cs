@@ -8,14 +8,15 @@ namespace MathildaLib
 		public delegate void OperatorDelegate (Search search);
 
 		private static OperatorDelegate[] StandardOperations = new OperatorDelegate [] {
-			LiftOperator.Lift,
 			FixSignOperator.FixSign,
 			SumOperator.Sum,
 			ZeroMultiplyOperator.ZeroMultiply,
 			ZeroAddOperator.ZeroAdd,
 			MultiplyOneOperator.MultiplyOne,
 			ScalarProductOperator.Product,
+			NegativeVariableOperator.NegativeVariable,
 			NegativeProductOperator.NegativeProduct,
+			LiftOperator.Lift,
 			MultiplyOperator.Multiply,
 			AddOperator.Add,
 			CancelVariableOperator.CancelVariable,
@@ -125,6 +126,11 @@ namespace MathildaLib
 
 			while (states.Count > 0) {
 				var min = states.Keys [0];
+
+				// TEST
+				if (states.Values [0] is LiftOperator) {
+					// Console.WriteLine ("min {0} vs node {1}", min, node);
+				}
 
 				if (min.CompareTo (node) < 0 && !history.ContainsKey (min)) {
 

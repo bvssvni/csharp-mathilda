@@ -247,13 +247,11 @@ namespace MathildaLib
 				return this.TypeId ().CompareTo (other.TypeId ());
 			}
 
-			if (this.Operation == ListOperation.Product &&
-			    this.m_list.Count == 1 &&
+			if (this.m_list.Count == 1 &&
 			    m_list [0].CompareTo (otherNode) == 0) {
 				return 1;
 			}
-			if (otherNode.Operation == ListOperation.Product &&
-			    otherNode.m_list.Count == 1 &&
+			if (otherNode.m_list.Count == 1 &&
 			    this.CompareTo (otherNode.m_list [0]) == 0) {
 				return -1;
 			}
@@ -265,22 +263,22 @@ namespace MathildaLib
 				return compareNonProductSubLists;
 			}
 			
+			var thisIndex = m_list [0] is NumberNode ? 1 : 0;
+			var otherIndex = otherNode.m_list [0] is NumberNode ? 1 : 0;
+			
+			var thisCount = m_list.Count - thisIndex;
+			var otherCount = otherNode.m_list.Count - otherIndex;
+			var compareCount = thisCount.CompareTo (otherCount);
+			if (compareCount != 0) {
+				return compareCount;
+			}
+
 			var compareOperation = m_listOperation.CompareTo (otherNode.m_listOperation);
 			if (compareOperation != 0) {
 				return compareOperation;
 			}
 			if (this.Operation != ListOperation.Product) {
 				throw new Exception ("Requires product list to compare ignored");
-			}
-
-			var thisIndex = m_list [0] is NumberNode ? 1 : 0;
-			var otherIndex = otherNode.m_list [0] is NumberNode ? 1 : 0;
-
-			var thisCount = m_list.Count - thisIndex;
-			var otherCount = otherNode.m_list.Count - otherIndex;
-			var compareCount = thisCount.CompareTo (otherCount);
-			if (compareCount != 0) {
-				return compareCount;
 			}
 
 			int n = thisCount;
@@ -323,13 +321,11 @@ namespace MathildaLib
 				return this.TypeId ().CompareTo (other.TypeId ());
 			}
 
-			if (this.Operation == ListOperation.Product &&
-			    this.m_list.Count == 1 &&
+			if (this.m_list.Count == 1 &&
 			    m_list [0].CompareTo (otherNode) == 0) {
 				return 1;
 			}
-			if (otherNode.Operation == ListOperation.Product &&
-			    otherNode.m_list.Count == 1 &&
+			if (otherNode.m_list.Count == 1 &&
 			    this.CompareTo (otherNode.m_list [0]) == 0) {
 				return -1;
 			}
@@ -341,14 +337,14 @@ namespace MathildaLib
 				return compareNonProductSubLists;
 			}
 
-			var compareOperation = m_listOperation.CompareTo (otherNode.m_listOperation);
-			if (compareOperation != 0) {
-				return compareOperation;
-			}
-
 			var compareCount = m_list.Count.CompareTo (otherNode.m_list.Count);
 			if (compareCount != 0) {
 				return compareCount;
+			}
+
+			var compareOperation = m_listOperation.CompareTo (otherNode.m_listOperation);
+			if (compareOperation != 0) {
+				return compareOperation;
 			}
 
 			int n = m_list.Count;

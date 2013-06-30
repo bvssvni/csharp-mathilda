@@ -73,6 +73,7 @@
     <Compile Include="Modules\ConjugateModule.cs" />
     <Compile Include="Tests\TestConjugate.cs" />
     <Compile Include="Operators\NegativeProductOperator.cs" />
+    <Compile Include="Operators\NegativeVariableOperator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

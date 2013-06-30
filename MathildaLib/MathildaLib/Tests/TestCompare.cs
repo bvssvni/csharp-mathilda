@@ -54,6 +54,45 @@ namespace MathildaLib
 
 			Assert.True (a.CompareTo (b) == 1);
 		}
+
+		[Test()]
+		public void Test2 () {
+			// (*b*i)
+			var bi = new VariableNode ("b").Multiply ("i");
+			// (-c+(*b*i))
+			var c = new ListNode (ListNode.ListOperation.Sum,
+			                      new VariableNode ("c"), bi);
+			c.SetInverted (0, true);
+
+			// (*(-c+(*b*i)))
+			var a = new ListNode (ListNode.ListOperation.Product, c);
+
+			Assert.True (a.CompareTo (c) == 1);
+
+			var amin = a.Minimize (SearchModule.CreateOperators ());
+			Assert.True (amin.ToString () == "(-c+(*b*i))");
+		}
+
+		[Test()]
+		public void Test3 () {
+			// (*(-1)*a) vs (-a)
+			var a = new NumberNode (-1).Multiply ("a");
+			var b = new ListNode (ListNode.ListOperation.Sum, 
+			                      new VariableNode ("a"));
+			b.SetInverted (0, true);
+
+			var compareResult = b.CompareTo (a);
+			Assert.True (compareResult == -1);
+		}
+
+		[Test()]
+		public void Test4 () {
+			// (*2*a) vs (+(*2*a))
+			var a = new NumberNode (2).Multiply ("a");
+			var b = new ListNode (ListNode.ListOperation.Sum,
+			                      new NumberNode (2).Multiply ("a"));
+			Assert.True (a.CompareTo (b) == -1);
+		}
 	}
 }
 
