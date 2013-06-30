@@ -17,6 +17,7 @@ namespace MathildaLib
 			NegativeVariableOperator.NegativeVariable,
 			NegativeProductOperator.NegativeProduct,
 			LiftOperator.Lift,
+			SmartLiftOperator.SmartLift,
 			MultiplyOperator.Multiply,
 			AddOperator.Add,
 			CancelVariableOperator.CancelVariable,

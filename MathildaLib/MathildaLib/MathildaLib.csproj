@@ -74,6 +74,7 @@
     <Compile Include="Tests\TestConjugate.cs" />
     <Compile Include="Operators\NegativeProductOperator.cs" />
     <Compile Include="Operators\NegativeVariableOperator.cs" />
+    <Compile Include="Operators\SmartLiftOperator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

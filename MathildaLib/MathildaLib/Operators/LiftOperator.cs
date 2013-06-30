@@ -25,22 +25,10 @@ namespace MathildaLib
 			return true;
 		}
 
-		public static Node Lift (Node node, out int times) {
-			times = 0;
-			var list = node as ListNode;
-			while (list != null && list.NodeCount == 1 && !list.GetInverted (0)) {
-				node = list [0];
-				list = node as ListNode;
-				times++;
-			}
-
-			return node;
-		}
-
 		public override void Do(ref Node node)
 		{
-			int times = 0;
-			node = Lift (node, out times);
+			var list = node as ListNode;
+			node = list [0];
 		}
 
 		public static void Lift (SearchModule.Search search) {
