@@ -34,6 +34,10 @@ namespace MathildaLib
 					if (list.Operation == ListNode.ListOperation.Sum) {
 						number.Value = -number.Value;
 					} else {
+						if (number.Value == 0.0) {
+							continue;
+						}
+
 						number.Value = 1.0 / number.Value;
 					}
 

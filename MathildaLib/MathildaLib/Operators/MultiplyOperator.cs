@@ -35,7 +35,15 @@ namespace MathildaLib
 			if (a is NumberNode && b is NumberNode) {
 				var an = a as NumberNode;
 				var bn = b as NumberNode;
-				an.Value *= bn.Value;
+				if (list.GetInverted (m_j)) {
+					if (bn.Value == 0.0) {
+						return;
+					}
+
+					an.Value /= bn.Value;
+				} else {
+					an.Value *= bn.Value;
+				}
 				list.RemoveNodeAt (m_j);
 				return;
 			}

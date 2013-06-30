@@ -128,7 +128,7 @@ namespace MathildaLib
 				if (min.CompareTo (node) < 0) {
 
 					// TEST
-					Console.WriteLine (min);
+					Console.WriteLine ("{0}: {1}", states.Values [0], min);
 
 					history.Add (min, true);
 					node = Minimize (min, history, operators);

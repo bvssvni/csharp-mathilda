@@ -27,10 +27,10 @@ namespace MathildaLib
 	public static class DivideExtensionModule
 	{
 		public static ListNode Divide (this NumberNode a, NumberNode b) {
-			b.Value = 1.0 / b.Value;
 			var list = new ListNode (ListNode.ListOperation.Product,
 			                         new List<Node> () {
 				a, b});
+			list.SetInverted (1, true);
 			return list;
 		}
 		
@@ -38,7 +38,8 @@ namespace MathildaLib
 			var list = new ListNode (ListNode.ListOperation.Product,
 			                         new List<Node> () {
 				a,
-				new NumberNode (1.0 / b)});
+				new NumberNode (b)});
+			list.SetInverted (1, true);
 			return list;
 		}
 		
@@ -80,14 +81,16 @@ namespace MathildaLib
 		public static ListNode Divide (this VariableNode a, double b) {
 			var list = new ListNode (ListNode.ListOperation.Product,
 			                         new List<Node> () {
-				a, new NumberNode (1.0 / b)});
+				a, new NumberNode (b)});
+			list.SetInverted (1, true);
 			return list;
 		}
 		
 		public static ListNode Divide (this VariableNode a, NumberNode b) {
 			var list = new ListNode (ListNode.ListOperation.Product,
 			                         new List<Node> () {
-				a, new NumberNode (1.0 / b.Value)});
+				a, new NumberNode (b.Value)});
+			list.SetInverted (1, true);
 			return list;
 		}
 		
@@ -126,25 +129,29 @@ namespace MathildaLib
 		
 		public static ListNode Divide (this ListNode a, double b) {
 			if (a.Operation == ListNode.ListOperation.Product) {
-				a.AddNode (new NumberNode (1.0 / b));
+				a.AddNode (new NumberNode (b));
+				a.SetInverted (a.NodeCount - 1, true);
 				return a;
 			}
 			
 			var list = new ListNode (ListNode.ListOperation.Product,
 			                         new List<Node> () {
-				a, new NumberNode (1.0 / b)});
+				a, new NumberNode (b)});
+			list.SetInverted (1, true);
 			return list;
 		}
 		
 		public static ListNode Divide (this ListNode a, NumberNode b) {
 			if (a.Operation == ListNode.ListOperation.Product) {
-				a.AddNode (new NumberNode (1.0 / b.Value));
+				a.AddNode (new NumberNode (b.Value));
+				a.SetInverted (a.NodeCount - 1, true);
 				return a;
 			}
 			
 			var list = new ListNode (ListNode.ListOperation.Product,
 			                         new List<Node> () {
-				a, new NumberNode (1.0 / b.Value)});
+				a, new NumberNode (b.Value)});
+			list.SetInverted (1, true);
 			return list;
 		}
 		

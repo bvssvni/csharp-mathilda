@@ -152,6 +152,10 @@ namespace MathildaLib
 				}
 
 				if (m_inverted [i]) {
+					if (b.Value == 0.0) {
+						continue;
+					}
+
 					a.Value /= b.Value;
 				} else {
 					a.Value *= b.Value;

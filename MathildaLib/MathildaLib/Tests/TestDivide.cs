@@ -131,6 +131,14 @@ namespace MathildaLib
 				new VariableNode ("a").Multiply (2));
 			Assert.True (a.IsEqualTo (new NumberNode (1)));
 		}
+
+		[Test()]
+		public void TestDivideByZero () {
+			var a = new NumberNode (1).Divide (0);
+			Assert.True (a.ToString () == "(*1/0)");
+			var b = a.Minimize (null, SearchModule.CreateOperators ());
+			Assert.True (b.ToString () == "(/0)");
+		}
 	}
 }
 
