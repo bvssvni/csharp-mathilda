@@ -246,6 +246,17 @@ namespace MathildaLib
 			if (otherNode == null) {
 				return this.TypeId ().CompareTo (other.TypeId ());
 			}
+
+			if (this.Operation == ListOperation.Product &&
+			    this.m_list.Count == 1 &&
+			    m_list [0].CompareTo (otherNode) == 0) {
+				return 1;
+			}
+			if (otherNode.Operation == ListOperation.Product &&
+			    otherNode.m_list.Count == 1 &&
+			    this.CompareTo (otherNode.m_list [0]) == 0) {
+				return -1;
+			}
 			
 			var thisNonProductSubLists = this.NumberOfNonProductSubLists ();
 			var otherNonProductSubLists = otherNode.NumberOfNonProductSubLists ();
@@ -305,41 +316,22 @@ namespace MathildaLib
 			return count;
 		}
 
-		private int NestedLifts () {
-			if (new LiftOperator ().Can (this)) {
-				var subList = this.m_list [0] as ListNode;
-				if (subList == null) {
-					return 1;
-				}
-
-				return 1 + subList.NestedLifts ();
-			}
-
-			return 0;
-		}
-
-		private int Depth () {
-			int maxDepth = 0;
-			for (int i = 0; i < m_list.Count; i++) {
-				var subList = this.m_list [i] as ListNode;
-				if (subList == null) {
-					continue;
-				}
-
-				int d = subList.Depth ();
-				if (d > maxDepth) {
-					maxDepth = d;
-				}
-			}
-
-			return maxDepth + 1;
-		}
-
 		public override int CompareTo (Node other)
 		{
 			var otherNode = other as ListNode;
 			if (otherNode == null) {
 				return this.TypeId ().CompareTo (other.TypeId ());
+			}
+
+			if (this.Operation == ListOperation.Product &&
+			    this.m_list.Count == 1 &&
+			    m_list [0].CompareTo (otherNode) == 0) {
+				return 1;
+			}
+			if (otherNode.Operation == ListOperation.Product &&
+			    otherNode.m_list.Count == 1 &&
+			    this.CompareTo (otherNode.m_list [0]) == 0) {
+				return -1;
 			}
 
 			var thisNonProductSubLists = this.NumberOfNonProductSubLists ();

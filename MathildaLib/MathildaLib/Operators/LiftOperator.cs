@@ -27,6 +27,10 @@ namespace MathildaLib
 
 		public override void Do(ref Node node)
 		{
+			
+			// TEST
+			Console.WriteLine ("Lift {0}", node);
+
 			var list = node as ListNode;
 			node = list [0];
 		}
