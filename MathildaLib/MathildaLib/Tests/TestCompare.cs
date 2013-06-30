@@ -43,15 +43,7 @@ namespace MathildaLib
 			              new VariableNode ("b").Multiply ("i")));
 			var changeSign2 = b [0] as ListNode;
 			changeSign2.SetInverted (0, true);
-
-			// TEST
-			Console.WriteLine (b);
-
 			Assert.True (b.ToString () == "(*(-c+(*b*i)))");
-
-			// TEST
-			Console.WriteLine (a.CompareTo (b));
-
 			Assert.True (a.CompareTo (b) == 1);
 		}
 
@@ -92,6 +84,32 @@ namespace MathildaLib
 			var b = new ListNode (ListNode.ListOperation.Sum,
 			                      new NumberNode (2).Multiply ("a"));
 			Assert.True (a.CompareTo (b) == -1);
+		}
+
+		[Test()]
+		public void Test5 () {
+			// (+(*(+(*a*c)+(*a*d)))+(*(+(*b*c)+(*b*d))))
+			var ac = new VariableNode ("a").Multiply ("c");
+			var ad = new VariableNode ("a").Multiply ("d");
+			var bc = new VariableNode ("b").Multiply ("c");
+			var bd = new VariableNode ("b").Multiply ("d");
+
+			var test = ac.Copy ().Add (ad);
+			Assert.True (test.ToString () == "(+(*a*c)+(*a*d))");
+
+			var exp = new ListNode (ListNode.ListOperation.Sum,
+			                        ac.Copy ().Add (ad),
+			                        bc.Copy ().Add (bd));
+			// (+(*a*c)+(*a*d)+(*b*c)+(*b*d))
+			var exp2 = ac.Add (ad).Add (bc).Add (bd);
+			var compareResult = exp.CompareTo (exp2);
+			Assert.True (compareResult == 1);
+		}
+
+		[Test()]
+		public void Test6 () {
+			// (*(-i)*(+b+(*c*(-i))))
+			// (+(*(-i)*b)+(+(*(-i)*c*(-i))))
 		}
 	}
 }

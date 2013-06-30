@@ -27,6 +27,8 @@ namespace MathildaLib
 			return true;
 		}
 
+		private static int m_counter = 0;
+
 		public override void Do(ref Node node)
 		{
 			var list = node as ListNode;
@@ -98,10 +100,27 @@ namespace MathildaLib
 						return;
 					}
 
+					if (bn.NodeCount == 1 && bn.GetInverted (0)) {
+						var res = new ListNode (ListNode.ListOperation.Sum,
+						                        an.Multiply (bn [0]));
+						res.SetInverted (0, true);
+						list.RemoveNodeAt (m_j);
+						list.RemoveNodeAt (m_i);
+						list.InsertNode (m_i, res);
+						return;
+					}
+
 					var newList = new List<Node> ();
 					int n = bn.NodeCount;
 					for (int i = 0; i < n; i++) {
 						var item = bn [i];
+						if (bn.GetInverted (i)) {
+							var negItem = new ListNode (ListNode.ListOperation.Sum,
+							                            item);
+							negItem.SetInverted (0, true);
+							item = negItem;
+						}
+
 						var mul = an.Multiply (item);
 
 						newList.Add (mul);
@@ -136,10 +155,6 @@ namespace MathildaLib
 			if (a is ListNode) {
 				var an = a as ListNode;
 				if (an.Operation == ListNode.ListOperation.Sum) {
-
-					// TEST
-					Console.WriteLine ("hello");
-
 					var newList = new List<Node> ();
 					var bInverted = list.GetInverted (m_j);
 					if (bInverted && an.CompareTo (b) == 0) {
@@ -150,33 +165,63 @@ namespace MathildaLib
 						return;
 					}
 
-					int n = an.NodeCount;
-					for (int i = 0; i < n; i++) {
-						var item = an [i];
-						if (an.GetInverted (i)) {
-							// Avoid making it more complicated.
-							// (*(-i)*(+b+(*c*(-i)))) -> (*(*(-i)*(+b+(*c*(-i)))))
-							return;
-						}
+					var bn = b as ListNode;
+					if (an.NodeCount == 1 && (bn != null && bn.NodeCount == 1 || bn == null)) {
+						return;
+					}
+					if (bn != null && an.NodeCount == 1 && bn.Operation == ListNode.ListOperation.Sum) {
+						// a * (b + c + d)
+						int m = bn.NodeCount;
+						for (int j = 0; j < m; j++) {
+							var item = bn [j];
+							if (bn.GetInverted (j)) {
+								var negItem = new ListNode (ListNode.ListOperation.Sum,
+								                            item);
+								negItem.SetInverted (0, true);
+								item = negItem;
+							}
 
-						if (bInverted) {
-							newList.Add (item.Divide (b));
-						} else {
-							newList.Add (item.Multiply (b));
+							if (bInverted) {
+								newList.Add (an.Divide (item));
+							} else {
+								newList.Add (an.Multiply (item));
+							}
+						}
+					} else {
+						// (a + b + c) * d
+						int n = an.NodeCount;
+						for (int i = 0; i < n; i++) {
+							var item = an [i];
+							if (an.GetInverted (i)) {
+								var negItem = new ListNode (ListNode.ListOperation.Sum,
+								                            item);
+								negItem.SetInverted (0, true);
+								item = negItem;
+							}
+
+							if (bInverted) {
+								newList.Add (item.Divide (b));
+							} else {
+								newList.Add (item.Multiply (b));
+							}
 						}
 					}
 
+					var newNode = new ListNode (ListNode.ListOperation.Sum, newList);
 					list.RemoveNodeAt (m_j);
 					list.RemoveNodeAt (m_i);
-					list.InsertNode (m_i, new ListNode (ListNode.ListOperation.Sum, newList));
+					list.InsertNode (m_i, newNode);
+					return;
+				}
+				if (an.Operation == ListNode.ListOperation.Product) {
+					an.Add (b);
+					list.RemoveNodeAt (m_j);
 					return;
 				}
 			}
 
 			// TEST
-			Console.WriteLine ("unsupported multiply!");
-			Console.WriteLine (a);
-			Console.WriteLine (b);
+			Console.WriteLine ("unsupported multiply {0} {1}", a, b);
 
 			throw new NotImplementedException ();
 		}

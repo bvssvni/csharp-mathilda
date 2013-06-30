@@ -93,6 +93,10 @@ namespace MathildaLib
 		public static Node Minimize (this Node node, OperatorDelegate[] operators,
 		                         SortedList<Node, bool> history = null) {
 			if (history == null) {
+		
+				// TEST
+				Console.WriteLine ("========");
+
 				history = new SortedList<Node, bool> ();
 				history.Add (node, true);
 			}
@@ -126,12 +130,6 @@ namespace MathildaLib
 
 			while (states.Count > 0) {
 				var min = states.Keys [0];
-
-				// TEST
-				if (states.Values [0] is LiftOperator) {
-					// Console.WriteLine ("min {0} vs node {1}", min, node);
-				}
-
 				if (min.CompareTo (node) < 0 && !history.ContainsKey (min)) {
 
 					// TEST

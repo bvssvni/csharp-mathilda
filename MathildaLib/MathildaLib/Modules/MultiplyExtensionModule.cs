@@ -162,18 +162,7 @@ namespace MathildaLib
 		public static ListNode Multiply (this ListNode a, ListNode b) {
 			if (a.Operation == ListNode.ListOperation.Sum &&
 			    b.Operation == ListNode.ListOperation.Sum) {
-				var newList = new List<Node> ();
-				int n = a.NodeCount;
-				int m = b.NodeCount;
-				for (int i = 0; i < n; i++) {
-					for (int j = 0; j < m; j++) {
-						var ai = a [i];
-						var bj = b [j];
-						newList.Add (ai.Multiply (bj));
-					}
-				}
-
-				return new ListNode (ListNode.ListOperation.Sum, newList);
+				return new ListNode (ListNode.ListOperation.Product, a, b);
 			}
 
 			if (a.Operation == ListNode.ListOperation.Sum &&
@@ -181,8 +170,16 @@ namespace MathildaLib
 				var newList = new List<Node> ();
 				int n = a.NodeCount;
 				for (int i = 0; i < n; i++) {
+					var item = a [i];
+					if (a.GetInverted (i)) {
+						var negItem = new ListNode (ListNode.ListOperation.Sum,
+						                            item);
+						negItem.SetInverted (0, true);
+						item = negItem;
+					}
+
 					var copy = b.Copy () as ListNode;
-					copy.InsertNode (0, a [i].Copy ());
+					copy.InsertNode (0, item.Copy ());
 					newList.Add (copy);
 				}
 

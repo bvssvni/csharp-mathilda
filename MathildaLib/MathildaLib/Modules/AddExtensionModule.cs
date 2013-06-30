@@ -110,7 +110,19 @@ namespace MathildaLib
 			return list;
 		}
 
-		public static ListNode Add (this ListNode a, Node b) {
+		public static ListNode Add (this ListNode a, NumberNode b) {
+			if (a.Operation == ListNode.ListOperation.Sum) {
+				a.AddNode (b);
+				return a;
+			}
+			
+			var list = new ListNode (ListNode.ListOperation.Sum,
+			                         new List<Node> () {
+				a, b});
+			return list;
+		}
+
+		public static ListNode Add (this ListNode a, VariableNode b) {
 			if (a.Operation == ListNode.ListOperation.Sum) {
 				a.AddNode (b);
 				return a;
@@ -146,16 +158,21 @@ namespace MathildaLib
 			return list;
 		}
 
-		public static ListNode Add (this ListNode a, VariableNode b) {
-			if (a.Operation == ListNode.ListOperation.Sum) {
-				a.AddNode (b);
-				return a;
+		public static ListNode Add (this ListNode a, ListNode b) {
+			if (a.Operation == ListNode.ListOperation.Product &&
+			    b.Operation == ListNode.ListOperation.Product) {
+				return new ListNode (ListNode.ListOperation.Sum, 
+				                     new List<Node> () {
+					a, b});
 			}
-			
-			var list = new ListNode (ListNode.ListOperation.Sum,
-			                         new List<Node> () {
-				a, b});
-			return list;
+			if (a.Operation == ListNode.ListOperation.Product &&
+			    b.Operation == ListNode.ListOperation.Sum) {
+				b.InsertNode (0, a);
+				return b;
+			}
+
+			a.AddNode (b);
+			return a;
 		}
 
 		public static Node Add (this Node a, Node b) {
@@ -187,22 +204,22 @@ namespace MathildaLib
 			if (a is VariableNode && b is ListNode) {
 				var an = a as VariableNode;
 				var bn = b as ListNode;
-				return an.Multiply (bn);
+				return an.Add (bn);
 			}
 			if (a is ListNode && b is NumberNode) {
 				var an = a as ListNode;
 				var bn = b as NumberNode;
-				return an.Multiply (bn);
+				return an.Add (bn);
 			}
 			if (a is ListNode && b is VariableNode) {
 				var an = a as ListNode;
 				var bn = b as VariableNode;
-				return an.Multiply (bn);
+				return an.Add (bn);
 			}
 			if (a is ListNode && b is ListNode) {
 				var an = a as ListNode;
 				var bn = b as ListNode;
-				return an.Multiply (bn);
+				return an.Add (bn);
 			}
 
 			throw new NotImplementedException ();

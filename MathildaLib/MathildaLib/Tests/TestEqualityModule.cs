@@ -127,10 +127,6 @@ namespace MathildaLib
 		public void TestNegativeVariable () {
 			var a = new NumberNode (-1).Multiply ("a");
 			var res = a.Minimize (SearchModule.CreateOperators ());
-
-			// TEST
-			Console.WriteLine (res.ToString ());
-
 			Assert.True (res.ToString () == "(-a)");
 		}
 	}

@@ -123,6 +123,28 @@ namespace MathildaLib
 			var b = new NumberNode (24);
 			Assert.True (a.IsEqualTo (b));
 		}
+
+		[Test()]
+		public void TestMultiply15 () {
+			// (a + b) * (c + d)
+			var a = new VariableNode ("a").Add ("b").Multiply (
+				new VariableNode ("c").Add ("d"));
+			var res = a.Minimize (SearchModule.CreateOperators ());
+
+			// TEST
+			Console.WriteLine (res.ToString ());
+			Assert.False (true);
+		}
+
+		[Test()]
+		public void TestMultiply16 () {
+			// (*b*(-i)) -> (-(*b*i))
+			var mi = new ListNode (ListNode.ListOperation.Sum, new VariableNode ("i"));
+			mi.SetInverted (0, true);
+			var a = new VariableNode ("b").Multiply (mi);
+			var res = a.Minimize (SearchModule.CreateOperators ());
+			Assert.True (res.ToString () == "(-(*b*i))");
+		}
 	}
 }
 
