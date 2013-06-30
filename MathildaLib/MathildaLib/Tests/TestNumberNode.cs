@@ -18,7 +18,13 @@ namespace MathildaLib
 
 		[Test()]
 		public void TestDualIdentityToString () {
-			Assert.True (NumberNode.ε.ToString () == "ε");
+			Assert.True (NumberNode.d.ToString () == "d");
+		}
+
+		[Test()]
+		public void TestComplexDualToString () {
+			var a = NumberNode.i * NumberNode.d;
+			Assert.True (a.ToString () == "id");
 		}
 
 		[Test()]
@@ -37,7 +43,7 @@ namespace MathildaLib
 			var b = a * a;
 			Assert.True (b == new NumberNode (0));
 
-			Assert.True ((NumberNode.ε * NumberNode.ε) == new NumberNode (0));
+			Assert.True ((NumberNode.d * NumberNode.d) == new NumberNode (0));
 		}
 
 		[Test()]
@@ -46,6 +52,30 @@ namespace MathildaLib
 			var b = NumberNode.Complex (2, 3);
 			var c = NumberNode.Complex (3, 5);
 			Assert.True ((a + b) == c);
+		}
+
+		[Test()]
+		public void TestDualAdd () {
+			var a = NumberNode.Dual (1, 2);
+			var b = NumberNode.Dual (2, 3);
+			var c = NumberNode.Dual (3, 5);
+			Assert.True ((a + b) == c);
+		}
+
+		[Test()]
+		public void TestComplexMultiply () {
+			var a = NumberNode.Complex (1, 2);
+			var b = NumberNode.Complex (2, 3);
+			var c = NumberNode.Complex (1*2-2*3, 2*2+1*3);
+			Assert.True (a * b == c);
+		}
+
+		[Test()]
+		public void TestDualMultiply () {
+			var a = NumberNode.Dual (1, 2);
+			var b = NumberNode.Dual (2, 3);
+			var c = NumberNode.Dual (1*2, 2*2+1*3);
+			Assert.True (a * b == c);
 		}
 	}
 }
