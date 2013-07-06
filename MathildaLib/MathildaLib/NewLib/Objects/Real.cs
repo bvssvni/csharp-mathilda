@@ -353,11 +353,6 @@ namespace MathildaLib
 			throw new NotImplementedException ();
 		}
 
-		public override string ToString()
-		{
-			return ToString (ExpressionFormat.Normal);
-		}
-
 		private static List<Product> Add (List<Product> a, List<Product> b) {
 			var list = new List<Product> ();
 			int na = a.Count;

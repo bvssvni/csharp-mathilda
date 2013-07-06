@@ -9,7 +9,12 @@ namespace MathildaLib
 		public abstract T Inverted ();
 		public abstract T Negative ();
 		public abstract string ToString (ExpressionFormat format);
-		
+
+		public override string ToString()
+		{
+			return ToString (ExpressionFormat.Normal);
+		}
+
 		public T Subtract (T b) {
 			var bNegative = b.Negative ();
 			return this.Add (bNegative);
