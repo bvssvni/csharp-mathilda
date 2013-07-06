@@ -80,6 +80,7 @@
     <Compile Include="NewLib\Objects\Complex.cs" />
     <Compile Include="NewLib\Objects\Real.cs" />
     <Compile Include="NewLib\Objects\ExpressionFormat.cs" />
+    <Compile Include="NewLib\Objects\Algebra.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

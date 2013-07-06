@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MathildaLib
 {
-	public class Real
+	public class Real : Algebra<Real>
 	{
 		public List<Product> AboveProducts;
 		public List<Product> BelowProducts;
@@ -191,14 +191,14 @@ namespace MathildaLib
 			};
 		}
 
-		public Real Inverted () {
+		public override Real Inverted () {
 			return new Real () {
 				AboveProducts = CopyProductList (this.BelowProducts),
 				BelowProducts = CopyProductList (this.AboveProducts)
 			};
 		}
 
-		public Real Negative () {
+		public override Real Negative () {
 			var r = this.Copy ();
 			int n = r.AboveProducts.Count;
 			for (int i = 0; i < n; i++) {
@@ -344,7 +344,7 @@ namespace MathildaLib
 			}
 		}
 
-		public string ToString (ExpressionFormat format) {
+		public override string ToString (ExpressionFormat format) {
 			switch (format) {
 				case ExpressionFormat.Normal: return ToStringNormal ();
 				case ExpressionFormat.Simplified: return ToStringSimplified ();
@@ -387,18 +387,13 @@ namespace MathildaLib
 			return list;
 		}
 
-		public Real Add (Real b) {
+		public override Real Add (Real b) {
 			var a = this;
 			return new Real () {
 				AboveProducts = Add (Multiply (a.AboveProducts, b.BelowProducts),
 					Multiply (a.BelowProducts, b.AboveProducts)),
 				BelowProducts = Multiply (a.BelowProducts, b.BelowProducts)
 			};
-		}
-
-		public Real Subtract (Real b) {
-			var bNegative = b.Negative ();
-			return this.Add (bNegative);
 		}
 
 		private static List<Product> Multiply (List<Product> a, List<Product> b) {
@@ -417,7 +412,7 @@ namespace MathildaLib
 			return list;
 		}
 
-		public Real Multiply (Real b) {
+		public override Real Multiply (Real b) {
 			var a = this;
 			return new Real () {
 				AboveProducts = Multiply (a.AboveProducts, b.AboveProducts),
@@ -425,26 +420,6 @@ namespace MathildaLib
 			};
 		}
 
-		public Real Divide (Real b) {
-			var invB = b.Inverted ();
-			return this.Multiply (invB);
-		}
-
-		public static Real operator + (Real a, Real b) {
-			return a.Add (b);
-		}
-
-		public static Real operator - (Real a, Real b) {
-			return a.Subtract (b);
-		}
-
-		public static Real operator * (Real a, Real b) {
-			return a.Multiply (b);
-		}
-
-		public static Real operator / (Real a, Real b) {
-			return a.Divide (b);
-		}
 	}
 }
 

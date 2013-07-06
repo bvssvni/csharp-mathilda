@@ -9,7 +9,7 @@ namespace MathildaLib
 		[Test()]
 		public void TestComplexToString()
 		{
-			var a = new Complex () {
+			var a = new Complex<Real> () {
 				Re = Real.Variable ("a"),
 				Img = Real.Variable ("b")
 			};
@@ -19,11 +19,11 @@ namespace MathildaLib
 		[Test()]
 		public void TestComplexMultiply ()
 		{
-			var a = new Complex () {
+			var a = new Complex<Real> () {
 				Re = Real.Variable ("a"),
 				Img = Real.Variable ("b")
 			};
-			var b = new Complex () {
+			var b = new Complex<Real> () {
 				Re = Real.Variable ("c"),
 				Img = Real.Variable ("d")
 			};

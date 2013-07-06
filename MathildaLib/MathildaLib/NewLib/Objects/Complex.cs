@@ -2,33 +2,42 @@ using System;
 
 namespace MathildaLib
 {
-	public class Complex
+	public class Complex<T> : Algebra<Complex<T>> where T : Algebra<T>
 	{
-		public Real Re;
-		public Real Img;
+		public T Re;
+		public T Img;
 
-		public Complex Add (Complex b) {
+		public override Complex<T> Add (Complex<T> b) {
 			var a = this;
-			return new Complex () {
+			return new Complex<T> () {
 				Re = a.Re + b.Re,
 				Img = a.Img + b.Img
 			};
 		}
 
-		public Complex Multiply (Complex b) {
+		public override Complex<T> Multiply (Complex<T> b) {
 			var a = this;
-			return new Complex () {
+			return new Complex<T> () {
 				Re = a.Re * b.Re - a.Img * b.Img,
 				Img = a.Re * b.Img + a.Img * b.Re
 			};
 		}
 
-		public static Complex operator + (Complex a, Complex b) {
-			return a.Add (b);
+		public override Complex<T> Inverted()
+		{
+			var sq = Re * Re + Img * Img;
+			return new Complex<T> () {
+				Re = this.Re / sq,
+				Img = this.Img / Img
+			};
 		}
 
-		public static Complex operator * (Complex a, Complex b) {
-			return a.Multiply (b);
+		public override Complex<T> Negative()
+		{
+			return new Complex<T> () {
+				Re = this.Re.Negative (),
+				Img = this.Img.Negative ()
+			};
 		}
 
 		public override string ToString()
@@ -36,7 +45,7 @@ namespace MathildaLib
 			return "{" + Re.ToString () + "," + Img.ToString () + "}";
 		}
 
-		public string ToString (ExpressionFormat format) {
+		public override string ToString (ExpressionFormat format) {
 			return "{" + Re.ToString (format) + "," + Img.ToString (format) + "}";
 		}
 	}
