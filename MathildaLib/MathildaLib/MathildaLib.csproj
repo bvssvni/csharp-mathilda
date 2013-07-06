@@ -82,6 +82,7 @@
     <Compile Include="NewLib\Objects\ExpressionFormat.cs" />
     <Compile Include="NewLib\Objects\Algebra.cs" />
     <Compile Include="NewLib\Objects\Quaternion.cs" />
+    <Compile Include="NewLib\Objects\Dual.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
