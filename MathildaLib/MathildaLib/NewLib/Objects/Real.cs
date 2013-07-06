@@ -369,16 +369,25 @@ namespace MathildaLib
 				var pb = ib < nb ? b [ib] : null;
 				var cmp = Product.CompareVariableExponent (pa, pb);
 				if (cmp == -1) {
-					list.Add (pa.Copy ());
+					if (pa.Scalar != 0) {
+						list.Add (pa.Copy ());
+					}
+
 					ia++;
 				} else if (cmp == 1) {
-					list.Add (pb.Copy ());
+					if (pb.Scalar != 0) {
+						list.Add (pb.Copy ());
+					}
+
 					ib++;
 				} else {
-					list.Add (new Product () {
-						Scalar = pa.Scalar + pb.Scalar,
-						Items = pa.CopyItems ()
-					});
+					if (pa.Scalar != 0 || pb.Scalar != 0) {
+						list.Add (new Product () {
+							Scalar = pa.Scalar + pb.Scalar,
+							Items = pa.CopyItems ()
+						});
+					}
+
 					ia++;
 					ib++;
 				}
