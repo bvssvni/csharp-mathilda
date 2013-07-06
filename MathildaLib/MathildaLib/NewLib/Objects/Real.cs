@@ -248,14 +248,20 @@ namespace MathildaLib
 			};
 		}
 
-		public override string ToString()
-		{
-			int n = this.AboveProducts.Count;
+		private bool IsIdentity (List<Product> list) {
+			if (list.Count != 1) {return false;}
+			if (list [0].Items.Count != 0) {return false;}
+			if (list [0].Scalar != 1) {return false;}
+
+			return true;
+		}
+
+		private static string ProductListToString (List<Product> list) {
+			int n = list.Count;
 			var strb = new System.Text.StringBuilder ();
-			strb.Append ("(");
 			for (int i = 0; i < n; i++) {
 				strb.Append ("+");
-				var product = this.AboveProducts [i];
+				var product = list [i];
 				strb.Append (product.Scalar.ToString (System.Globalization.CultureInfo.InvariantCulture));
 				var items = product.Items;
 				int m = items.Count;
@@ -267,45 +273,30 @@ namespace MathildaLib
 					strb.Append (variableExponent.Exponent);
 				}
 			}
-
-			strb.Append (")/(");
-			n = this.BelowProducts.Count;
-			for (int i = 0; i < n; i++) {
-				strb.Append ("+");
-				var product = this.BelowProducts [i];
-				strb.Append (product.Scalar.ToString (System.Globalization.CultureInfo.InvariantCulture));
-				var items = product.Items;
-				int m = items.Count;
-				for (int j = 0; j < m; j++) {
-					strb.Append ("*");
-					var variableExponent = items [j];
-					strb.Append (variableExponent.Variable);
-					strb.Append ("^");
-					strb.Append (variableExponent.Exponent);
-				}
-			}
-
-			strb.Append (")");
 
 			return strb.ToString ();
 		}
 
-		public string ToStringSimplified()
-		{
-			int n = this.AboveProducts.Count;
+		private static string ProductListToStringSimplified (List<Product> list) {
+			int n = list.Count;
 			var strb = new System.Text.StringBuilder ();
-			strb.Append ("(");
 			for (int i = 0; i < n; i++) {
-				strb.Append ("+");
-				var product = this.AboveProducts [i];
-				if (product.Scalar != 1) {
+				var product = list [i];
+				var isOne = product.Scalar == 1 || product.Scalar == -1;
+				if (i != 0 && product.Scalar >= 0) {
+					strb.Append ("+");
+				}
+				if (!isOne) {
 					strb.Append (product.Scalar.ToString (System.Globalization.CultureInfo.InvariantCulture));
+				}
+				if (product.Scalar == -1) {
+					strb.Append ("-");
 				}
 
 				var items = product.Items;
 				int m = items.Count;
 				for (int j = 0; j < m; j++) {
-					if (product.Scalar != 1 || j != 0) {
+					if (!isOne || j != 0) {
 						strb.Append ("*");
 					}
 
@@ -318,32 +309,53 @@ namespace MathildaLib
 				}
 			}
 
-			strb.Append (")/(");
-			n = this.BelowProducts.Count;
-			for (int i = 0; i < n; i++) {
-				strb.Append ("+");
-				var product = this.BelowProducts [i];
-				if (product.Scalar != 1) {
-					strb.Append (product.Scalar.ToString (System.Globalization.CultureInfo.InvariantCulture));
-				}
-
-				var items = product.Items;
-				int m = items.Count;
-				for (int j = 0; j < m; j++) {
-					if (product.Scalar != 1 || j != 0) {
-						strb.Append ("*");
-					}
-
-					var variableExponent = items [j];
-					strb.Append (variableExponent.Variable);
-					strb.Append ("^");
-					strb.Append (variableExponent.Exponent);
-				}
-			}
-			
-			strb.Append (")");
-			
 			return strb.ToString ();
+		}
+
+		private string ToStringNormal ()
+		{
+			var strb = new System.Text.StringBuilder ();
+			strb.Append ("(");
+			strb.Append (ProductListToString (this.AboveProducts));
+			strb.Append (")/(");
+			strb.Append (ProductListToString (this.BelowProducts));
+			strb.Append (")");
+			return strb.ToString ();
+		}
+
+		private string ToStringSimplified()
+		{
+			var aboveIsIdentity = IsIdentity (this.AboveProducts);
+			var belowIsIdentity = IsIdentity (this.BelowProducts);
+			if (aboveIsIdentity && belowIsIdentity) {
+				return "1";
+			} else if (aboveIsIdentity) {
+				return "1/(" + ProductListToStringSimplified (this.BelowProducts) + ")";
+			} else if (belowIsIdentity) {
+				return "(" + ProductListToStringSimplified (this.AboveProducts) + ")";
+			} else {
+				var strb = new System.Text.StringBuilder ();
+				strb.Append ("(");
+				strb.Append (ProductListToStringSimplified (this.AboveProducts));
+				strb.Append (")/(");
+				strb.Append (ProductListToStringSimplified (this.BelowProducts));
+				strb.Append (")");
+				return strb.ToString ();
+			}
+		}
+
+		public string ToString (ExpressionFormat format) {
+			switch (format) {
+				case ExpressionFormat.Normal: return ToStringNormal ();
+				case ExpressionFormat.Simplified: return ToStringSimplified ();
+			}
+
+			throw new NotImplementedException ();
+		}
+
+		public override string ToString()
+		{
+			return ToString (ExpressionFormat.Normal);
 		}
 
 		private static List<Product> Add (List<Product> a, List<Product> b) {

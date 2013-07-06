@@ -36,8 +36,8 @@ namespace MathildaLib
 			return "{" + Re.ToString () + "," + Img.ToString () + "}";
 		}
 
-		public string ToStringSimplified () {
-			return "{" + Re.ToStringSimplified () + "," + Img.ToStringSimplified () + "}";
+		public string ToString (ExpressionFormat format) {
+			return "{" + Re.ToString (format) + "," + Img.ToString (format) + "}";
 		}
 	}
 }

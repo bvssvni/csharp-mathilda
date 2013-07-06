@@ -29,11 +29,7 @@ namespace MathildaLib
 			};
 			var c = a * b;
 			Assert.True (c.ToString () == "{(+1*a^1*c^1+-1*b^1*d^1)/(+1),(+1*a^1*d^1+1*b^1*c^1)/(+1)}");
-
-			// TEST
-			Console.WriteLine (c.ToStringSimplified ());
-
-			Assert.True (c.ToStringSimplified () == "{(+a*c+-1*b*d)/(+),(+a*d+b*c)/(+)}");
+			Assert.True (c.ToString (ExpressionFormat.Simplified) == "{(a*c-b*d),(a*d+b*c)}");
 		}
 	}
 }
