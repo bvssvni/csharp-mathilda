@@ -124,6 +124,10 @@ namespace MathildaLib
 				new VariableNode ("b").Multiply ("d"))));
 			Assert.True (b.ToString () == "(+(*(+(*a*c)+(*a*d)))+(*(+(*b*c)+(*b*d))))");
 			int compareResult = a.CompareTo (b);
+
+			// TEST
+			Console.WriteLine ("aMass {0} bMass {1}", a.Mass (), b.Mass ());
+
 			Assert.True (compareResult == -1);
 			Assert.True (b.CompareTo (a) == 1);
 		}

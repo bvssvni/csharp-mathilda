@@ -314,6 +314,22 @@ namespace MathildaLib
 			return count;
 		}
 
+		public long Mass () {
+			int n = m_list.Count;
+			long mass = 1;
+			for (int i = 0; i < n; i++) {
+				var subList = m_list [i] as ListNode;
+				if (subList == null) {
+					mass++;
+				} else {
+					var subMass = subList.Mass ();
+					mass += subMass;
+				}
+			}
+
+			return mass;
+		}
+
 		public override int CompareTo (Node other)
 		{
 			var otherNode = other as ListNode;
@@ -323,23 +339,36 @@ namespace MathildaLib
 
 			// TEST
 			/*
-			// Smart lift comparison.
-			var lift = new SmartLiftOperator ();
-			if (lift.Can (otherNode)) {
-				var copy = otherNode.Copy ();
-				lift.Do (ref copy);
-				if (copy.CompareTo (this) == 0) {
-					return -1;
-				}
-			}
-			if (lift.Can (this)) {
-				var copy = this.Copy ();
-				lift.Do (ref copy);
-				if (copy.CompareTo (otherNode) == 0) {
-					return 1;
+			if (this.Operation == otherNode.Operation) {
+				var otherMass = other is ListNode ? ((ListNode)other).Mass () : 1;
+				var compareMass = this.Mass ().CompareTo (otherMass);
+				if (compareMass != 0) {
+
+					// TEST
+					Console.WriteLine ("{0} vs {1} = {2}", this, otherNode, compareMass);
+
+					return compareMass;
 				}
 			}
 			*/
+
+//			// TEST
+//			// Smart lift comparison.
+//			var lift = new SmartLiftOperator ();
+//			if (lift.Can (otherNode)) {
+//				var copy = otherNode.Copy ();
+//				lift.Do (ref copy);
+//				if (copy.CompareTo (this) == 0) {
+//					return -1;
+//				}
+//			}
+//			if (lift.Can (this)) {
+//				var copy = this.Copy ();
+//				lift.Do (ref copy);
+//				if (copy.CompareTo (otherNode) == 0) {
+//					return 1;
+//				}
+//			}
 
 			if (this.m_list.Count == 1 &&
 			    m_list [0].CompareTo (otherNode) == 0) {
@@ -366,6 +395,7 @@ namespace MathildaLib
 			if (compareOperation != 0) {
 				return compareOperation;
 			}
+
 
 			int n = m_list.Count;
 			for (int i = 0; i < n; i++) {

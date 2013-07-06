@@ -41,6 +41,11 @@ namespace MathildaLib
 			return num;
 		}
 
+		public static NumberNode operator + (NumberNode a, double b) {
+			var num = new NumberNode (a.m_value + b);
+			return num;
+		}
+
 		public static NumberNode operator / (double a, NumberNode b) {
 			return new NumberNode (a / b.m_value);
 		}

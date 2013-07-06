@@ -51,8 +51,16 @@ namespace MathildaLib
 			// a * (1 + 2)
 			var a = new VariableNode ("a").Multiply (
 				new NumberNode (1).Add (2));
+			// a + 2*a
 			var b = new VariableNode ("a").Add (
 				new NumberNode (2).Multiply ("a"));
+			var aMin = a.Minimize (SearchModule.CreateOperators ());
+			var bMin = b.Minimize (SearchModule.CreateOperators ());
+
+			// TEST
+			Console.WriteLine ("aMin {0} bMin {1}", aMin, bMin);
+			Console.WriteLine ("aMass {0} bMass {1}", ((ListNode)aMin).Mass (), ((ListNode)bMin).Mass ());
+
 			Assert.True (a.IsEqualTo (b));
 		}
 

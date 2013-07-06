@@ -75,6 +75,10 @@
     <Compile Include="Operators\NegativeProductOperator.cs" />
     <Compile Include="Operators\NegativeVariableOperator.cs" />
     <Compile Include="Operators\SmartLiftOperator.cs" />
+    <Compile Include="NewLib\TestReal.cs" />
+    <Compile Include="NewLib\TestComplex.cs" />
+    <Compile Include="NewLib\Objects\Complex.cs" />
+    <Compile Include="NewLib\Objects\Real.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -83,5 +87,7 @@
     <Folder Include="Operators\" />
     <Folder Include="Modules\" />
     <Folder Include="Rules\" />
+    <Folder Include="NewLib\" />
+    <Folder Include="NewLib\Objects\" />
   </ItemGroup>
 </Project>

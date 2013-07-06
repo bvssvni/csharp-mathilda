@@ -35,6 +35,10 @@ namespace MathildaLib
 			var list = node as ListNode;
 			var a = list [m_i];
 			var b = list [m_j];
+			if (a is NumberNode && b is NumberNode) {
+				// Handled by sum operator.
+				return;
+			}
 			if (a is VariableNode && b is VariableNode) {
 				var an = a as VariableNode;
 				var bn = b as VariableNode;
@@ -48,6 +52,26 @@ namespace MathildaLib
 				list.RemoveNodeAt (m_i);
 				list.InsertNode (m_i, newNode);
 				return;
+			}
+			if (a is VariableNode && b is ListNode) {
+				var bn = b as ListNode;
+				if (bn.Operation == ListNode.ListOperation.Product) {
+					var fakeList = new ListNode (ListNode.ListOperation.Product, a);
+					if (fakeList.CompareToIgnoreScalar (bn) == 0) {
+						var bIndex = bn [0] is NumberNode ? 1 : 0;
+						if (bIndex == 0) {
+							bn.InsertNode (0, new NumberNode (2));
+							list.RemoveNodeAt (m_i);
+						} else {
+							var num = bn [0] as NumberNode;
+							num = num + 1;
+							bn [0] = num;
+							list.RemoveNodeAt (m_i);
+						}
+
+						return;
+					}
+				}
 			}
 			if (a is ListNode && b is ListNode) {
 				var an = a as ListNode;
@@ -73,6 +97,12 @@ namespace MathildaLib
 
 				return;
 			}
+
+			// TEST
+			/*
+			Console.WriteLine ("unsupported addition {0} {1}", a, b);
+			throw new NotImplementedException ();
+			*/
 		}
 
 		public static void Add (SearchModule.Search search) {

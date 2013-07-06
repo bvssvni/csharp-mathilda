@@ -102,6 +102,19 @@ namespace MathildaLib
 				history.Add (node, true);
 			}
 
+			var smartLift = new SmartLiftOperator ();
+			if (smartLift.Can (node)) {
+				smartLift.Do (ref node);
+				
+				// TEST
+				throw new Exception ("what???");
+			}
+
+			var lift = new LiftOperator ();
+			if (lift.Can (node)) {
+				lift.Do (ref node);
+			}
+
 			// Collect the operations.
 			var states = new SortedList<Node, Operator> ();
 			var search = new Search () {
