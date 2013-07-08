@@ -75,14 +75,15 @@
     <Compile Include="Operators\NegativeProductOperator.cs" />
     <Compile Include="Operators\NegativeVariableOperator.cs" />
     <Compile Include="Operators\SmartLiftOperator.cs" />
-    <Compile Include="NewLib\TestReal.cs" />
-    <Compile Include="NewLib\TestComplex.cs" />
     <Compile Include="NewLib\Objects\Complex.cs" />
     <Compile Include="NewLib\Objects\Real.cs" />
     <Compile Include="NewLib\Objects\ExpressionFormat.cs" />
     <Compile Include="NewLib\Objects\Algebra.cs" />
     <Compile Include="NewLib\Objects\Quaternion.cs" />
     <Compile Include="NewLib\Objects\Dual.cs" />
+    <Compile Include="NewLib\Tests\TestComplex.cs" />
+    <Compile Include="NewLib\Tests\TestReal.cs" />
+    <Compile Include="NewLib\Tests\TestDualQuaternionModule.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -93,5 +94,6 @@
     <Folder Include="Rules\" />
     <Folder Include="NewLib\" />
     <Folder Include="NewLib\Objects\" />
+    <Folder Include="NewLib\Tests\" />
   </ItemGroup>
 </Project>
