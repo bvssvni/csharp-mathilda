@@ -18,6 +18,9 @@ namespace MathildaLib
 					Scalar = a.Scalar * b.Scalar,
 					Items = new List<VariableExponent> ()
 				};
+				if (p.Scalar == 0.0) {
+					return p;
+				}
 
 				int na = a.Items.Count;
 				int nb = b.Items.Count;
@@ -327,6 +330,13 @@ namespace MathildaLib
 		{
 			var aboveIsIdentity = IsIdentity (this.AboveProducts);
 			var belowIsIdentity = IsIdentity (this.BelowProducts);
+			var aboveZero = this.AboveProducts.Count == 0;
+			var belowZero = this.BelowProducts.Count == 0;
+			if (aboveZero) {
+				return "0";
+			} else if (belowZero) {
+				return "(" + ProductListToStringSimplified (this.AboveProducts) + ")/0";
+			}
 			if (aboveIsIdentity && belowIsIdentity) {
 				return "1";
 			} else if (aboveIsIdentity) {
@@ -377,10 +387,13 @@ namespace MathildaLib
 					ib++;
 				} else {
 					if (pa.Scalar != 0 || pb.Scalar != 0) {
-						list.Add (new Product () {
+						var newp = new Product () {
 							Scalar = pa.Scalar + pb.Scalar,
 							Items = pa.CopyItems ()
-						});
+						};
+						if (newp.Scalar != 0) {
+							list.Add (newp);
+						}
 					}
 
 					ia++;

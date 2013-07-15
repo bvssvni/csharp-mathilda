@@ -1,14 +1,22 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="MathildaLib/NewLib/Notes/DualQuaternions.txt">
+    <Files>
+      <File FileName="MathildaLib/NewLib/Tests/TestDualQuaternionModule.cs" Line="16" Column="11" />
+      <File FileName="MathildaLib/NewLib/Objects/Quaternion.cs" Line="1" Column="1" />
+      <File FileName="MathildaLib/NewLib/Modules/DualQuaternionModule.cs" Line="24" Column="7" />
+      <File FileName="MathildaLib/NewLib/Notes/DualQuaternions.txt" Line="5" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="MathildaLib" expanded="True">
             <Node name="NewLib" expanded="True">
-              <Node name="Tests" expanded="True">
-                <Node name="TestDualQuaternionModule.cs" selected="True" />
+              <Node name="Modules" expanded="True" />
+              <Node name="Notes" expanded="True">
+                <Node name="DualQuaternions.txt" selected="True" />
               </Node>
+              <Node name="Objects" expanded="True" />
             </Node>
             <Node name="Tests" expanded="True" />
           </Node>
@@ -24,7 +32,13 @@
         <State selected="True" />
       </Pad>
       <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State selected="True" />
+        <State expanded="True">
+          <Node name="MathildaLib" expanded="True">
+            <Node name="MathildaLib" expanded="True">
+              <Node name="TestDualQuaternionModule" selected="True" />
+            </Node>
+          </Node>
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

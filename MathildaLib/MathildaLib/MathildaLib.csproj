@@ -84,6 +84,7 @@
     <Compile Include="NewLib\Tests\TestComplex.cs" />
     <Compile Include="NewLib\Tests\TestReal.cs" />
     <Compile Include="NewLib\Tests\TestDualQuaternionModule.cs" />
+    <Compile Include="NewLib\Modules\DualQuaternionModule.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -95,5 +96,10 @@
     <Folder Include="NewLib\" />
     <Folder Include="NewLib\Objects\" />
     <Folder Include="NewLib\Tests\" />
+    <Folder Include="NewLib\Modules\" />
+    <Folder Include="NewLib\Notes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NewLib\Notes\DualQuaternions.txt" />
   </ItemGroup>
 </Project>

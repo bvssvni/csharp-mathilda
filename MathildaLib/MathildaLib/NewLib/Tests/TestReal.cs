@@ -49,6 +49,34 @@ namespace MathildaLib
 			var a = Real.Variable ("a") / Real.Variable ("b");
 			Assert.True (a.ToString () == "(+1*a^1)/(+1*b^1)");
 		}
+
+		[Test()]
+		public void TestMultiplyZero () {
+			var a = Real.Variable ("a");
+			var b = Real.Scalar (0);
+			var c = a * b;
+			Assert.True (c.ToString (ExpressionFormat.Simplified) == "0");
+		}
+
+		[Test()]
+		public void TestZeroPlusOne () {
+			var a = Real.Scalar (0);
+			var b = Real.Scalar (1);
+			var c = a + b;
+			Assert.True (c.ToString (ExpressionFormat.Simplified) == "1");
+			var d = b + a;
+			Assert.True (d.ToString (ExpressionFormat.Simplified) == "1");
+		}
+
+		[Test()]
+		public void TestZeroPlusVariable () {
+			var a = Real.Scalar (0);
+			var b = Real.Variable ("a");
+			var c = a + b;
+			Assert.True (c.ToString (ExpressionFormat.Simplified) == "(a)");
+			var d = b + a;
+			Assert.True (d.ToString (ExpressionFormat.Simplified) == "(a)");
+		}
 	}
 }
 

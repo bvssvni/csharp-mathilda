@@ -102,18 +102,17 @@ namespace MathildaLib
 				history.Add (node, true);
 			}
 
+			/*
 			var smartLift = new SmartLiftOperator ();
 			if (smartLift.Can (node)) {
 				smartLift.Do (ref node);
-				
-				// TEST
-				throw new Exception ("what???");
 			}
 
 			var lift = new LiftOperator ();
 			if (lift.Can (node)) {
 				lift.Do (ref node);
 			}
+			*/
 
 			// Collect the operations.
 			var states = new SortedList<Node, Operator> ();
@@ -144,6 +143,18 @@ namespace MathildaLib
 
 			while (states.Count > 0) {
 				var min = states.Keys [0];
+				//*/
+				if (!history.ContainsKey (min)) {
+					history.Add (min, true);
+					var sub = Minimize (min, operators, history);
+					if (sub.CompareTo (node) < 0) {
+						node = sub;
+				
+						// TEST
+						Console.WriteLine ("{0}: {1}", states.Values [0], node);	
+					}
+				}
+				/*/
 				if (min.CompareTo (node) < 0 && !history.ContainsKey (min)) {
 
 					// TEST
@@ -152,6 +163,7 @@ namespace MathildaLib
 					history.Add (min, true);
 					node = Minimize (min, operators, history);
 				}
+				//*/
 
 				states.RemoveAt (0);
 			}

@@ -45,7 +45,7 @@ namespace MathildaLib
 
 		public override string ToString(ExpressionFormat format)
 		{
-			return "{" + this.Re.ToString (format) + "," + this.Eps.ToString () + "}";
+			return "{" + this.Re.ToString (format) + "," + this.Eps.ToString (format) + "}";
 		}
 	}
 }
