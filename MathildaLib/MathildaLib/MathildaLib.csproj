@@ -34,72 +34,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Nodes\Node.cs" />
-    <Compile Include="Nodes\NumberNode.cs" />
-    <Compile Include="Nodes\ListNode.cs" />
-    <Compile Include="Nodes\VariableNode.cs" />
-    <Compile Include="Operators\Operator.cs" />
-    <Compile Include="Operators\SwapOperator.cs" />
-    <Compile Include="Operators\SumOperator.cs" />
-    <Compile Include="Tests\TestSum.cs" />
-    <Compile Include="Modules\SearchModule.cs" />
-    <Compile Include="Modules\NodeTypeModule.cs" />
-    <Compile Include="Modules\EqualityModule.cs" />
-    <Compile Include="Tests\TestEqualityModule.cs" />
-    <Compile Include="Tests\TestOperations.cs" />
-    <Compile Include="Operators\LiftOperator.cs" />
-    <Compile Include="Operators\ZeroMultiplyOperator.cs" />
-    <Compile Include="Operators\ZeroAddOperator.cs" />
-    <Compile Include="Modules\AddExtensionModule.cs" />
-    <Compile Include="Modules\MultiplyExtensionModule.cs" />
-    <Compile Include="Operators\ScalarProductOperator.cs" />
-    <Compile Include="Operators\MultiplyOperator.cs" />
-    <Compile Include="Rules\Rule.cs" />
-    <Compile Include="Operators\ReplaceOperator.cs" />
-    <Compile Include="Rules\ComplexRule.cs" />
-    <Compile Include="Tests\TestComplexNumbers.cs" />
-    <Compile Include="Operators\MultiplyOneOperator.cs" />
-    <Compile Include="Operators\AddOperator.cs" />
-    <Compile Include="Tests\TestCompareIgnoreScalar.cs" />
-    <Compile Include="Tests\TestCompare.cs" />
-    <Compile Include="Modules\SubtractExtensionModule.cs" />
-    <Compile Include="Operators\CancelVariableOperator.cs" />
-    <Compile Include="Modules\DivideExtensionModule.cs" />
-    <Compile Include="Tests\TestMultiply.cs" />
-    <Compile Include="Tests\TestAdd.cs" />
-    <Compile Include="Tests\TestSubtract.cs" />
-    <Compile Include="Operators\FixSignOperator.cs" />
-    <Compile Include="Tests\TestDivide.cs" />
-    <Compile Include="Modules\ConjugateModule.cs" />
-    <Compile Include="Tests\TestConjugate.cs" />
-    <Compile Include="Operators\NegativeProductOperator.cs" />
-    <Compile Include="Operators\NegativeVariableOperator.cs" />
-    <Compile Include="Operators\SmartLiftOperator.cs" />
-    <Compile Include="NewLib\Objects\Complex.cs" />
-    <Compile Include="NewLib\Objects\Real.cs" />
-    <Compile Include="NewLib\Objects\ExpressionFormat.cs" />
-    <Compile Include="NewLib\Objects\Algebra.cs" />
-    <Compile Include="NewLib\Objects\Quaternion.cs" />
-    <Compile Include="NewLib\Objects\Dual.cs" />
-    <Compile Include="NewLib\Tests\TestComplex.cs" />
-    <Compile Include="NewLib\Tests\TestReal.cs" />
-    <Compile Include="NewLib\Tests\TestDualQuaternionModule.cs" />
-    <Compile Include="NewLib\Modules\DualQuaternionModule.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Tests\" />
-    <Folder Include="Nodes\" />
-    <Folder Include="Operators\" />
-    <Folder Include="Modules\" />
-    <Folder Include="Rules\" />
-    <Folder Include="NewLib\" />
-    <Folder Include="NewLib\Objects\" />
-    <Folder Include="NewLib\Tests\" />
-    <Folder Include="NewLib\Modules\" />
-    <Folder Include="NewLib\Notes\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="NewLib\Notes\DualQuaternions.txt" />
+    <Folder Include="Objects\" />
   </ItemGroup>
 </Project>

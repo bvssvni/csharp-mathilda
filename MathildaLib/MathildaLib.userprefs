@@ -1,24 +1,22 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MathildaLib/NewLib/Notes/DualQuaternions.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MathildaLib/Tests/TestMultiply.cs">
     <Files>
-      <File FileName="MathildaLib/NewLib/Tests/TestDualQuaternionModule.cs" Line="16" Column="11" />
-      <File FileName="MathildaLib/NewLib/Objects/Quaternion.cs" Line="1" Column="1" />
-      <File FileName="MathildaLib/NewLib/Modules/DualQuaternionModule.cs" Line="24" Column="7" />
-      <File FileName="MathildaLib/NewLib/Notes/DualQuaternions.txt" Line="5" Column="1" />
+      <File FileName="MathildaLib/Tests/TestCompare.cs" Line="109" Column="3" />
+      <File FileName="MathildaLib/Tests/TestAdd.cs" Line="1" Column="1" />
+      <File FileName="MathildaLib/Modules/SearchModule.cs" Line="147" Column="38" />
+      <File FileName="MathildaLib/Tests/TestMultiply.cs" Line="64" Column="1" />
+      <File FileName="MathildaLib/Nodes/ListNode.cs" Line="298" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="MathildaLib" expanded="True">
-            <Node name="NewLib" expanded="True">
-              <Node name="Modules" expanded="True" />
-              <Node name="Notes" expanded="True">
-                <Node name="DualQuaternions.txt" selected="True" />
-              </Node>
-              <Node name="Objects" expanded="True" />
+            <Node name="Modules" expanded="True" />
+            <Node name="Nodes" expanded="True" />
+            <Node name="Tests" expanded="True">
+              <Node name="TestMultiply.cs" selected="True" />
             </Node>
-            <Node name="Tests" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -35,7 +33,9 @@
         <State expanded="True">
           <Node name="MathildaLib" expanded="True">
             <Node name="MathildaLib" expanded="True">
-              <Node name="TestDualQuaternionModule" selected="True" />
+              <Node name="TestMultiply" expanded="True">
+                <Node name="TestMultiply6" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
