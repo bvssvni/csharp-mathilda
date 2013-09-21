@@ -34,10 +34,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Objects\Complex.cs" />
+    <Compile Include="Objects\Number.cs" />
+    <Compile Include="Objects\Scalar.cs" />
+    <Compile Include="Tests\TestComplex.cs" />
+    <Compile Include="Objects\Dual.cs" />
+    <Compile Include="Modules\PowerModule.cs" />
+    <Compile Include="Tests\TestPower.cs" />
+    <Compile Include="Objects\Power.cs" />
+    <Compile Include="Objects\Log.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Tests\" />
     <Folder Include="Objects\" />
+    <Folder Include="Modules\" />
   </ItemGroup>
 </Project>
