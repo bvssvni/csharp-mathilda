@@ -43,6 +43,7 @@
     <Compile Include="Tests\TestPower.cs" />
     <Compile Include="Objects\Power.cs" />
     <Compile Include="Objects\Log.cs" />
+    <Compile Include="Objects\SquareRoot.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

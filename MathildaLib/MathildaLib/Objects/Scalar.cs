@@ -2,7 +2,7 @@ using System;
 
 namespace MathildaLib
 {
-	public class Scalar : Number<Scalar>, Power<Scalar>, Log<Scalar>
+	public class Scalar : Number<Scalar>, Power<Scalar>, Log<Scalar>, SquareRoot<Scalar>
 	{
 		public double Value;
 
@@ -44,6 +44,11 @@ namespace MathildaLib
 		public Scalar Log()
 		{
 			return new Scalar(Math.Log(Value));
+		}
+
+		public Scalar Sqrt()
+		{
+			return new Scalar(Math.Sqrt(Value));
 		}
 	}
 }
