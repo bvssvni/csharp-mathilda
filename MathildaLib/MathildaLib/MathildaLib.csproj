@@ -39,19 +39,13 @@
     <Compile Include="Objects\Scalar.cs" />
     <Compile Include="Tests\TestComplex.cs" />
     <Compile Include="Objects\Dual.cs" />
-    <Compile Include="Modules\PowerModule.cs" />
     <Compile Include="Tests\TestPower.cs" />
-    <Compile Include="Objects\Power.cs" />
     <Compile Include="Objects\SquareRoot.cs" />
-    <Compile Include="Objects\Logarithm.cs" />
-    <Compile Include="Objects\Sinus.cs" />
-    <Compile Include="Objects\Cosinus.cs" />
     <Compile Include="Objects\Tangent.cs" />
     <Compile Include="Modules\TrigonometryModule.cs" />
-    <Compile Include="Objects\Arctangent.cs" />
     <Compile Include="Objects\Secant.cs" />
-    <Compile Include="Objects\Exponent.cs" />
     <Compile Include="Tests\TestTrigonometry.cs" />
+    <Compile Include="Objects\Hyperbolic.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

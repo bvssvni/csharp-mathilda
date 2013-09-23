@@ -4,15 +4,9 @@ namespace MathildaLib
 {
 	public class Scalar : 
 		Number<Scalar>, 
-		Power<Scalar>, 
-		Exponent<Scalar>,
-		Logarithm<Scalar>, 
 		SquareRoot<Scalar>,
-		Sinus<Scalar>,
-		Cosinus<Scalar>,
 		Tangent<Scalar>,
-		Secant<Scalar>,
-		Arctangent<Scalar>
+		Secant<Scalar>
 	{
 		public double Value;
 
@@ -81,9 +75,19 @@ namespace MathildaLib
 			return new Scalar(Math.Sin(Value));
 		}
 
+		public Scalar Sinh()
+		{
+			return new Scalar(Math.Sinh(Value));
+		}
+
 		public Scalar Cos()
 		{
 			return new Scalar(Math.Cos(Value));
+		}
+
+		public Scalar Cosh()
+		{
+			return new Scalar(Math.Cosh(Value));
 		}
 
 		public Scalar Tan()

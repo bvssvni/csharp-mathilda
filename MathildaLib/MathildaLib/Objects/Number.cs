@@ -2,7 +2,7 @@ using System;
 
 namespace MathildaLib
 {
-	public interface Number<T>
+	public interface Number<T> : Hyperbolic<T>
 	{
 		T Add(T b);
 		T Add(double b);
@@ -13,6 +13,13 @@ namespace MathildaLib
 		T Divide(T b);
 		T FromReal(double b);
 		int CompareReal(double b);
+		T Log();
+		T Sin();
+		T Cos();
+		T Atan2(T x);
+		T Atan();
+		T Exp();
+		T Pow(T b);
 	}
 }
 
