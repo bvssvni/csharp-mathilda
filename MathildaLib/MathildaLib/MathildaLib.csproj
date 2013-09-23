@@ -42,13 +42,25 @@
     <Compile Include="Modules\PowerModule.cs" />
     <Compile Include="Tests\TestPower.cs" />
     <Compile Include="Objects\Power.cs" />
-    <Compile Include="Objects\Log.cs" />
     <Compile Include="Objects\SquareRoot.cs" />
+    <Compile Include="Objects\Logarithm.cs" />
+    <Compile Include="Objects\Sinus.cs" />
+    <Compile Include="Objects\Cosinus.cs" />
+    <Compile Include="Objects\Tangent.cs" />
+    <Compile Include="Modules\TrigonometryModule.cs" />
+    <Compile Include="Objects\Arctangent.cs" />
+    <Compile Include="Objects\Secant.cs" />
+    <Compile Include="Objects\Exponent.cs" />
+    <Compile Include="Tests\TestTrigonometry.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Tests\" />
     <Folder Include="Objects\" />
     <Folder Include="Modules\" />
+    <Folder Include="Documentation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Documentation\index.html" />
   </ItemGroup>
 </Project>

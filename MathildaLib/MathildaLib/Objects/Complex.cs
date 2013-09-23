@@ -18,6 +18,11 @@ namespace MathildaLib
 			return new Complex<T>(A.Add(b.A), B.Add(b.B));
 		}
 
+		public Complex<T> Add(double b)
+		{
+			return new Complex<T>(A.Add(b), B);
+		}
+
 		public Complex<T> Subtract(Complex<T> b)
 		{
 			return new Complex<T>(A.Subtract(b.A), B.Subtract(b.B));
@@ -34,6 +39,11 @@ namespace MathildaLib
 			                      A.Multiply(b.B).Add(B.Multiply(b.A)));
 		}
 
+		public Complex<T> Multiply(double b)
+		{
+			return new Complex<T>(A.Multiply(b), B.Multiply(b));
+		}
+
 		public Complex<T> Divide(Complex<T> b)
 		{
 			var dot = b.A.Multiply(b.A).Add(b.B.Multiply(b.B));
@@ -41,6 +51,16 @@ namespace MathildaLib
 				A.Multiply(b.A).Add(B.Multiply(b.B)).Divide(dot),
 				B.Multiply(b.A).Subtract(A.Multiply(b.B)).Divide(dot)
 				);
+		}
+
+		public Complex<T> FromReal(double b)
+		{
+			return new Complex<T>(this.A.FromReal(b), this.A.FromReal(0.0));
+		}
+
+		public int CompareReal(double b)
+		{
+			return A.CompareReal(b);
 		}
 	}
 }

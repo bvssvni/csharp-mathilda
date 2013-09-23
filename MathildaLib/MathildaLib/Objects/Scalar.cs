@@ -2,7 +2,17 @@ using System;
 
 namespace MathildaLib
 {
-	public class Scalar : Number<Scalar>, Power<Scalar>, Log<Scalar>, SquareRoot<Scalar>
+	public class Scalar : 
+		Number<Scalar>, 
+		Power<Scalar>, 
+		Exponent<Scalar>,
+		Logarithm<Scalar>, 
+		SquareRoot<Scalar>,
+		Sinus<Scalar>,
+		Cosinus<Scalar>,
+		Tangent<Scalar>,
+		Secant<Scalar>,
+		Arctangent<Scalar>
 	{
 		public double Value;
 
@@ -14,6 +24,11 @@ namespace MathildaLib
 		public Scalar Add(Scalar b)
 		{
 			return new Scalar(Value + b.Value);
+		}
+
+		public Scalar Add(double b)
+		{
+			return new Scalar(Value + b);
 		}
 
 		public Scalar Subtract(Scalar b)
@@ -31,6 +46,11 @@ namespace MathildaLib
 			return new Scalar(Value * b.Value);
 		}
 
+		public Scalar Multiply(double b)
+		{
+			return new Scalar(Value * b);
+		}
+
 		public Scalar Divide(Scalar b)
 		{
 			return new Scalar(Value / b.Value);
@@ -41,6 +61,11 @@ namespace MathildaLib
 			return new Scalar(Math.Pow(Value, b.Value));
 		}
 
+		public Scalar Exp()
+		{
+			return new Scalar(Math.Exp(Value));
+		}
+
 		public Scalar Log()
 		{
 			return new Scalar(Math.Log(Value));
@@ -49,6 +74,46 @@ namespace MathildaLib
 		public Scalar Sqrt()
 		{
 			return new Scalar(Math.Sqrt(Value));
+		}
+		
+		public Scalar Sin()
+		{
+			return new Scalar(Math.Sin(Value));
+		}
+
+		public Scalar Cos()
+		{
+			return new Scalar(Math.Cos(Value));
+		}
+
+		public Scalar Tan()
+		{
+			return new Scalar(Math.Tan(Value));
+		}
+
+		public Scalar Sec()
+		{
+			return new Scalar(1.0 / Math.Cos(Value));
+		}
+
+		public Scalar Atan()
+		{
+			return new Scalar(Math.Atan(Value));
+		}
+
+		public Scalar Atan2(Scalar x)
+		{
+			return new Scalar(Math.Atan2(Value, x.Value));
+		}
+
+		public Scalar FromReal(double b)
+		{
+			return new Scalar(b);
+		}
+
+		public int CompareReal(double b)
+		{
+			return Value.CompareTo(b);
 		}
 	}
 }

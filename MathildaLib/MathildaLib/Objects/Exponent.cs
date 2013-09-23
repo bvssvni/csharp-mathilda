@@ -2,9 +2,9 @@ using System;
 
 namespace MathildaLib
 {
-	public interface Log<T>
+	public interface Exponent<T>
 	{
-		T Log();
+		T Exp();
 	}
 }
 

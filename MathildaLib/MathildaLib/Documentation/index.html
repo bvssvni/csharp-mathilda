@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Mathilda Documentation</title>
+	</head>
+	<body>
+	<h1>Mathilda Documentation</h1>
+	<p>
+	The goal is to develop a complete set of abstract algebraic operations.<br />
+	</p>
+	
+	<code>
+	Number = Add + Subtract + Multiply + Divide<br />
+	A = Sinus + Cosinus + Tangent<br />
+	B = Secant<br />
+	Scalar = Number + Power + Exponent + Logarithm + SquareRoot + A + B + Arctangent<br />
+	</code>
+	
+	<table border="1">
+	<tr>
+		<td><b>Type</b></td><td><b>Pow</b></td><td><b>Log</b></td>
+		<td><b>Sin</b></td><td><b>Cos</b></td><td><b>Tan</b></td>
+		<td><b>Atan2</b></td><td><b>Atan</b></td><td><b>Comments</b></td>
+	</tr>
+	<tr>
+		<td>Scalar</td><td>Yes</td><td>Yes</td><td>Yes</td>
+		<td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td>
+	</tr>
+	<tr>
+		<td>Complex&lt;T&gt;</td><td>Exponent, Logarithm, Arctangent</td><td>Arctangent</td>
+		<td>No</td><td>No</td><td>No</td><td>No</td><td>No</td>
+	</tr>
+	<tr>
+		<td>Dual&lt;T&gt;</td><td>Logarithm, Power</td><td>Logarithm</td>
+		<td>Sinus, Cosinus</td><td>Sinus, Cosinus</td><td>Secant</td><td>Yes</td><td>Yes</td>
+	</tr>
+	</table>
+	
+	</body>
+</html>

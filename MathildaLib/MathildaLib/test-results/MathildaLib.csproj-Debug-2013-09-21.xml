@@ -279,6 +279,20 @@ Execution time: 0,20ms</Message>
 
 Execution time: 0,20ms</Message>
     </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2013-09-21T17:46:48</TestDate>
+      <Passed>4</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 0,40ms</Message>
+    </UnitTestResult>
   </Results>
   <Tests>
     <TestRecord Name="MathildaLib">
@@ -587,6 +601,20 @@ Execution time: 0,19ms</Message>
 
 Execution time: 0,20ms</Message>
         </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2013-09-21T17:46:48</TestDate>
+          <Passed>4</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 0,40ms</Message>
+        </UnitTestResult>
       </Results>
       <Tests>
         <TestRecord Name="TestAdd">
@@ -630,6 +658,7 @@ MathildaLib.SumOperator: 2
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestAdd10">
               <Results>
@@ -650,6 +679,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestAdd11">
               <Results>
@@ -685,6 +715,7 @@ MathildaLib.SwapOperator: (+1+(+3+4)+2)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestAdd12">
               <Results>
@@ -720,6 +751,7 @@ MathildaLib.SwapOperator: (+1+(*3*4)+2)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestAdd13">
               <Results>
@@ -747,6 +779,7 @@ MathildaLib.SwapOperator: 5
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestAdd14">
               <Results>
@@ -773,6 +806,7 @@ MathildaLib.SwapOperator: (+2+a)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestAdd15">
               <Results>
@@ -810,6 +844,7 @@ MathildaLib.SwapOperator: (+2+3+4)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestAdd16">
               <Results>
@@ -847,6 +882,7 @@ MathildaLib.SwapOperator: (+(*2*1)+(*3*4))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestAdd2">
               <Results>
@@ -867,6 +903,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestAdd3">
               <Results>
@@ -892,6 +929,7 @@ MathildaLib.SwapOperator: (+2+1+3)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestAdd4">
               <Results>
@@ -919,6 +957,7 @@ MathildaLib.SwapOperator: (+(*2*3)+1)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestAdd5">
               <Results>
@@ -939,6 +978,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestAdd6">
               <Results>
@@ -959,6 +999,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestAdd7">
               <Results>
@@ -979,6 +1020,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestAdd8">
               <Results>
@@ -1006,6 +1048,7 @@ MathildaLib.SwapOperator: (+2+a)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestAdd9">
               <Results>
@@ -1026,6 +1069,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
           </Tests>
         </TestRecord>
@@ -1068,6 +1112,7 @@ MathildaLib.SwapOperator: (*(+(*b*i)-c))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="Test3">
               <Results>
@@ -1088,6 +1133,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="Test4">
               <Results>
@@ -1108,6 +1154,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="Test5">
               <Results>
@@ -1128,6 +1175,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestCompareSmartList">
               <Results>
@@ -1154,6 +1202,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestNestedProductList">
               <Results>
@@ -1174,6 +1223,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestProductListEquivalentToSumListWithOnlyOneElement">
               <Results>
@@ -1194,6 +1244,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestSubListLessThanSize">
               <Results>
@@ -1223,6 +1274,7 @@ MathildaLib.SwapOperator: (*(*c*i*i))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
           </Tests>
         </TestRecord>
@@ -1263,6 +1315,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestTwoVSOne">
               <Results>
@@ -1283,6 +1336,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
           </Tests>
         </TestRecord>
@@ -1608,6 +1662,20 @@ Execution time: 0,09ms</Message>
 
 Execution time: 0,11ms</Message>
             </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-09-21T17:46:48</TestDate>
+              <Passed>2</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,30ms</Message>
+            </UnitTestResult>
           </Results>
           <Tests>
             <TestRecord Name="TestComplexComplexMultiply">
@@ -1629,6 +1697,7 @@ Execution time: 0,01ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestComplexMultiply">
               <Results>
@@ -1649,6 +1718,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestComplexToString">
               <Results>
@@ -1669,6 +1739,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply">
               <Results>
@@ -2029,7 +2100,24 @@ Execution time: 0,00ms</Message>
                   <ConsoleOutput />
                   <ConsoleError />
                 </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-09-21T17:46:48</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDivide">
               <Results>
@@ -2305,7 +2393,24 @@ Execution time: 0,01ms</Message>
                   <ConsoleOutput />
                   <ConsoleError />
                 </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-09-21T17:46:48</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,01ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
           </Tests>
         </TestRecord>
@@ -2352,6 +2457,7 @@ MathildaLib.SwapOperator: b
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestISquared">
               <Results>
@@ -2376,6 +2482,7 @@ MathildaLib.ReplaceOperator: -1
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestNested1">
               <Results>
@@ -2423,6 +2530,7 @@ MathildaLib.SwapOperator: (+-1+i)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
           </Tests>
         </TestRecord>
@@ -2927,6 +3035,7 @@ after smart lift (+(*i*b)+(+(*(-i)*(-(*i*c)))))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
           </Tests>
         </TestRecord>
@@ -2970,6 +3079,7 @@ MathildaLib.SwapOperator: (*0.5*1)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDivide10">
               <Results>
@@ -3013,6 +3123,7 @@ MathildaLib.SwapOperator: (+(*2/a)+1)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDivide11">
               <Results>
@@ -3314,6 +3425,7 @@ MathildaLib.SwapOperator: (+4+(*2*a)+(+(*2*a)+(*a*a)))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDivide12">
               <Results>
@@ -4468,6 +4580,7 @@ MathildaLib.SwapOperator: (+(*1/a)+0.5)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDivide13">
               <Results>
@@ -4500,6 +4613,7 @@ MathildaLib.SwapOperator: (*0.25*a)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDivide14">
               <Results>
@@ -4527,6 +4641,7 @@ MathildaLib.SwapOperator: 2
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDivide15">
               <Results>
@@ -4579,6 +4694,7 @@ unsupported multiply a (*a*2)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDivide16">
               <Results>
@@ -4650,6 +4766,7 @@ MathildaLib.SwapOperator: 0.25
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDivide2">
               <Results>
@@ -4670,6 +4787,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDivide3">
               <Results>
@@ -4742,6 +4860,7 @@ MathildaLib.SwapOperator: 16
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDivide4">
               <Results>
@@ -4783,6 +4902,7 @@ MathildaLib.SwapOperator: (/2*1/3)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDivide5">
               <Results>
@@ -4807,6 +4927,7 @@ MathildaLib.SwapOperator: (*0.5*a)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDivide6">
               <Results>
@@ -4831,6 +4952,7 @@ MathildaLib.CancelVariableOperator: 1
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDivide7">
               <Results>
@@ -4869,6 +4991,7 @@ unsupported multiply a (*a*2)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDivide8">
               <Results>
@@ -4896,6 +5019,7 @@ MathildaLib.MultiplyOneOperator: (/b)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDivide9">
               <Results>
@@ -5007,6 +5131,7 @@ MathildaLib.SwapOperator: (+1+(*0.5*a))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDivideByZero">
               <Results>
@@ -5037,6 +5162,7 @@ MathildaLib.SwapOperator: Infinity
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
           </Tests>
         </TestRecord>
@@ -5077,6 +5203,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
           </Tests>
         </TestRecord>
@@ -5118,6 +5245,7 @@ MathildaLib.SwapOperator: (+a+b)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDuplicates">
               <Results>
@@ -5147,6 +5275,7 @@ MathildaLib.AddOperator: (+(*2*a))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestInvertedInequality">
               <Results>
@@ -5169,6 +5298,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply">
               <Results>
@@ -5197,6 +5327,7 @@ MathildaLib.SwapOperator: (*5*2*3)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiplyNumbers">
               <Results>
@@ -5240,6 +5371,7 @@ MathildaLib.SwapOperator: (*1*3*2*4)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestNegativeVariable">
               <Results>
@@ -5262,6 +5394,7 @@ MathildaLib.NegativeVariableOperator: (-a)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestNested1">
               <Results>
@@ -5295,6 +5428,7 @@ MathildaLib.SwapOperator: (+(*b*c)+(*a*c))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestNested2">
               <Results>
@@ -5330,6 +5464,7 @@ MathildaLib.SwapOperator: (+(*2*a)+(*a*b))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestNested3">
               <Results>
@@ -5383,6 +5518,7 @@ MathildaLib.SwapOperator: (+(*a*b)+(*c*a*d))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestSumNumbers">
               <Results>
@@ -5414,6 +5550,7 @@ MathildaLib.SwapOperator: (+1+3+2+4)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestVariableCancellingProduct">
               <Results>
@@ -5438,6 +5575,7 @@ MathildaLib.CancelVariableOperator: 1
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestVariableCancellingSum">
               <Results>
@@ -5462,6 +5600,7 @@ MathildaLib.CancelVariableOperator: 0
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestZeroAdd">
               <Results>
@@ -5489,6 +5628,7 @@ MathildaLib.ZeroMultiplyOperator: 0
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestZeroMultiply">
               <Results>
@@ -5517,6 +5657,7 @@ MathildaLib.ZeroAddOperator: a
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
           </Tests>
         </TestRecord>
@@ -5559,6 +5700,7 @@ MathildaLib.ScalarProductOperator: 6
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply10">
               <Results>
@@ -5723,6 +5865,7 @@ MathildaLib.SwapOperator: (+(*1*3*4)+(*3*2*4))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply11">
               <Results>
@@ -5748,6 +5891,7 @@ MathildaLib.SwapOperator: (*2*1*3)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply12">
               <Results>
@@ -5772,6 +5916,7 @@ MathildaLib.SwapOperator: (*2*1*a)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply13">
               <Results>
@@ -5912,6 +6057,7 @@ MathildaLib.SwapOperator: (+(*1*2*3)+(*2*1*4))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply14">
               <Results>
@@ -5955,6 +6101,7 @@ MathildaLib.SwapOperator: (*1*3*2*4)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply15">
               <Results>
@@ -7179,6 +7326,7 @@ MathildaLib.SwapOperator: (+(*b*c)+(*b*d)+(+(*a*c)+(*a*d)))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply16">
               <Results>
@@ -7202,6 +7350,7 @@ MathildaLib.MultiplyOperator: (-(*b*i))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply2">
               <Results>
@@ -7222,6 +7371,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply3">
               <Results>
@@ -7256,6 +7406,7 @@ MathildaLib.SwapOperator: (+(*2*b)+(*2*a))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply4">
               <Results>
@@ -7276,6 +7427,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply5">
               <Results>
@@ -7296,6 +7448,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply6">
               <Results>
@@ -7367,6 +7520,7 @@ MathildaLib.SwapOperator: (+(*2*a)+a)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply7">
               <Results>
@@ -7444,6 +7598,7 @@ MathildaLib.SwapOperator: (+(*2*3)+(*1*3))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply8">
               <Results>
@@ -7501,6 +7656,7 @@ MathildaLib.SwapOperator: (+(*2*a)+(*1*a))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply9">
               <Results>
@@ -7821,6 +7977,7 @@ before smart lift (+(*7)+(*(+(*2*3)+(*2*4))))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
           </Tests>
         </TestRecord>
@@ -7861,6 +8018,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestListAddVariable">
               <Results>
@@ -7881,6 +8039,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestNumberAddNumber">
               <Results>
@@ -7901,6 +8060,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestNumberAddNumberMultiplyNumber">
               <Results>
@@ -7921,6 +8081,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestNumberAddNumberMultiplyVariable">
               <Results>
@@ -7941,6 +8102,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestNumberAddVariable">
               <Results>
@@ -7961,6 +8123,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestNumberMultiplyNumber">
               <Results>
@@ -7981,6 +8144,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestNumberMultiplyNumberAddNumber">
               <Results>
@@ -8001,6 +8165,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestNumberMultiplyNumberAddVariable">
               <Results>
@@ -8021,6 +8186,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestNumberMultiplyProductList">
               <Results>
@@ -8041,6 +8207,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestNumberMultiplyVariable">
               <Results>
@@ -8061,6 +8228,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestVariableAddNumber">
               <Results>
@@ -8081,6 +8249,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestVariableAddVariable">
               <Results>
@@ -8101,6 +8270,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestVariableMultiplyNumber">
               <Results>
@@ -8121,6 +8291,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestVariableMultiplyProductList">
               <Results>
@@ -8141,6 +8312,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestVariableMultiplyVariable">
               <Results>
@@ -8161,6 +8333,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
           </Tests>
         </TestRecord>
@@ -8201,6 +8374,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDivide">
               <Results>
@@ -8221,6 +8395,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply">
               <Results>
@@ -8241,6 +8416,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiply2">
               <Results>
@@ -8261,6 +8437,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestMultiplyZero">
               <Results>
@@ -8281,6 +8458,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestScalarToString">
               <Results>
@@ -8301,6 +8479,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestVariableToString">
               <Results>
@@ -8321,6 +8500,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestZeroPlusOne">
               <Results>
@@ -8341,6 +8521,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestZeroPlusVariable">
               <Results>
@@ -8361,6 +8542,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
           </Tests>
         </TestRecord>
@@ -8405,6 +8587,7 @@ MathildaLib.SumOperator: 0
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestSubtract10">
               <Results>
@@ -8429,6 +8612,7 @@ MathildaLib.SwapOperator: (+3+1-a)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestSubtract11">
               <Results>
@@ -8469,6 +8653,7 @@ MathildaLib.SwapOperator: (+1-3+2-4)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestSubtract12">
               <Results>
@@ -8508,6 +8693,7 @@ MathildaLib.SwapOperator: (+1-(*3*4)+3)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestSubtract13">
               <Results>
@@ -8535,6 +8721,7 @@ MathildaLib.SwapOperator: -1
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestSubtract14">
               <Results>
@@ -8561,6 +8748,7 @@ MathildaLib.SwapOperator: (+2-a)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestSubtract15">
               <Results>
@@ -8607,6 +8795,7 @@ MathildaLib.SwapOperator: (-4-3+(*1*2))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestSubtract16">
               <Results>
@@ -8648,6 +8837,7 @@ MathildaLib.SwapOperator: (+(*2*1)-(*3*4))
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestSubtract2">
               <Results>
@@ -8668,6 +8858,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestSubtract3">
               <Results>
@@ -8695,6 +8886,7 @@ MathildaLib.SwapOperator: (-2+1-3)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestSubtract4">
               <Results>
@@ -8723,6 +8915,7 @@ MathildaLib.SwapOperator: (-(*2*3)+1)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestSubtract5">
               <Results>
@@ -8743,6 +8936,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestSubtract6">
               <Results>
@@ -8763,6 +8957,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestSubtract7">
               <Results>
@@ -8791,6 +8986,7 @@ MathildaLib.SwapOperator: (+-3+a)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestSubtract8">
               <Results>
@@ -8819,6 +9015,7 @@ MathildaLib.SwapOperator: (+-2+a)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestSubtract9">
               <Results>
@@ -8844,6 +9041,7 @@ MathildaLib.SwapOperator: (+-3+1+2)
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
           </Tests>
         </TestRecord>
@@ -8884,6 +9082,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestIgnoringVariable">
               <Results>
@@ -8904,6 +9103,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
           </Tests>
         </TestRecord>
@@ -9105,6 +9305,20 @@ Execution time: 0,05ms</Message>
 
 Execution time: 0,05ms</Message>
             </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-09-21T17:46:48</TestDate>
+              <Passed>2</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0,05ms</Message>
+            </UnitTestResult>
           </Results>
           <Tests>
             <TestRecord Name="TestCase">
@@ -9142,6 +9356,7 @@ Execution time: 0,00ms</Message>
                   <ConsoleError />
                 </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestDual">
               <Results>
@@ -9388,7 +9603,24 @@ Execution time: 0,01ms</Message>
                   <ConsoleOutput />
                   <ConsoleError />
                 </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-09-21T17:46:48</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,03ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
             <TestRecord Name="TestScalar">
               <Results>
@@ -9600,7 +9832,24 @@ Execution time: 0,00ms</Message>
                   <ConsoleOutput />
                   <ConsoleError />
                 </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-09-21T17:46:48</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0,00ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
               </Results>
+              <Tests />
             </TestRecord>
           </Tests>
         </TestRecord>

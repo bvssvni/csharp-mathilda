@@ -13,6 +13,11 @@ namespace MathildaLib
 			var b = a.Pow(new Scalar(3));
 
 			Assert.True(b.Value == 8);
+
+			var c = new Scalar(1);
+			var d = c.Log();
+
+			Assert.True(d.Value == 0);
 		}
 
 		[Test()]
